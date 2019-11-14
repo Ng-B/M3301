@@ -59,20 +59,32 @@
         <form action="inscription.php">
          <fieldset>
            <legend>Informations personnelles</legend>
-           Nom : <br>
-           <input type="text" name="firstname" value="DUPONT"><br>
-           Prénom : <br>
-           <input type="text" name="lastname" value="Alain"><br><br>
-           Date de naissance : <br>
-           <input type="text" name="lastname" value="jj/mm/aaaa"><br><br>
-           Sexe : <br>
-           <input type="text" name="lastname" value="Mouse"><br><br>
-           Téléphone : <br>
-           <input type="text" name="lastname" value="0651236598"><br><br>
-           <input type="submit" value="Submit">
+           Nom :
+           <input type="text" name="firstname" placeholder="DUPONT" required><br><br>
+           Prénom :
+           <input type="text" name="lastname" placeholder="Alain" required><br><br>
+           Date de naissance :
+           <input type="text" name="date" placeholder="jj/mm/aaaa" required><br><br>
+           Sexe :
+           <input type="text" name="sexe" placeholder="M" required><br><br>
+           Numéro de téléphone :
+           <input type="text" name="phone" placeholder="0651236598" required><br><br>
+           Adresse mail :
+           <input type="text" name="mail" placeholder="0651236598" required><br><br>
+           Bureau :
+           <input type="text" name="bureau" placeholder="Joueur" required><br><br>
          </fieldset>
          <fieldset>
            <legend>Informations parents</legend>
+           Numéro de téléphone portable père :
+           <input type="text" name="phoneP" placeholder="0651236589" required><br><br>
+           Numéro de téléphone fixe père :
+           <input type="text" name="phonePF" placeholder="0476589856"><br><br>
+           Numéro de téléphone portable mère :
+           <input type="text" name="phoneM" placeholder="0652365987" required><br><br>
+           Numéro de téléphone fixe mère :
+           <input type="text" name="phoneMF" placeholder="0456358975"><br><br>
+           <input type="submit" value="Valider">
         </fieldset>
         </form>
 
