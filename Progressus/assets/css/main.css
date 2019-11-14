@@ -10,6 +10,7 @@
 		#head .btn-default:focus { color:rgba(255,255,255,.8); -webkit-box-shadow:inset 0px 0px 0px 3px rgba(255,255,255,.8); -moz-box-shadow:inset 0px 0px 0px 3px rgba(255,255,255,.8); box-shadow:inset 0px 0px 0px 3px rgba(255,255,255,.8); background: transparent; }
 		#head .btn-default:active,
 		#head .btn-default.active { color:#fff; -webkit-box-shadow:inset 0px 0px 0px 3px #fff; -moz-box-shadow:inset 0px 0px 0px 3px #fff; box-shadow:inset 0px 0px 0px 3px #fff; background: transparent; }
+.btn2{font-size: 20px;}
 
 @media (max-width: 767px) {
 	#head { min-height:420px; padding-top:160px; }
@@ -74,6 +75,7 @@ h1 {position: absolute; top:0px; left: 130px;}
 	.footer2 a { color: #aaa; }
 		.footer2 a:hover { color: #fff; }
 		.footer2 p { margin: 0; }
+		#footer {margin-top: 130px;}
 
 	.widget-simplenav { margin-left:-5px; }
 	.widget-simplenav a{ margin:0 5px; }
