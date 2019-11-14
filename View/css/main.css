@@ -63,6 +63,11 @@ h1 {position: absolute; top:0px; left: 130px;}
 	.sidebar .widget { margin-bottom:20px; }
 	.sidebar h1, .sidebar .h1, .sidebar h2, .sidebar .h2, .sidebar h3, .sidebar .h3 { margin-top:20px; }
 
+.formualairechoix {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
 /* Footer */
 .footerr {margin-top: 80px;}
 
