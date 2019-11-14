@@ -60,8 +60,6 @@ h1 {position: absolute; top:10px; left: 130px;}
 	.sidebar h1, .sidebar .h1, .sidebar h2, .sidebar .h2, .sidebar h3, .sidebar .h3 { margin-top:20px; }
 
 /* Footer */
-.col-sm-89 { margin-left: 300px; }
-.col-sm-89 p {text-align: left;}
 .footer1 { background: #232323; padding: 30px 0 0 0; font-size: 12px; color: #999; display: flex; flex: wrap; justify-content: space-between;}
 	.footer1 a { color: #ccc; }
 	.footer1 .widget { margin-bottom:30px; }
