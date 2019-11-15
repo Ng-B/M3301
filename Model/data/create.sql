@@ -84,7 +84,7 @@ create TABLE IF NOT EXISTS License (
   lieu STRING NOT NULL,
   dateMatch date NOT NULL,
   idArbitre INTEGER DEFAULT NULL,
-  heure STRING NOT NULL
+  heure DATE NOT NULL
 
   );
 
