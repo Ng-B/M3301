@@ -86,3 +86,11 @@ h1 {position: absolute; top:0px; left: 130px;}
 
 	.widget-simplenav { margin-left:-5px; }
 	.widget-simplenav a{ margin:0 5px; }
+
+.formulaire label {
+	width: 275px;
+}
+
+#bureau, #valider{
+ width:188px;
+}

@@ -40,4 +40,15 @@ public function setId(int $id){
   $this->id=$id;
 }
 
+public function setPrenom(string $prenom){
+  $this->prenom=$prenom;
+}
+
+public function setDateNaissance(string $dateNaissance){
+  $this->dateNaissance=$dateNaissance;
+}
+
+public function setSexe(string $sexe){
+  $this->sexe=$sexe;
+}
  ?>
