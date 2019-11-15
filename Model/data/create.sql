@@ -64,8 +64,6 @@ create TABLE IF NOT EXISTS License (
   Foreign key (idMatch) references Match(id)
   );
 
-
-
   CREATE TABLE IF NOT EXISTS vehicule(
   nbplaces INTEGER (1) DEFAULT 0
   );
@@ -93,3 +91,9 @@ create TABLE IF NOT EXISTS License (
     password STRING,
     admin BOOLEAN DEFAULT False
   );
+
+  CREATE view if not exists vueEntraineurEquipe(nom String, prenom String,mail string, tel string , nbbuts integer,nbtirs integer,nblavage Integer)
+  as select nom,prenom, tel,mail,Nbbuts,Nbtirs, nblavage
+  from adherent as ad,contact as c,joueurs as j
+  where
+  ad.id=c.idadh and ad.id=j.idadh;
