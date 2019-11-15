@@ -152,6 +152,22 @@ public function getAdherentParDateNaiisance(string $date /*pas de variable date*
             return $contact;
           }
         }
+
+        //--------------------------------EQUIPE----------------------------------//
+          public function getEquipeParId(string $id): Equipe {
+            $reponse=$this->db->query("SELECT * FROM Equipe WHERE id=$id ");
+            $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"Equipe");
+            if(count($donnees)>1) {
+              printf("Plusieurs equipes avec cet id");
+            }
+            else if(count($donnees) == 0) {
+              printf("Aucune equipe avec cet id");
+            } else {
+              $equipe= $donnees[0];
+              return $equipe;
+            }
+          }
+
 }
 
 
