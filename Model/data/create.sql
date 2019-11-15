@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS ADHERENT(
   Prenom STRING NOT NULL,
   dateDeNaissance date NOT NULL,
   sexe STRING CHECK  (sexe = 'homme' or sexe ='femme'),
-  tel INTEGER NOT NULL
+  tel STRING NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS Joueurs(
@@ -39,44 +39,35 @@ create TABLE IF NOT EXISTS License (
 
   CREATE TABLE IF NOT EXISTS Contact(
    mail STRING  PRIMARY KEY,
-   telPere INTEGER,
-   fixePere INTEGER,
-   telMere INTEGER,
-   fixeMere INTEGER
+   telPere STRING default NULL,
+   fixePere STRING default NULL,
+   telMere STRING default NULL,
+   fixeMere STRING default NULL
   );
 
   CREATE TABLE IF NOT EXISTS Equipe(
-  id STRING CHECK (id ='-9' or id ='-11'or id ='-13F'or id ='-13M'or id ='-15F'or id ='-15M'or id ='-18F'or id ='-18M'or id ='SeniorsF'or id ='SeniorsM'),
+  id STRING CHECK (id ='-9' or id ='-11'or id ='-13F'or id ='-13M'or id ='-15F'or id ='-15M'or id ='-18F'or id ='-18M'or id ='SeniorF'or id ='SeniorM'),
   idJoueur INTEGER,
   nbLavage INTEGER DEFAULT 0,
   PRIMARY KEY('idjoueur','nbLavage'),
   Foreign key (idJoueur) references ADHERENT(id)
   );
 
-  CREATE TABLE IF NOT EXISTS Parcticipe(
-  idParticipant INTEGER,
+  CREATE TABLE IF NOT EXISTS Dispo(
   idMatch INTEGER,
   idJoueur INTEGER,
+  selectionne bool,
+  besoinTransport bool,
   ratiosMatch STRING,
   PRIMARY KEY('idjoueur','idMatch'),
   Foreign key (idJoueur) references Joueurs(idJoueur),
   Foreign key (idMatch) references Match(id)
   );
 
-  CREATE TABLE IF NOT EXISTS ParcticipePas(
-  idMatch INTEGER,
-  idJoueur INTEGER,
-  raison STRING CHECK (raison = 'Absent' or raison ='NonSelec'),
-  PRIMARY KEY('idjoueur','idMatch'),
-  Foreign key (idJoueur) references Joueurs(idJoueur),
-  Foreign key (idMatch) references Match(id)
-  );
 
-  CREATE TABLE IF NOT EXISTS Transport(
-  idParticipant INTEGER  PRIMARY KEY,
-  etat STRING(9) CHECK (etat= 'Emmene' or etat='EstEmmene' or etat='Cherche'),
-  nbplaces INTEGER (1) DEFAULT 0,
-  foreign key (idParticipant) references Parcticipe(idParticipant)
+
+  CREATE TABLE IF NOT EXISTS vehicule(
+  nbplaces INTEGER (1) DEFAULT 0
   );
 
   CREATE TABLE IF NOT EXISTS Match(
