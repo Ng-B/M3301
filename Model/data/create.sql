@@ -81,7 +81,6 @@ create TABLE IF NOT EXISTS License (
 
   CREATE TABLE IF NOT EXISTS Photo(
   id INTEGER PRIMARY KEY,
-  idMatch INTEGER,
   idEquipe INTEGER,
   photo BLOB,
   Foreign key (idMatch) references Match(id),
