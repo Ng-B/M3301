@@ -13,6 +13,7 @@
       }
    }
 
+   //--------------------------------ADHERENT----------------------------------//
    public function getAdherentParNom(string $nom): array() {
      $reponse=$this->db->query("SELECT * FROM ADHERENT WHERE Nom LIKE '%$nom' ");
      $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"Adherent");
@@ -29,7 +30,7 @@
        return $adherent[];
      }
    }
-}
+
 
 public function getAdherentParId(int $id): Adherent {
   $reponse=$this->db->query("SELECT * FROM ADHERENT WHERE id=$id ");
@@ -41,11 +42,117 @@ public function getAdherentParId(int $id): Adherent {
     printf("Aucun adherent avec cet id");
   } else {
     $adherent= $donnees[0];
+    return $adherent;
   }
-  return $adherent;
  }
-}
 
+
+public function getAdherentParDateNaiisance(string $date /*pas de variable date*/): array {
+  $reponse=$this->db->query("SELECT * FROM ADHERENT WHERE dateDeNaissance=$date ");
+  $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"Adherent");
+  if(count($donnees)>1) {
+    for(int $i=0; $i<count($donnees); $i++) {
+      $adherent[$i] = $donnees[$i];
+    }
+    return $adherent[];
+  }
+  else if(count($donnees) == 0) {
+    printf("Aucun adherent avec cette date de naissance");
+  } else {
+    $adherent= $donnees[0];
+    return $adherent[];
+  }
+ }
+
+ //--------------------------------JOUEUR----------------------------------//
+ public function getJoueurParID(int $id): Joueur {
+   $reponse=$this->db->query("SELECT * FROM Joueur WHERE idAdh=$id ");
+   $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"Joueur");
+   if(count($donnees)>1) {
+     printf("Plusieurs joueurs avec cet id");
+   }
+   else if(count($donnees) == 0) {
+     printf("Aucun jooueur avec cet id");
+   } else {
+     $joueur= $donnees[0];
+     return $joueur;
+   }
+  }
+
+//--------------------------------ENTRAINEUR----------------------------------//
+  public function getEntraineurParID(int $id): Entraineur {
+    $reponse=$this->db->query("SELECT * FROM Entraineurs WHERE idAdh=$id ");
+    $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"Entraineurs");
+    if(count($donnees)>1) {
+      printf("Plusieurs entraineurs avec cet id");
+    }
+    else if(count($donnees) == 0) {
+      printf("Aucun entraineur avec cet id");
+    } else {
+      $entraineur= $donnees[0];
+      return $entraineur;
+    }
+  }
+
+  //--------------------------------BUREAU----------------------------------//
+    public function getBureauParID(int $id): Bureau {
+      $reponse=$this->db->query("SELECT * FROM Bureau WHERE idAdh=$id ");
+      $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"Bureau");
+      if(count($donnees)>1) {
+        printf("Plusieurs bureaux avec cet id");
+      }
+      else if(count($donnees) == 0) {
+        printf("Aucun bureaux avec cet id");
+      } else {
+        $entraineur= $donnees[0];
+        return $entraineur;
+      }
+    }
+
+    //--------------------------------LICENSE----------------------------------//
+      public function getLicenseParID(int $id): License {
+        $reponse=$this->db->query("SELECT * FROM License WHERE idAdh=$id ");
+        $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"License");
+        if(count($donnees)>1) {
+          printf("Plusieurs licenses avec cet id");
+        }
+        else if(count($donnees) == 0) {
+          printf("Aucun license avec cet id");
+        } else {
+          $license= $donnees[0];
+          return $license;
+        }
+      }
+
+      //--------------------------------CONTACT----------------------------------//
+        public function getContactParMail(string $mail): Contact {
+          $reponse=$this->db->query("SELECT * FROM Contact WHERE mail=$mail ");
+          $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"Contact");
+          if(count($donnees)>1) {
+            printf("Plusieurs contacts avec cet mail");
+          }
+          else if(count($donnees) == 0) {
+            printf("Aucun contact avec cet mail");
+          } else {
+            $contact= $donnees[0];
+            return $contact;
+          }
+        }
+
+        public function getContactParTel(int $tel): Contact {
+          $reponse=$this->db->query("SELECT * FROM Contact WHERE telPere=$tel OR telMere=$tel ");
+          $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"Contact");
+          if(count($donnees)>1) {
+            printf("Plusieurs contacts avec cet num tel");
+          }
+          else if(count($donnees) == 0) {
+            printf("Aucun contact avec cet num tel");
+          } else {
+            $contact= $donnees[0];
+            return $contact;
+          }
+        }
+}
 
 
 ?>
