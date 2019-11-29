@@ -97,10 +97,20 @@ h1 {position: absolute; top:0px; left: 130px;}
 
 table{
   border-collapse: collapse;
+	vertical-align:top;
+	width: 100%;
+	text-align: center;
 }
 
 th, td{
-  border: 1px solid black;
+  border-bottom: 1px solid #ddd;
   padding: 10px;
+}
+
+th {
+	text-align:left;
+}
+
+td {
 	text-align: center;
 }
