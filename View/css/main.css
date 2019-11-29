@@ -106,11 +106,3 @@ th, td{
   border-bottom: 1px solid #ddd;
   padding: 10px;
 }
-
-th {
-	text-align:left;
-}
-
-td {
-	text-align: center;
-}
