@@ -30,6 +30,12 @@
 	font-size: 50px;
 }
 
+
+
+.container2 {
+	margin-right: 75px;
+}
+
 /* Typography */
 h1, h2, h3, h4, h5, h6 { font-family:"Open sans", sans-serif, Arial; }
 h1, .h1, h2, .h2, h3, .h3 { margin-top:30px; }
