@@ -15,8 +15,13 @@
 	<link rel="stylesheet" href="../View/css/bootstrap-theme.css" media="screen" >
 	<link rel="stylesheet" href="../View/css/main.css">
 
-</head>
+  <style media="screen">
+    th {
+     text-align:left;
+    }
+  </style>
 
+</head>
 <body>
 	<!-- Fixed navbar -->
 	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
@@ -30,9 +35,9 @@
 				<ul class="nav navbar-nav pull-right">
 					<li><a class="btn2" href="index.html">Accueil</a></li>
 					<li><a class="btn2" href="presidentAdherents.html">Gestion des adhérents</a></li>
-					<li class="active"><a class="btn2" href="lesmatchs.html">Gestion des matchs</a></li>
-					<li><a class="btn2" href="monCompte.html">Mon compte</a></li>
-					<li><a class="btn2" href="index.html">Déconnexion</a></li>
+          <li><a class="btn2" href="lesmatchs.html">Gestion des matchs</a></li>
+					<li class="active"><a class="btn2" href="monCompte.html">Mon compte</a></li>
+          <li><a class="btn2" href="index.html">Déconnexion</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -46,33 +51,59 @@
 
 		<ol class="breadcrumb">
 			<li><a href="index.html">Accueil</a></li>
-			<li><a href="lesmatchs.html">Gestion des matchs</a></li>
-      <li class="active">Ajouter un match</li>
+			<li class="active">Mon compte</li>
 		</ol>
+
 		<div class="row">
+
 			<!-- Article main content -->
 			<article class="col-sm-9 maincontent">
 				<header class="page-header">
-					<h2 class="page-title">Gestion des matchs</h2>
+					<h2 class="page-title">Mon compte</h2>
 				</header>
 				<br>
-				<p>* champs obligatoires</p>
-				<div class="formulaire">
-					<form action="inscription.php">
-	         <fieldset>
-	           <legend>Créer un match</legend>
-	           <label for="lieu">Lieu * : </label>
-	           <input type="text" name="lieu" placeholder="32 bis avenue Mallifaud, Grenoble 38000" required><br><br>
-	           <label for="date">Date du match * :</label>
-	           <input type="text" name="date" placeholder=" 10/05/2019" required><br><br>
-	           <label for="id">ID de l'arbitre * :</label>
-	           <input type="text" name="id" placeholder="12" required><br><br>
-	           <label for="heure">Heure * :</label>
-					   <input type="text" name="heure" placeholder="10h45">
-	        </fieldset>
-	        </form><br>
-						<input type="submit" value="Valider" id="valider">
-				</div>
+				<table style="width:100%">
+			 <tr>
+         <th>ID :</th>
+         <td>1</td>
+       </tr>
+       <tr>
+				 <th>Nom :</th>
+         <td>LOCATELLI</td>
+       </tr>
+       <tr>
+				 <th>Prénom :</th>
+         <td>Antoine</td>
+       </tr>
+       <tr>
+         <th>Date de naissance :</th>
+         <td>01/01/2000</td>
+       </tr>
+       <tr>
+         <th>Sexe : </th>
+         <td>Homme</td>
+       </tr>
+       <tr>
+				 <th>Numéro de téléphone :</th>
+         <td>0651213520</td>
+       </tr>
+       <tr>
+				 <th>Adresse mail :</th>
+         <td>antoine.locatelli@iut2.univ-grenoble-alpes.fr</td>
+       </tr>
+       <tr>
+				 <th>Numéro de licence :</th>
+         <td>123456789</td>
+       </tr>
+       <tr>
+         <th>Rôle :</th>
+         <td>Joueur</td>
+       </tr>
+       <tr>
+         <th>Bureau :</th>
+         <td>Président</td>
+       </tr>
+			</table>
 
 			</article>
 			<!-- /Article -->
@@ -130,9 +161,9 @@
 						<div class="widget-body">
 							<p class="simplenav">
 								<a href="index.html">Accueil</a> |
-								<a href="presidentAdherents.html">Gestion des adhérents</a> |
-								<b><a href="lesmatchs.html">Gestion des matchs</a></b> |
-								<a href="monCompte.html">Mon compte</a>
+								<a href="presidentAdherents.html">Gestion des adhérents</a>|
+                <a href="lesmatchs.html">Gestion des matchs</a> |
+							  <b><a href="monCompte.html">Mon compte</a></b>
 							</p>
 						</div>
 					</div>
