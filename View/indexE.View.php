@@ -24,13 +24,15 @@
 			<div class="navbar-header">
 				<!-- Button for smallest screens -->
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="index.html"><img src="../View/images/logo.png" alt="logo club" width = 5% height = 100% class="logo"><h1>Vaillante Chatillonnaise Handball</h1></a>
+				<a class="navbar-brand" href="indexE.html"><img src="../View/images/logo.png" alt="logo club" width = 5% height = 100% class="logo"><h1>Vaillante Chatillonnaise Handball</h1></a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
-					<li class="active"><a class="btn2" href="indexP.html">Accueil</a></li>
-					<li><a class="btn2" href="presidentAdherents.html">Gestion des adhérents</a></li>
-					<li><a class="btn2" href="lesmatchs.html">Gestion des matchs</a></li>
+					<li class="active"><a class="btn2" href="indexE.html">Accueil</a></li>
+					<li><a class="btn2" href="gestionJoueur.html">Gestion des joueurs</a></li>
+					<li><a class="btn2" href="gestionEquipe.html">Gestion de l'équipe</a></li>
+					<li><a class="btn2" href="matchsPassesE.html">Matchs passés</a></li>
+					<li><a class="btn2" href="matchsVenirE.html">Matchs à venir</a></li>
 					<li><a class="btn2" href="monCompte.html">Mon compte</a></li>
 					<li><a class="btn2" href="index.html">Déconnexion</a></li>
 				</ul>
@@ -166,10 +168,12 @@
 					<div class="col-md-6 widget">
 						<div class="widget-body">
 							<p class="simplenav">
-								<b><a href="indexP.html">Accueil</a></b> |
-								<a href="presidentAdherents.html">Gestion des adhérents</a> |
-								<a href="lesmatchs.html">Gestion des matchs</a> |
-								<a href="monCompte.html">Mon compte</a> |
+								<b><a href="indexE.html">Accueil</a></b> |
+								<a href="gestionJoueur.html">Gestion des joueurs</a> |
+								<a href="gestionEquipe.html">Gestion de l'équipe</a> |
+								<a href="matchsPassesE.html">Matchs passés</a> |
+								<a href="matchsVenirE.html">Matchs à venir</a> |
+								<a href="monCompteE.html">Mon compte</a> |
 								<a href="index.html">Déconnexion</a>
 							</p>
 						</div>

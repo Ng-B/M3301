@@ -30,14 +30,16 @@
 			<div class="navbar-header">
 				<!-- Button for smallest screens -->
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="index.html"><img src="../View/images/logo.png" width = 5% height = 100% alt="" class="logo"><h1>Vaillante Chatillonnaise Handball</h1></a>
+				<a class="navbar-brand" href="indexE.html"><img src="../View/images/logo.png" width = 5% height = 100% alt="" class="logo"><h1>Vaillante Chatillonnaise Handball</h1></a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
-					<li><a class="btn2" href="indexJ.html">Accueil</a></li>
-					<li class="active"><a class="btn2" href="matchsPasses.html">Matchs passés</a></li>
-					<li><a class="btn2" href="matchsVenir.html">Matchs à venir</a></li>
-					<li><a class="btn2" href="monCompteJ.html">Mon compte</a></li>
+					<li><a class="btn2" href="indexE.html">Accueil</a></li>
+					<li><a class="btn2" href="gestionJoueur.html">Gestion des joueurs</a></li>
+					<li><a class="btn2" href="gestionEquipe.html">Gestion de l'équipe</a></li>
+					<li><a class="btn2" href="matchsPassesE.html">Matchs passés</a></li>
+					<li class="active"><a class="btn2" href="matchsVenirE.html">Matchs à venir</a></li>
+					<li><a class="btn2" href="monCompte.html">Mon compte</a></li>
 					<li><a class="btn2" href="index.html">Déconnexion</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
@@ -52,7 +54,7 @@
 
 		<ol class="breadcrumb">
 			<li><a href="index.html">Accueil</a></li>
-			<li class="active">Matchs passés</li>
+			<li class="active">Matchs à venir</li>
 		</ol>
 
 		<div class="row">
@@ -60,7 +62,7 @@
 			<!-- Article main content -->
 			<article class="col-sm-9 maincontent">
 				<header class="page-header">
-					<h2 class="page-title">Matchs passés</h2>
+					<h2 class="page-title">Matchs à venir</h2>
 				</header>
 				<br>
 				<table style="width:100%">
@@ -75,7 +77,7 @@
 			 </tr>
 			 <tr>
 				 <td>Grenoble - Echirolles</td>
-				 <td>29/11/2019</td>
+				 <td>20/12/2019</td>
 				 <td>Grenoble</td>
 				 <td>15h30</td>
 				 <td>16h45</td>
@@ -83,7 +85,7 @@
 			</tr>
 			<tr>
 				<td>Grenoble - Lyon</td>
-				<td>13/10/2019</td>
+				<td>21/01/2020</td>
 				<td>Lyon</td>
 				<td>10h00</td>
 				<td>11h45</td>
@@ -146,10 +148,12 @@
 					<div class="col-md-6 widget">
 						<div class="widget-body">
 							<p class="simplenav">
-								<a href="indexJ.html">Accueil</a> |
-								<b><a href="matchsPasses.html">Matchs passés</a></b> |
-								<a href="matchsVenir.html">Matchs à venir</a> |
-							  <a href="monCompteJ.html">Mon compte</a> |
+								<a href="indexE.html">Accueil</a> |
+								<a href="gestionJoueur.html">Gestion des joueurs</a> |
+								<a href="gestionEquipe.html">Gestion de l'équipe</a> |
+								<a href="matchsPassesE.html">Matchs passés</a> |
+								<b><a href="matchsVenirE.html">Matchs à venir</a></b> |
+								<a href="monCompteE.html">Mon compte</a> |
 								<a href="index.html">Déconnexion</a>
 							</p>
 						</div>
