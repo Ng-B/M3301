@@ -71,6 +71,7 @@
 				 <th>Age</th>
 				 <th>Sexe</th>
 				 <th>Rôle</th>
+				 <th>Catégorie</th>
 				 <th></th>
 			 </tr>
 			 <tr>
@@ -79,6 +80,7 @@
 				 <td>19</td>
 				 <td>M</td>
 				 <td>Président</td>
+				 <td>-18M</td>
 				 <td><a href="plusInfos.View.php">Plus d'informations</a></td>
 			 </tr>
 			 <tr>
@@ -87,6 +89,7 @@
 				 <td>19</td>
 				 <td>M</td>
 				 <td>Joueur</td>
+				 <td>-18M</td>
 				 <td><a href="plusInfos.View.php">Plus d'informations</a></td>
 			 </tr>
 			 <tr>
@@ -95,6 +98,7 @@
 				 <td>19</td>
 				 <td>M</td>
 				 <td>Joueur</td>
+				 <td>-18M</td>
 				 <td><a href="plusInfos.View.php">Plus d'informations</a></td>
 			 </tr>
 			 <tr>
@@ -103,6 +107,7 @@
 				 <td>19</td>
 				 <td>M</td>
 				 <td>Joueur</td>
+				 <td>-18M</td>
 				 <td><a href="plusInfos.View.php">Plus d'informations</a></td>
 			 </tr>
 			 <tr>
@@ -111,6 +116,7 @@
 				 <td>19</td>
 				 <td>F</td>
 				 <td>Joueur</td>
+				 <td>-18M</td>
 				 <td><a href="plusInfos.View.php">Plus d'informations</a></td>
 			 </tr>
 			 <tr>
@@ -119,6 +125,7 @@
 				 <td>19</td>
 				 <td>M</td>
 				 <td>Joueur</td>
+				 <td>-18M</td>
 				 <td><a href="plusInfos.View.php">Plus d'informations</a></td>
 			 </tr>
 			 <tr>
@@ -127,6 +134,7 @@
 				 <td>19</td>
 				 <td>M</td>
 				 <td>Joueur</td>
+				 <td>-18M</td>
 				 <td><a href="plusInfos.View.php">Plus d'informations</a></td>
 			 </tr>
 			</table>
