@@ -77,7 +77,7 @@
 		<div class="row">
 			<div class="col-sm-6">
 				<h3>La formation ?</h3>
-				<p>Depuis de nombreuses années, le club du Villeurbanne Handball a toujours porté une grande attention à la formation qui est au coeur de la stratégie sportive du club.
+				<p>Depuis de nombreuses années, le club du Vaillante Châtillonnaise Handball a toujours porté une grande attention à la formation qui est au coeur de la stratégie sportive du club.
 					Nous considérons le handball non pas comme un sport mais un mode de vie. Avec un entrainnement intensive de 8h par semaine, l'association crée des experts.
 				</p>
 			</div>
