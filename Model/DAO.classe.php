@@ -1,4 +1,5 @@
 <?php
+require_once("/users/info/etu-s3/bekelen/public_html/M3301/Model/Adherent.class.php");
  class DAO{
    private $db;
 
@@ -14,20 +15,20 @@
    }
 
    //--------------------------------ADHERENT----------------------------------//
-   public function getAdherentParNom(string $nom): array() {
+   public function getAdherentParNom(string $nom) {
      $reponse=$this->db->query("SELECT * FROM ADHERENT WHERE Nom LIKE '%$nom' ");
      $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"Adherent");
      if(count($donnees)>1) {
-       for(int $i=0; $i<count($donnees); $i++) {
+       for( $i=0; $i<count($donnees); $i++) {
          $adherent[$i] = $donnees[$i];
        }
-       return $adherent[];
+       return $adherent ;
      }
      else if(count($donnees) == 0) {
        printf("Aucun adherent avec ce nom");
      } else {
        $adherent[]= $donnees[0];
-       return $adherent[];
+       return $adherent;
      }
    }
 
@@ -51,17 +52,23 @@ public function getAdherentParDateNaiisance(string $date /*pas de variable date*
   $reponse=$this->db->query("SELECT * FROM ADHERENT WHERE dateDeNaissance=$date ");
   $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"Adherent");
   if(count($donnees)>1) {
-    for(int $i=0; $i<count($donnees); $i++) {
+    for( $i=0; $i<count($donnees); $i++) {
       $adherent[$i] = $donnees[$i];
     }
-    return $adherent[];
+    return $adherent;
   }
   else if(count($donnees) == 0) {
     printf("Aucun adherent avec cette date de naissance");
   } else {
     $adherent= $donnees[0];
-    return $adherent[];
+    return $adherent;
   }
+ }
+
+ public function getNombreTotalAdherents() : int {
+   $total=$this->db->query("SELECT count(*) FROM ADHERENT ");
+   $donnees=$total-> fetchAll(PDO::FETCH_CLASS,"Adherent");
+   return count($donnees);
  }
 
  //--------------------------------JOUEUR----------------------------------//
