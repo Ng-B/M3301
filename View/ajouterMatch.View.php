@@ -24,11 +24,11 @@
 			<div class="navbar-header">
 				<!-- Button for smallest screens -->
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="index.View.php"><img src="../View/images/logo.png" width = 5% height = 100% alt="" class="logo"><h1>Vaillante Chatillonnaise Handball</h1></a>
+				<a class="navbar-brand" href="indexP.View.php"><img src="../View/images/logo.png" width = 5% height = 100% alt="" class="logo"><h1>Vaillante Chatillonnaise Handball</h1></a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
-					<li><a class="btn2" href="index.View.php">Accueil</a></li>
+					<li><a class="btn2" href="indexP.View.php">Accueil</a></li>
 					<li><a class="btn2" href="presidentAdherents.View.php">Gestion des adhérents</a></li>
 					<li class="active"><a class="btn2" href="lesmatchs.View.php">Gestion des matchs</a></li>
 					<li><a class="btn2" href="monCompte.View.php">Mon compte</a></li>
@@ -129,7 +129,7 @@
 					<div class="col-md-6 widget">
 						<div class="widget-body">
 							<p class="simplenav">
-								<a href="index.View.php">Accueil</a> |
+								<a href="indexP.View.php">Accueil</a> |
 								<a href="presidentAdherents.View.php">Gestion des adhérents</a> |
 								<b><a href="lesmatchs.View.php">Gestion des matchs</a></b> |
 								<a href="monCompte.View.php">Mon compte</a>
