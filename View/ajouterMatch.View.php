@@ -66,7 +66,7 @@
 	           <label for="date">Date du match * : </label>
 	           <input type="date" name="date" placeholder="28/12/2019" required><br><br>
 						 <label for="heure">Heure * : </label>
-					   <input type="text" name="heure" placeholder="10h45"><br><br>
+					   <input type="time" name="heure" placeholder="10h45"><br><br>
 						 <label for="lieu">Adresse * : </label>
 	           <input type="text" name="lieu" placeholder="32 Bis Avenue Mallifaud" required><br><br>
 	           <label for="id">ID de l'arbitre * : </label>
