@@ -66,52 +66,53 @@
 				<a href="ajouterMatch.View.php"><input type="submit" value="Ajouter un match" id="valider"></a><br><br><br>
 				<table style="width:100%">
 			 <tr>
-				 <th>Lieu</th>
+				 <th>ID du match</th>
 				 <th>Date</th>
-				 <th>ID Arbitre</th>
 				 <th>Heure</th>
+				 <th>Adresse</th>
+				 <th>ID Arbitre</th>
+				 <th>Catégorie</th>
 			 </tr>
 			 <tr>
-				 <td>14 avenue Jean Paul, Grenoble 38100</td>
+				 <td>1</td>
 				 <td>14/07/2019</td>
-				 <td>18</td>
 				 <td>15h15</td>
+				 <td>14 avenue Jean Paul</td>
+			   <td>18</td>
+				 <td>-18M</td>
+
 			 </tr>
 			 <tr>
-         <td>18 avenue Paulloir, Grenoble 38130</td>
-         <td>11/07/2019</td>
-         <td>14</td>
-         <td>15h15</td>
+				 <td>2</td>
+				 <td>14/07/2019</td>
+				 <td>15h15</td>
+				 <td>14 avenue Jean Paul</td>
+			   <td>18</td>
+				 <td>-18M</td>
 			 </tr>
 			 <tr>
-         <td>18 avenue Helloir, Grenoble 38130</td>
-         <td>11/07/2019</td>
-         <td>14</td>
-         <td>15h15</td>
+				 <td>3</td>
+				 <td>14/07/2019</td>
+				 <td>15h15</td>
+				 <td>14 avenue Jean Paul</td>
+			   <td>18</td>
+				 <td>-18M</td>
 			 </tr>
 			 <tr>
-         <td>18 rue Buger, Grenoble 38130</td>
-         <td>11/07/2019</td>
-         <td>14</td>
-         <td>15h15</td>
+				 <td>4</td>
+				 <td>14/07/2019</td>
+				 <td>15h15</td>
+				 <td>14 avenue Jean Paul</td>
+			   <td>18</td>
+				 <td>-18M</td>
 			 </tr>
 			 <tr>
-         <td>88 longe Ereoir, Grenoble 38130</td>
-         <td>11/07/2019</td>
-         <td>14</td>
-         <td>15h15</td>
-			 </tr>
-			 <tr>
-         <td>18 avenue Paulloir, Grenoble 38130</td>
-         <td>11/07/2019</td>
-         <td>14</td>
-         <td>15h15</td>
-			 </tr>
-			 <tr>
-         <td>10 rue Mozzy, Grenoble 38130</td>
-         <td>11/07/2019</td>
-         <td>14</td>
-         <td>15h15</td>
+				 <td>5</td>
+				 <td>14/07/2019</td>
+				 <td>15h15</td>
+				 <td>14 avenue Jean Paul</td>
+			   <td>18</td>
+				 <td>-18M</td>
 			 </tr>
 			</table>
 
