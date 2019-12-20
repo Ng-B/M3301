@@ -67,86 +67,59 @@
 				<br>
 				<table style="width:100%">
 					<tr>
-	 				 <th>ID du match</th>
-	 				 <th>Match</th>
-	 				 <th>Date</th>
-	 				 <th>Heure</th>
-	 				 <th>Adresse</th>
-	 				 <th>ID Arbitre</th>
-	 				 <th>Catégorie</th>
-	 			 </tr>
-	 			 <tr>
-	 				 <td>1</td>
-	 				 <td>Grenoble - Echirolles</td>
-	 				 <td>14/07/2019</td>
-	 				 <td>15h15</td>
-	 				 <td>14 avenue Jean Paul</td>
-	 			   <td>18</td>
-	 				 <td>-18M</td>
+						<th>Match</th>
+						<th>Date</th>
+						<th>Heure</th>
+						<th>Adresse</th>
+						<th>Nom de l'arbitre</th>
+						<th>Catégorie</th>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>Grenoble - Echirolles</td>
+						<td>14/07/2019</td>
+						<td>15h15</td>
+						<td>14 avenue Jean Paul</td>
+						<td>Jean</td>
+						<td>-18M</td>
 
-	 			 </tr>
-	 			 <tr>
-	 				 <td>2</td>
-	 				 <td>Grenoble - Echirolles</td>
-	 				 <td>14/07/2019</td>
-	 				 <td>15h15</td>
-	 				 <td>14 avenue Jean Paul</td>
-	 			   <td>18</td>
-	 				 <td>-18M</td>
-	 			 </tr>
-	 			 <tr>
-	 				 <td>3</td>
-	 				 <td>Grenoble - Echirolles</td>
-	 				 <td>14/07/2019</td>
-	 				 <td>15h15</td>
-	 				 <td>14 avenue Jean Paul</td>
-	 			   <td>18</td>
-	 				 <td>-18M</td>
-	 			 </tr>
-	 			 <tr>
-	 				 <td>4</td>
-	 				 <td>Grenoble - Echirolles</td>
-	 				 <td>14/07/2019</td>
-	 				 <td>15h15</td>
-	 				 <td>14 avenue Jean Paul</td>
-	 			   <td>18</td>
-	 				 <td>-18M</td>
-	 			 </tr>
-	 			 <tr>
-	 				 <td>5</td>
-	 				 <td>Grenoble - Echirolles</td>
-	 				 <td>14/07/2019</td>
-	 				 <td>15h15</td>
-	 				 <td>14 avenue Jean Paul</td>
-	 			   <td>18</td>
-	 				 <td>-18M</td>
-	 			 </tr>
-	 				 <td>3</td>
-	 				 <td>Grenoble - Echirolles</td>
-	 				 <td>14/07/2019</td>
-	 				 <td>15h15</td>
-	 				 <td>14 avenue Jean Paul</td>
-	 			   <td>18</td>
-	 				 <td>-18M</td>
-	 			 </tr>
-	 			 <tr>
-	 				 <td>4</td>
-	 				 <td>Grenoble - Echirolles</td>
-	 				 <td>14/07/2019</td>
-	 				 <td>15h15</td>
-	 				 <td>14 avenue Jean Paul</td>
-	 			   <td>18</td>
-	 				 <td>-18M</td>
-	 			 </tr>
-	 			 <tr>
-	 				 <td>5</td>
-	 				 <td>Grenoble - Echirolles</td>
-	 				 <td>14/07/2019</td>
-	 				 <td>15h15</td>
-	 				 <td>14 avenue Jean Paul</td>
-	 			   <td>18</td>
-	 				 <td>-18M</td>
-	 			 </tr>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Grenoble - Echirolles</td>
+						<td>14/07/2019</td>
+						<td>15h15</td>
+						<td>14 avenue Jean Paul</td>
+						<td>Jean</td>
+						<td>-18M</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Grenoble - Echirolles</td>
+						<td>14/07/2019</td>
+						<td>15h15</td>
+						<td>14 avenue Jean Paul</td>
+						<td>Jean</td>
+						<td>-18M</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>Grenoble - Echirolles</td>
+						<td>14/07/2019</td>
+						<td>15h15</td>
+						<td>14 avenue Jean Paul</td>
+						<td>Jean</td>
+						<td>-18M</td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td>Grenoble - Echirolles</td>
+						<td>14/07/2019</td>
+						<td>15h15</td>
+						<td>14 avenue Jean Paul</td>
+						<td>Jean</td>
+						<td>-18M</td>
+					</tr>
 			</table>
 
 			</article>

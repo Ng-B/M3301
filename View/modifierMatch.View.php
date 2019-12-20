@@ -64,8 +64,6 @@
 					<form action="inscription.php">
 	         <fieldset>
 						 <legend>Informations</legend>
-						<label for="id">ID du match * : </label>
-					 <input type="text" name="id" value="1" required><br><br>
 					 <label for="id">Match * : </label>
 					 <input type="text" name="id" placeholder="Grenoble - Echirolles" required><br><br>
 						<label for="date">Date du match * : </label>
@@ -74,8 +72,8 @@
 						<input type="text" name="heure" value="10h45"><br><br>
 						<label for="lieu">Adresse * : </label>
 						<input type="text" name="lieu" value="32 Bis Avenue Mallifaud" required><br><br>
-						<label for="id">ID de l'arbitre * : </label>
-						<input type="text" name="id" value="12" required><br><br>
+						<label for="id">Nom de l'arbitre * : </label>
+						<input type="text" name="id" value="Jean"><br><br>
 						<label for="role">Catégorie * : </label>
 						<select name="categorie">
 					 <option value="-9" selected>-9</option>
