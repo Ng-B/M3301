@@ -75,7 +75,6 @@
 						<th>Catégorie</th>
 					</tr>
 					<tr>
-						<td>1</td>
 						<td>Grenoble - Echirolles</td>
 						<td>14/07/2019</td>
 						<td>15h15</td>
@@ -85,7 +84,6 @@
 
 					</tr>
 					<tr>
-						<td>2</td>
 						<td>Grenoble - Echirolles</td>
 						<td>14/07/2019</td>
 						<td>15h15</td>
@@ -94,7 +92,6 @@
 						<td>-18M</td>
 					</tr>
 					<tr>
-						<td>3</td>
 						<td>Grenoble - Echirolles</td>
 						<td>14/07/2019</td>
 						<td>15h15</td>
@@ -103,7 +100,6 @@
 						<td>-18M</td>
 					</tr>
 					<tr>
-						<td>4</td>
 						<td>Grenoble - Echirolles</td>
 						<td>14/07/2019</td>
 						<td>15h15</td>
@@ -112,7 +108,6 @@
 						<td>-18M</td>
 					</tr>
 					<tr>
-						<td>5</td>
 						<td>Grenoble - Echirolles</td>
 						<td>14/07/2019</td>
 						<td>15h15</td>
