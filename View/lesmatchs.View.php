@@ -52,7 +52,7 @@
 
 		<ol class="breadcrumb">
 			<li><a href="indexP.View.php">Accueil</a></li>
-			<li class="active"> Gestion des matchs </li>
+			<li class="active"> Ajouter un match </li>
 		</ol>
 
 		<div class="row">
@@ -60,7 +60,7 @@
 			<!-- Article main content -->
 			<article class="col-sm-9 maincontent">
 				<header class="page-header">
-					<h2 class="page-title">Gestion des matchs</h2>
+					<h2 class="page-title">Informations</h2>
 				</header>
 				<br>
 				<a href="ajouterMatch.View.php"><input type="submit" value="Ajouter un match" id="valider"></a><br><br><br>
