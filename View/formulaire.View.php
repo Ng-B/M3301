@@ -68,7 +68,7 @@
 	           <label for="lastname">Prénom * :</label>
 	           <input type="text" name="lastname" placeholder="Alain" required><br><br>
 	           <label for="date">Date de naissance * :</label>
-	           <input type="text" name="date" placeholder="jj/mm/aaaa" required><br><br>
+	           <input type="date" name="date" placeholder="jj/mm/aaaa" required><br><br>
 	           <label for="gender">Sexe * :</label>
 						<input type="radio" name="gender" value="male" checked>     Homme
 	          <input type="radio" name="gender" value="female">     Femme<br><br>

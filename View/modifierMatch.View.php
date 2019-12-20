@@ -67,7 +67,7 @@
 						<label for="id">ID du match * : </label>
 					 <input type="text" name="id" value="1" required><br><br>
 						<label for="date">Date du match * : </label>
-						<input type="text" name="date" value="28/12/2019" required><br><br>
+						<input type="date" name="date" value="28/12/2019" required><br><br>
 						<label for="heure">Heure * : </label>
 						<input type="text" name="heure" value="10h45"><br><br>
 						<label for="lieu">Adresse * : </label>

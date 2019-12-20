@@ -69,7 +69,7 @@
 	           <label for="lastname">Prénom * :</label>
 	           <input type="text" name="lastname" value="Alain" readonly="readonly" required><br><br>
 	           <label for="date">Date de naissance * :</label>
-	           <input type="text" name="date" value="01/01/2000" readonly="readonly" required><br><br>
+	           <input type="date" name="date" value="01/01/2000" readonly="readonly" required><br><br>
 	           <label for="gender">Sexe * :</label>
 						<input type="radio" name="gender" value="male" disabled="disabled" checked>     Homme
 	          <input type="radio" name="gender" value="female" disabled="disabled">     Femme<br><br>
