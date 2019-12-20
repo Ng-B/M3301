@@ -1,5 +1,5 @@
 <?php
-require_once("/users/info/etu-s3/bekelen/public_html/M3301/Model/Adherent.class.php");
+require_once("./Adherent.class.php");
  class DAO{
    private $db;
 
