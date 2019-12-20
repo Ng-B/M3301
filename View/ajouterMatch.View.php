@@ -53,14 +53,14 @@
 			<!-- Article main content -->
 			<article class="col-sm-9 maincontent">
 				<header class="page-header">
-					<h2 class="page-title">Gestion des matchs</h2>
+					<h2 class="page-title">Ajouter un match</h2>
 				</header>
 				<br>
 				<p>* champs obligatoires</p>
 				<div class="formulaire">
 					<form action="inscription.php">
 	         <fieldset>
-	           <legend>Créer un match</legend>
+	           <legend>Informations</legend>
 	           <label for="lieu">Lieu * : </label>
 	           <input type="text" name="lieu" placeholder="32 bis avenue Mallifaud, Grenoble 38000" required><br><br>
 	           <label for="date">Date du match * :</label>
