@@ -8,6 +8,9 @@ class Adherent{
   private $telephone;
 }
 
+
+
+
 public function getNom(): string{
   return $nom;
 }
@@ -50,5 +53,9 @@ public function setDateNaissance(string $dateNaissance){
 
 public function setSexe(string $sexe){
   $this->sexe=$sexe;
+}
+
+public function setTelephone(string $telephone){
+  $this->telephone=$telephone;
 }
  ?>
