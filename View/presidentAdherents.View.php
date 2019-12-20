@@ -18,6 +18,7 @@
 	<style media="screen">
     th {
      text-align:center;
+		 padding-bottom: 10px;
     }
 
 		td {
