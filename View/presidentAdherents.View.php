@@ -22,6 +22,7 @@
 
 		td {
      text-align:center;
+		 padding-bottom: 10px;
     }
   </style>
 
