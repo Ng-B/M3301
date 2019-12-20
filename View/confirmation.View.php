@@ -48,7 +48,7 @@
 			<li><a href="indexP.View.php">Accueil</a></li>
 			<li><a href="presidentAdherents.View.php">Gestion des adhérents</a></li>
 			<li><a href="formulaire.View.php">Ajouter un adhérent</a></li>
-      <li class="active">Confirmation</li>
+      <li class="active">Récapitulatif</li>
 		</ol>
 
 		<div class="row">
