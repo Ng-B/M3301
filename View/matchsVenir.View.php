@@ -16,9 +16,15 @@
 	<link rel="stylesheet" href="../View/css/main.css">
 
 	<style media="screen">
-    th {
-     text-align:center;
-    }
+	th {
+	 text-align:center;
+	 padding-bottom: 10px;
+	}
+
+	td {
+	 text-align:center;
+	 padding-bottom: 10px;
+	}
   </style>
 
 </head>
