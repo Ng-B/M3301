@@ -89,7 +89,7 @@
 						 </select>
 				 </fieldset>
 				 </form><br>
-					 <a href="modifierMatch.View.php"><input type="submit" value="Valider" id="valider"></a>
+					 <a href="confirmationMatch.View.php"><input type="submit" value="Valider" id="valider"></a>
 				</div>
 
 			</article>
