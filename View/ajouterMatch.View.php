@@ -61,15 +61,17 @@
 					<form action="inscription.php">
 	         <fieldset>
 	           <legend>Informations</legend>
-	           <label for="lieu">Lieu * : </label>
-	           <input type="text" name="lieu" placeholder="32 bis avenue Mallifaud, Grenoble 38000" required><br><br>
-	           <label for="date">Date du match * :</label>
+						 <label for="id">ID du match * : </label>
+						<input type="text" name="id" placeholder=" 10/05/2019" required><br><br>
+	           <label for="date">Date du match * : </label>
 	           <input type="text" name="date" placeholder=" 10/05/2019" required><br><br>
-	           <label for="id">ID de l'arbitre * :</label>
-	           <input type="text" name="id" placeholder="12" required><br><br>
-	           <label for="heure">Heure * :</label>
+						 <label for="heure">Heure * : </label>
 					   <input type="text" name="heure" placeholder="10h45"><br><br>
-						 <label for="role">Catégorie * :</label>
+						 <label for="lieu">Lieu * : </label>
+	           <input type="text" name="lieu" placeholder="32 bis avenue Mallifaud, Grenoble 38000" required><br><br>
+	           <label for="id">ID de l'arbitre * : </label>
+	           <input type="text" name="id" placeholder="12" required><br><br>
+						 <label for="role">Catégorie * : </label>
 						 <select name="categorie">
   					<option value="-9" selected>-9</option>
  					  <option value="-11">-11</option>
