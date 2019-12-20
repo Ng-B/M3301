@@ -71,8 +71,8 @@
 	           <label for="date">Date de naissance * :</label>
 	           <input type="text" name="date" value="01/01/2000" readonly="readonly" required><br><br>
 	           <label for="gender">Sexe * :</label>
-						<input type="radio" name="gender" value="male" checked>     Homme
-	          <input type="radio" name="gender" value="female">     Femme<br><br>
+						<input type="radio" name="gender" value="male" readonly="readonly" checked>     Homme
+	          <input type="radio" name="gender" value="female" readonly="readonly">     Femme<br><br>
 	           <label for="phone">Numéro de téléphone * :</label>
 	           <input type="text" name="phone" value="0651236598" readonly="readonly" required><br><br>
 	           <label for="mail">Adresse mail * :</label>
