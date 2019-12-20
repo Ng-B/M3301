@@ -133,6 +133,7 @@
 								<a href="presidentAdherents.View.php">Gestion des adhérents</a> |
 								<b><a href="lesmatchs.View.php">Gestion des matchs</a></b> |
 								<a href="monCompte.View.php">Mon compte</a>
+								<a href="index.View.php">Déconnexion</a>
 							</p>
 						</div>
 					</div>

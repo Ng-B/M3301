@@ -28,11 +28,11 @@
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
-					<li class="active"><a class="btn2" href="indexJ.html">Accueil</a></li>
-					<li><a class="btn2" href="matchsPasses.html">Matchs passés</a></li>
-					<li><a class="btn2" href="matchsVenir.html">Matchs à venir</a></li>
-					<li><a class="btn2" href="monCompteJ.html">Mon compte</a></li>
-					<li><a class="btn2" href="index.html">Déconnexion</a></li>
+					<li class="active"><a class="btn2" href="indexJ.View.php">Accueil</a></li>
+					<li><a class="btn2" href="matchsPasses.View.php">Matchs passés</a></li>
+					<li><a class="btn2" href="matchsVenir.View.php">Matchs à venir</a></li>
+					<li><a class="btn2" href="monCompteJ.View.php">Mon compte</a></li>
+					<li><a class="btn2" href="index.View.php">Déconnexion</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -166,11 +166,11 @@
 					<div class="col-md-6 widget">
 						<div class="widget-body">
 							<p class="simplenav">
-								<b><a href="indexJ.html">Accueil</a></b> |
-								<a href="matchsPasses.html">Matchs passés</a> |
-								<a href="matchsVenir.html">Matchs à venir</a> |
-								<a href="monCompteJ.html">Mon compte</a> |
-								<a href="index.html">Déconnexion</a>
+								<b><a href="indexJ.View.php">Accueil</a></b> |
+								<a href="matchsPasses.View.php">Matchs passés</a> |
+								<a href="matchsVenir.View.php">Matchs à venir</a> |
+								<a href="monCompteJ.View.php">Mon compte</a> |
+								<a href="index.View.php">Déconnexion</a>
 							</p>
 						</div>
 					</div>

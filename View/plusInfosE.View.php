@@ -34,12 +34,12 @@
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
 					<li><a class="btn2" href="indexE.View.php">Accueil</a></li>
-					<li class="active"><a class="btn2" href="gestionJoueur.html">Gestion des joueurs</a></li>
-					<li><a class="btn2" href="gestionEquipe.html">Gestion de l'équipe</a></li>
-					<li><a class="btn2" href="matchsPassesE.html">Matchs passés</a></li>
-					<li><a class="btn2" href="matchsVenirE.html">Matchs à venir</a></li>
-					<li><a class="btn2" href="monCompte.html">Mon compte</a></li>
-					<li><a class="btn2" href="index.html">Déconnexion</a></li>
+					<li class="active"><a class="btn2" href="gestionJoueur.View.php">Gestion des joueurs</a></li>
+					<li><a class="btn2" href="gestionEquipe.View.php">Gestion de l'équipe</a></li>
+					<li><a class="btn2" href="matchsPassesE.View.php">Matchs passés</a></li>
+					<li><a class="btn2" href="matchsVenirE.View.php">Matchs à venir</a></li>
+					<li><a class="btn2" href="monCompte.View.php">Mon compte</a></li>
+					<li><a class="btn2" href="index.View.php">Déconnexion</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -181,11 +181,11 @@
 						<div class="widget-body">
 							<p class="simplenav">
 								<a href="indexE.View.php">Accueil</a> |
-								<b><a href="gestionJoueur.html">Gestion des joueurs</a></b> |
-								<a href="gestionEquipe.html">Gestion de l'équipe</a> |
-								<a href="matchsPassesE.html">Matchs passés</a> |
-								<a href="matchsVenirE.html">Matchs à venir</a> |
-								<a href="monCompteE.html">Mon compte</a> |
+								<b><a href="gestionJoueur.View.php">Gestion des joueurs</a></b> |
+								<a href="gestionEquipe.View.php">Gestion de l'équipe</a> |
+								<a href="matchsPassesE.View.php">Matchs passés</a> |
+								<a href="matchsVenirE.View.php">Matchs à venir</a> |
+								<a href="monCompte.View.php">Mon compte</a> |
 								<a href="index.View.php">Déconnexion</a>
 							</p>
 						</div>
