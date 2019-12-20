@@ -68,7 +68,7 @@
 	           <label for="id">ID de l'arbitre * :</label>
 	           <input type="text" name="id" placeholder="12" required><br><br>
 	           <label for="heure">Heure * :</label>
-					   <input type="text" name="heure" placeholder="10h45">
+					   <input type="text" name="heure" placeholder="10h45"><br><br>
 						 <label for="role">Catégorie * :</label>
 						 <select name="categorie">
   					<option value="-9" selected>-9</option>
