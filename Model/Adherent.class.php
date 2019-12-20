@@ -6,49 +6,54 @@ class Adherent{
   private $dateNaissance;
   private $sexe;
   private $telephone;
+
+  public function getNom(): string{
+    return $nom;
+  }
+
+  public function getId(): int{
+    return $id;
+  }
+
+  public function getPrenom(): string{
+    return $prenom;
+  }
+
+  public function getDateNaissance(): string{
+    return $dateNaissance;
+  }
+
+  public function getSexe(): string{
+    return $sexe;
+  }
+
+  public function getTelephone(): string{
+    return $telephone;
+  }
+
+  public function setNom(string $nom){
+    $this->nom=$nom;
+  }
+
+  public function setId(int $id){
+    $this->id=$id;
+  }
+
+  public function setPrenom(string $prenom){
+    $this->prenom=$prenom;
+  }
+
+  public function setDateNaissance(string $dateNaissance){
+    $this->dateNaissance=$dateNaissance;
+  }
+
+  public function setSexe(string $sexe){
+    $this->sexe=$sexe;
+  }
+
+  public function setTelephone(string $telephone){
+    $this->telephone=$telephone;
+  }
 }
 
-public function getNom(): string{
-  return $nom;
-}
-
-public function getId(): int{
-  return $id;
-}
-
-public function getPrenom(): string{
-  return $prenom;
-}
-
-public function getDateNaissance(): string{
-  return $dateNaissance;
-}
-
-public function getSexe(): string{
-  return $sexe;
-}
-
-public function getTelephone(): string{
-  return $telephone;
-}
-
-public function setNom(string $nom){
-  $this->nom=$nom;
-}
-
-public function setId(int $id){
-  $this->id=$id;
-}
-
-public function setPrenom(string $prenom){
-  $this->prenom=$prenom;
-}
-
-public function setDateNaissance(string $dateNaissance){
-  $this->dateNaissance=$dateNaissance;
-}
-
-public function setSexe(string $sexe){
-  $this->sexe=$sexe;
-}
- ?>
+  ?>

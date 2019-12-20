@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
 
@@ -20,17 +20,19 @@
 <body>
 	<!-- Fixed navbar -->
 	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
-		<div class="container" >
+		<div class="container2" >
 			<div class="navbar-header">
 				<!-- Button for smallest screens -->
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="index.html"><img src="../View/images/logo.png" width = 5% height = 100% alt="" class="logo"><h1>Vaillante Chatillonnaise Handball</h1></a>
+				<a class="navbar-brand" href="indexP.View.php"><img src="../View/images/logo.png" width = 5% height = 100% alt="" class="logo"><h1>Vaillante Chatillonnaise Handball</h1></a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
-					<li><a class="btn2" href="index.html">Accueil</a></li>
-					<li class="active"><a class="btn2" href="contact.html">Nous contacter</a></li>
-					<li><a class="btn2" href="signin.html">Se connecter</a></li>
+					<li><a class="btn2" href="indexP.View.php">Accueil</a></li>
+					<li><a class="btn2" href="presidentAdherents.View.php">Gestion des adhérents</a></li>
+					<li class="active"><a class="btn2" href="lesmatchs.View.php">Gestion des matchs</a></li>
+					<li><a class="btn2" href="monCompte.View.php">Mon compte</a></li>
+					<li><a class="btn2" href="index.View.php">Déconnexion</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -43,8 +45,10 @@
 	<div class="container">
 
 		<ol class="breadcrumb">
-			<li><a href="index.html">Accueil</a></li>
-			<li class="active"> Nous contacter </li>
+			<li><a href="indexP.View.php">Accueil</a></li>
+			<li><a href="lesmatchs.View.php">Gestion des matchs</a></li>
+			<li><a href="ajouterMatch.View.php">Ajouter un match</a></li>
+      <li class="active">Modifier un match</li>
 		</ol>
 
 		<div class="row">
@@ -52,39 +56,41 @@
 			<!-- Article main content -->
 			<article class="col-sm-9 maincontent">
 				<header class="page-header">
-					<h2 class="page-title">Nous contacter</h2>
+					<h2 class="page-title">Modifier un adhérent</h2>
 				</header>
-
-				<p>
-					Si vous avez des questions ou que vous souhaitez avoir plus d'informations, nous vous invitons à remplir le formulaire ci-dessous.
-					Nous ferons notre maximum pour vous répondre au plus vite.
-				</p>
 				<br>
-					<form>
-						<div class="row">
-							<div class="col-sm-4">
-								<input class="form-control" type="text" placeholder="Nom">
-							</div>
-							<div class="col-sm-4">
-								<input class="form-control" type="text" placeholder="Email">
-							</div>
-							<div class="col-sm-4">
-								<input class="form-control" type="text" placeholder="Telephone">
-							</div>
-						</div>
-						<br>
-						<div class="row">
-							<div class="col-sm-12">
-								<textarea placeholder="Inserez vos messages ici..." class="form-control" rows="9"></textarea>
-							</div>
-						</div>
-						<br>
-						<div class="row">
-							<div class="col-sm-6 text-right">
-								<input class="btn btn-action" type="submit" value="Envoyer votre message">
-							</div>
-						</div>
-					</form>
+				<p>* champs obligatoires</p>
+				<div class="formulaire">
+					<form action="inscription.php">
+	         <fieldset>
+						 <legend>Informations</legend>
+						<label for="id">ID du match * : </label>
+					 <input type="text" name="id" value="1" required><br><br>
+						<label for="date">Date du match * : </label>
+						<input type="date" name="date" value="28/12/2019" required><br><br>
+						<label for="heure">Heure * : </label>
+						<input type="text" name="heure" value="10h45"><br><br>
+						<label for="lieu">Adresse * : </label>
+						<input type="text" name="lieu" value="32 Bis Avenue Mallifaud" required><br><br>
+						<label for="id">ID de l'arbitre * : </label>
+						<input type="text" name="id" value="12" required><br><br>
+						<label for="role">Catégorie * : </label>
+						<select name="categorie">
+					 <option value="-9" selected>-9</option>
+						 <option value="-11">-11</option>
+						 <option value="-13M">-13M</option>
+						 <option value="-13F">-13F</option>
+						 <option value="-15M">-15M</option>
+						 <option value="-15F">-15F</option>
+						 <option value="-18M">-18M</option>
+						 <option value="-18F">-18F</option>
+						 <option value="SeniorM">-SéniorM</option>
+						 <option value="SeniorF">-SéniorF</option>
+						 </select>
+				 </fieldset>
+				 </form><br>
+					 <a href="confirmationMatch.View.php"><input type="submit" value="Valider" id="valider"></a>
+				</div>
 
 			</article>
 			<!-- /Article -->
@@ -141,9 +147,11 @@
 					<div class="col-md-6 widget">
 						<div class="widget-body">
 							<p class="simplenav">
-								<a href="index.html">Accueil</a> |
-								<a href="contact.html">Nous contacter</a> |
-								<b><a href="signin.html">Se connecter</a></b>
+								<a href="indexP.View.php">Accueil</a> |
+								<b><a href="presidentAdherents.View.php">Gestion des adhérents</a></b> |
+								<a href="lesmatchs.View.php">Gestion des matchs</a> |
+								<a href="monCompte.View.php">Mon compte</a>
+								<a href="index.View.php">Déconnexion</a>
 							</p>
 						</div>
 					</div>

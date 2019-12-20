@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title>Accueil</title>
 
@@ -20,7 +20,7 @@
 <body class="home">
 	<!-- Fixed navbar -->
 	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
-		<div class="container">
+		<div class="container2">
 			<div class="navbar-header">
 				<!-- Button for smallest screens -->
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
@@ -164,9 +164,9 @@
 					<div class="col-md-6 widget">
 						<div class="widget-body">
 							<p class="simplenav">
-								<a href="index.html">Accueil</a> |
+								<b><a href="index.html">Accueil</a></b> |
 								<a href="contact.html">Nous contacter</a> |
-								<b><a href="signin.html">Se connecter</a></b>
+								<a href="signin.html">Se connecter</a>
 							</p>
 						</div>
 					</div>

@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+*<!DOCTYPE html>
 <html lang="fr">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>Se connecter</title>
+
 
 	<link rel="shortcut icon" href="../View/images/logo.png">
 
@@ -20,17 +20,17 @@
 <body>
 	<!-- Fixed navbar -->
 	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
-		<div class="container">
+		<div class="container2" >
 			<div class="navbar-header">
 				<!-- Button for smallest screens -->
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="index.html"><img src="../View/images/logo.png" alt="logo club" width = 5% height = 100% class="logo"><h1>Vaillante Chatillonnaise Handball</h1></a>
+				<a class="navbar-brand" href="index.View.php"><img src="../View/images/logo.png" width = 5% height = 100% alt="" class="logo"><h1>Vaillante Chatillonnaise Handball</h1></a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
-					<li><a class="btn2" href="index.html">Accueil</a></li>
-					<li><a class="btn2" href="contact.html">Nous contacter</a></li>
-					<li class="active"><a class="btn2" href="signin.html">Se connecter</a></li>
+					<li><a class="btn2" href="index.View.php">Accueil</a></li>
+					<li class="active"><a class="btn2" href="contact.View.php">Nous contacter</a></li>
+					<li><a class="btn2" href="signin.View.php">Se connecter</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -43,56 +43,64 @@
 	<div class="container">
 
 		<ol class="breadcrumb">
-			<li><a href="index.html">Accueil</a></li>
-			<li class="active">Se connecter</li>
+			<li><a href="index.View.php">Accueil</a></li>
+			<li class="active"> Nous contacter </li>
 		</ol>
 
 		<div class="row">
 
 			<!-- Article main content -->
-			<article class="col-xs-12 maincontent">
+			<article class="col-sm-9 maincontent">
 				<header class="page-header">
-					<h2 class="page-title">Se connecter</h2>
+					<h2 class="page-title">Nous contacter</h2>
 				</header>
 
-				<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-					<div class="panel panel-default">
-						<div class="panel-body">
-							<h3 class="thin text-center">Se connecter à votre compte</h3>
-							<hr>
-
-							<form>
-								<div class="top-margin">
-									<label>Nom d'utilisateur/Email <span class="text-danger">*</span></label>
-									<input type="text" class="form-control">
-								</div>
-								<div class="top-margin">
-									<label>Mot de passe <span class="text-danger">*</span></label>
-									<input type="password" class="form-control">
-								</div>
-
-								<hr>
-
-								<div class="row">
-									<div class="col-lg-8">
-										<b><a href="forgot.html">Mot de passe oublié</a></b>
-									</div>
-									<div class="col-lg-4 text-right">
-										<button class="btn btn-action" type="submit">Connexion</button>
-									</div>
-								</div>
-							</form>
+				<p>
+					Si vous avez des questions ou que vous souhaitez avoir plus d'informations, nous vous invitons à remplir le formulaire ci-dessous.
+					Nous ferons notre maximum pour vous répondre au plus vite.
+				</p>
+				<br>
+					<form>
+						<div class="row">
+							<div class="col-sm-4">
+								<input class="form-control" type="text" placeholder="Nom">
+							</div>
+							<div class="col-sm-4">
+								<input class="form-control" type="text" placeholder="Email">
+							</div>
+							<div class="col-sm-4">
+								<input class="form-control" type="text" placeholder="Telephone">
+							</div>
 						</div>
-					</div>
-
-				</div>
+						<br>
+						<div class="row">
+							<div class="col-sm-12">
+								<textarea placeholder="Inserez vos messages ici..." class="form-control" rows="9"></textarea>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-sm-6 text-right">
+								<input class="btn btn-action" type="submit" value="Envoyer votre message">
+							</div>
+						</div>
+					</form>
 
 			</article>
 			<!-- /Article -->
 
+			<!-- Sidebar -->
+			<aside class="col-sm-3 sidebar sidebar-right">
+
+			</aside>
+			<!-- /Sidebar -->
+
 		</div>
 	</div>	<!-- /container -->
 
+	<section class="container-full top-space">
+		<div id="map"></div>
+	</section>
 
 	<footer id="footer" class="top-space">
 
@@ -133,9 +141,9 @@
 					<div class="col-md-6 widget">
 						<div class="widget-body">
 							<p class="simplenav">
-								<a href="index.html">Accueil</a> |
-								<a href="contact.html">Nous contacter</a> |
-								<b><a href="signin.html">Se connecter</a></b>
+								<a href="index.View.php">Accueil</a> |
+								<b><a href="contact.View.php">Nous contacter</a></b> |
+								<a href="signin.View.php">Se connecter</a>
 							</p>
 						</div>
 					</div>
