@@ -4,7 +4,7 @@ require_once("/users/info/etu-s3/bekelen/public_html/M3301/Model/Adherent.class.
    private $db;
 
    public function __construct($path){
-     $database = 'sqlite:'.$path.'/data.db';
+     $database = 'pgsql:host=localhost;port=5432;dbname=HandBase;user=postgres;password=openthegates';
       try{
         $this->db= new PDO($database,'','');
       }
