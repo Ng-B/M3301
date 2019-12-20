@@ -6,6 +6,7 @@ class Adherent{
   private $dateNaissance;
   private $sexe;
   private $telephone;
+  private $idContact;
 
   public function getNom(): string{
     return $nom;
