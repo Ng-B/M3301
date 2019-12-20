@@ -82,23 +82,23 @@
 	           <label for="role">Rôle(s) :</label>
 						<input type="checkbox" name="joueur" value="joueur" disabled="disabled" checked>     Joueur
 	          <input type="checkbox" name="entraineur" value="entraineur" disabled="disabled">     Entraîneur (catégorie :
-						<select name="categorie">
- 						<option value="-9">-9</option>
-					  <option value="-11">-11</option>
-						<option value="-13M">-13M</option>
-						<option value="-13F">-13F</option>
-						<option value="-15M">-15M</option>
-						<option value="-15F">-15F</option>
-					  <option value="-18M">-18M</option>
-						<option value="-18F" selected>-18F</option>
-						<option value="SeniorM">-SéniorM</option>
-						<option value="SeniorF">-SéniorF</option>
-					  </select>)<br><br>
+						<select name="categorie" disabled="disabled">
+ 						<option value="-9" disabled="disabled">-9</option>
+					  <option value="-11" disabled="disabled">-11</option>
+						<option value="-13M" disabled="disabled">-13M</option>
+						<option value="-13F" disabled="disabled">-13F</option>
+						<option value="-15M" disabled="disabled">-15M</option>
+						<option value="-15F" disabled="disabled">-15F</option>
+					  <option value="-18M" disabled="disabled">-18M</option>
+						<option value="-18F" disabled="disabled" selected >-18F</option>
+						<option value="SeniorM" disabled="disabled">-SéniorM</option>
+						<option value="SeniorF" disabled="disabled">-SéniorF</option>
+					  </select disabled="disabled">)<br><br>
 	          <label for="bureau">Bureau :</label>
 						<select name="bureau" id="bureau">
- 						<option value="president">Président</option>
-					  <option value="secretaire">Secrétaire</option>
-						<option value="secretaire" selected>Aucun des deux</option>
+ 						<option value="president" disabled="disabled">Président</option>
+					  <option value="secretaire" disabled="disabled">Secrétaire</option>
+						<option value="secretaire" disabled="disabled" selected>Aucun des deux</option>
 					 </select>
 	         </fieldset>
 					 <br><br>
