@@ -85,7 +85,7 @@
  						<option value="SeniorF">-SéniorF</option>
  					  </select>
 	        </fieldset>
-	        </form><br><br><br>
+	        </form><br>
 						<input type="submit" value="Valider" id="valider">
 				</div>
 
