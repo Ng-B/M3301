@@ -50,7 +50,7 @@
 	<div class="container">
 
 		<ol class="breadcrumb">
-			<li><a href="index.View.php">Accueil</a></li>
+			<li><a href="indexP.View.php">Accueil</a></li>
 			<li><a href="presidentAdherents.View.php">Gestion des adhérents</a></li>
       <li class="active"> Plus d'informations</li>
 		</ol>

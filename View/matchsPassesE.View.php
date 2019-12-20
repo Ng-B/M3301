@@ -53,7 +53,7 @@
 	<div class="container">
 
 		<ol class="breadcrumb">
-			<li><a href="index.html">Accueil</a></li>
+			<li><a href="indexE.View.php">Accueil</a></li>
 			<li class="active">Matchs passés</li>
 		</ol>
 

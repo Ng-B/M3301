@@ -53,7 +53,7 @@
 	<div class="container">
 
 		<ol class="breadcrumb">
-			<li><a href="indexE.html">Accueil</a></li>
+			<li><a href="indexE.View.php">Accueil</a></li>
 			<li class="active">Gestion des joueurs</li>
 		</ol>
 

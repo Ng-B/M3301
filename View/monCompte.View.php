@@ -50,7 +50,7 @@
 	<div class="container">
 
 		<ol class="breadcrumb">
-			<li><a href="index.View.php">Accueil</a></li>
+			<li><a href="indexP.View.php">Accueil</a></li>
 			<li class="active">Mon compte</li>
 		</ol>
 

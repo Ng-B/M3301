@@ -45,8 +45,8 @@
 	<div class="container">
 
 		<ol class="breadcrumb">
-			<li><a href="index.html">Accueil</a></li>
-			<li><a href="presidentAdherents.html">Gestion des adhérents</a></li>
+			<li><a href="index.View.php">Accueil</a></li>
+			<li><a href="presidentAdherents.View.php">Gestion des adhérents</a></li>
 			<li class="active"> Ajouter un adhérent</li>
 		</ol>
 
