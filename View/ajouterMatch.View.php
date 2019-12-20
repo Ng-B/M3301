@@ -69,8 +69,21 @@
 	           <input type="text" name="id" placeholder="12" required><br><br>
 	           <label for="heure">Heure * :</label>
 					   <input type="text" name="heure" placeholder="10h45">
+						 <label for="role">Catégorie * :</label>
+						 <select name="categorie">
+  					<option value="-9" selected>-9</option>
+ 					  <option value="-11">-11</option>
+ 						<option value="-13M">-13M</option>
+ 						<option value="-13F">-13F</option>
+ 						<option value="-15M">-15M</option>
+ 						<option value="-15F">-15F</option>
+ 					  <option value="-18M">-18M</option>
+ 						<option value="-18F">-18F</option>
+ 						<option value="SeniorM">-SéniorM</option>
+ 						<option value="SeniorF">-SéniorF</option>
+ 					  </select>
 	        </fieldset>
-	        </form><br>
+	        </form><br><br><br>
 						<input type="submit" value="Valider" id="valider">
 				</div>
 
