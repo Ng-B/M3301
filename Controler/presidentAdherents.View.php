@@ -18,6 +18,12 @@
 	<style media="screen">
     th {
      text-align:center;
+		 padding-bottom: 10px;
+    }
+
+		td {
+     text-align:center;
+		 padding-bottom: 10px;
     }
   </style>
 
@@ -30,15 +36,15 @@
 			<div class="navbar-header">
 				<!-- Button for smallest screens -->
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="index.html"><img src="../View/images/logo.png" width = 5% height = 100% alt="" class="logo"><h1>Vaillante Chatillonnaise Handball</h1></a>
+				<a class="navbar-brand" href="indexP.View.php"><img src="../View/images/logo.png" width = 5% height = 100% alt="" class="logo"><h1>Vaillante Chatillonnaise Handball</h1></a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
-					<li><a class="btn2" href="indexP.html">Accueil</a></li>
-					<li class="active"><a class="btn2" href="presidentAdherents.html">Gestion des adhérents</a></li>
-					<li><a class="btn2" href="lesmatchs.html">Gestion des matchs</a></li>
-					<li><a class="btn2" href="monCompte.html">Mon compte</a></li>
-					<li><a class="btn2" href="index.html">Déconnexion</a></li>
+					<li><a class="btn2" href="indexP.View.php">Accueil</a></li>
+					<li class="active"><a class="btn2" href="presidentAdherents.View.php">Gestion des adhérents</a></li>
+					<li><a class="btn2" href="lesmatchs.View.php">Gestion des matchs</a></li>
+					<li><a class="btn2" href="monCompte.View.php">Mon compte</a></li>
+					<li><a class="btn2" href="index.View.php">Déconnexion</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -51,7 +57,7 @@
 	<div class="container">
 
 		<ol class="breadcrumb">
-			<li><a href="index.html">Accueil</a></li>
+			<li><a href="indexP.View.php">Accueil</a></li>
 			<li class="active"> Gestion des adhérents </li>
 		</ol>
 
@@ -63,7 +69,7 @@
 					<h2 class="page-title">Gestion des adhérents</h2>
 				</header>
 				<br>
-				<a href="formulaire.html"><input type="submit" value="Ajouter un adhérent" id="valider"></a><br><br><br>
+				<a href="formulaire.View.php"><input type="submit" value="Ajouter un adhérent" id="valider"></a><br><br><br>
 				<table style="width:100%">
 			 <tr>
 				 <th>Nom</th>
@@ -71,6 +77,7 @@
 				 <th>Age</th>
 				 <th>Sexe</th>
 				 <th>Rôle</th>
+				 <th>Catégorie</th>
 				 <th></th>
 			 </tr>
 			 <tr>
@@ -79,7 +86,8 @@
 				 <td>19</td>
 				 <td>M</td>
 				 <td>Président</td>
-				 <td><a href="plusInfos.html">Plus d'informations</a></td>
+				 <td>-18M</td>
+				 <td><a href="plusInfos.View.php">Plus d'informations</a></td>
 			 </tr>
 			 <tr>
 				 <td>FABRY</td>
@@ -87,7 +95,8 @@
 				 <td>19</td>
 				 <td>M</td>
 				 <td>Joueur</td>
-				 <td><a href="plusInfos.html">Plus d'informations</a></td>
+				 <td>-18M</td>
+				 <td><a href="plusInfos.View.php">Plus d'informations</a></td>
 			 </tr>
 			 <tr>
 				 <td>BEKELE</td>
@@ -95,7 +104,8 @@
 				 <td>19</td>
 				 <td>M</td>
 				 <td>Joueur</td>
-				 <td><a href="plusInfos.html">Plus d'informations</a></td>
+				 <td>-18M</td>
+				 <td><a href="plusInfos.View.php">Plus d'informations</a></td>
 			 </tr>
 			 <tr>
 				 <td>LARAICHI</td>
@@ -103,7 +113,8 @@
 				 <td>19</td>
 				 <td>M</td>
 				 <td>Joueur</td>
-				 <td><a href="plusInfos.html">Plus d'informations</a></td>
+				 <td>-18M</td>
+				 <td><a href="plusInfos.View.php">Plus d'informations</a></td>
 			 </tr>
 			 <tr>
 				 <td>ALIDA</td>
@@ -111,7 +122,8 @@
 				 <td>19</td>
 				 <td>F</td>
 				 <td>Joueur</td>
-				 <td><a href="plusInfos.html">Plus d'informations</a></td>
+				 <td>-18M</td>
+				 <td><a href="plusInfos.View.php">Plus d'informations</a></td>
 			 </tr>
 			 <tr>
 				 <td>NULL</td>
@@ -119,7 +131,8 @@
 				 <td>19</td>
 				 <td>M</td>
 				 <td>Joueur</td>
-				 <td><a href="plusInfos.html">Plus d'informations</a></td>
+				 <td>-18M</td>
+				 <td><a href="plusInfos.View.php">Plus d'informations</a></td>
 			 </tr>
 			 <tr>
 				 <td>NULL</td>
@@ -127,7 +140,8 @@
 				 <td>19</td>
 				 <td>M</td>
 				 <td>Joueur</td>
-				 <td><a href="plusInfos.html">Plus d'informations</a></td>
+				 <td>-18M</td>
+				 <td><a href="plusInfos.View.php">Plus d'informations</a></td>
 			 </tr>
 			</table>
 
@@ -186,11 +200,11 @@
 					<div class="col-md-6 widget">
 						<div class="widget-body">
 							<p class="simplenav">
-								<a href="indexP.html">Accueil</a> |
-								<b><a href="presidentAdherents.html">Gestion des adhérents</a></b> |
-								<a href="lesmatchs.html">Gestion des matchs</a> |
-								<a href="monCompte.html">Mon compte</a> |
-								<a href="index.html">Déconnexion</a>
+								<a href="indexP.View.php">Accueil</a> |
+								<b><a href="presidentAdherents.View.php">Gestion des adhérents</a></b> |
+								<a href="lesmatchs.View.php">Gestion des matchs</a> |
+							  <a href="monCompte.View.php">Mon compte</a>
+								<a href="index.View.php">Déconnexion</a>
 							</p>
 						</div>
 					</div>

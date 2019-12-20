@@ -24,13 +24,13 @@
 			<div class="navbar-header">
 				<!-- Button for smallest screens -->
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="index.html"><img src="../View/images/logo.png" alt="logo club" width = 5% height = 100% class="logo"><h1>Vaillante Chatillonnaise Handball</h1></a>
+				<a class="navbar-brand" href="index.View.php"><img src="../View/images/logo.png" alt="logo club" width = 5% height = 100% class="logo"><h1>Vaillante Chatillonnaise Handball</h1></a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
-					<li><a class="btn2" href="index.html">Accueil</a></li>
-					<li><a class="btn2" href="contact.html">Nous contacter</a></li>
-					<li class="active"><a class="btn2" href="signin.html">Se connecter</a></li>
+					<li><a class="btn2" href="index.View.php">Accueil</a></li>
+					<li><a class="btn2" href="contact.View.php">Nous contacter</a></li>
+					<li class="active"><a class="btn2" href="signin.View.php">Se connecter</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -43,7 +43,7 @@
 	<div class="container">
 
 		<ol class="breadcrumb">
-			<li><a href="index.html">Accueil</a></li>
+			<li><a href="index.View.php">Accueil</a></li>
 			<li class="active">Se connecter</li>
 		</ol>
 
@@ -75,7 +75,7 @@
 
 								<div class="row">
 									<div class="col-lg-8">
-										<b><a href="forgot.html">Mot de passe oublié</a></b>
+										<b><a href="forgot.View.php">Mot de passe oublié</a></b>
 									</div>
 									<div class="col-lg-4 text-right">
 										<button class="btn btn-action" type="submit">Connexion</button>
@@ -133,9 +133,9 @@
 					<div class="col-md-6 widget">
 						<div class="widget-body">
 							<p class="simplenav">
-								<a href="index.html">Accueil</a> |
-								<a href="contact.html">Nous contacter</a> |
-								<b><a href="signin.html">Se connecter</a></b>
+								<a href="index.View.php">Accueil</a> |
+								<a href="contact.View.php">Nous contacter</a> |
+								<b><a href="signin.View.php">Se connecter</a></b>
 							</p>
 						</div>
 					</div>

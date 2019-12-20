@@ -34,14 +34,16 @@
 			<div class="navbar-header">
 				<!-- Button for smallest screens -->
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="indexP.View.php"><img src="../View/images/logo.png" width = 5% height = 100% alt="" class="logo"><h1>Vaillante Chatillonnaise Handball</h1></a>
+				<a class="navbar-brand" href="indexE.View.php"><img src="../View/images/logo.png" width = 5% height = 100% alt="" class="logo"><h1>Vaillante Chatillonnaise Handball</h1></a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
-					<li><a class="btn2" href="indexP.View.php">Accueil</a></li>
-					<li class="active"><a class="btn2" href="presidentAdherents.View.php">Gestion des adhérents</a></li>
-          <li><a class="btn2" href="lesmatchs.View.php">Gestion des matchs</a></li>
-					<li><a class="btn2" href="monCompte.View.php">Mon compte</a></li>
+					<li><a class="btn2" href="indexE.View.php">Accueil</a></li>
+					<li><a class="btn2" href="gestionJoueur.View.php">Gestion des joueurs</a></li>
+					<li><a class="btn2" href="gestionEquipe.View.php">Gestion de l'équipe</a></li>
+					<li><a class="btn2" href="matchsPassesE.View.php">Matchs passés</a></li>
+					<li><a class="btn2" href="matchsVenirE.View.php">Matchs à venir</a></li>
+					<li class="active"><a class="btn2" href="monCompteE.View.php">Mon compte</a></li>
 					<li><a class="btn2" href="index.View.php">Déconnexion</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
@@ -55,9 +57,8 @@
 	<div class="container">
 
 		<ol class="breadcrumb">
-			<li><a href="indexP.View.php">Accueil</a></li>
-			<li><a href="presidentAdherents.View.php">Gestion des adhérents</a></li>
-      <li class="active"> Plus d'informations</li>
+			<li><a href="indexE.View.php">Accueil</a></li>
+			<li class="active">Mon compte</li>
 		</ol>
 
 		<div class="row">
@@ -65,10 +66,9 @@
 			<!-- Article main content -->
 			<article class="col-sm-9 maincontent">
 				<header class="page-header">
-					<h2 class="page-title">Plus d'informations</h2>
+					<h2 class="page-title">Mon compte</h2>
 				</header>
 				<br>
-				<a href="modifier.View.php"><input type="submit" value="Modifier" id="valider"></a><br><br><br>
 				<table style="width:100%">
 			 <tr>
          <th>ID :</th>
@@ -108,23 +108,7 @@
        </tr>
        <tr>
          <th>Bureau :</th>
-         <td>NULL</td>
-       </tr>
-       <tr>
-         <th>Numéro de téléphone portable père :</th>
-         <td>NULL</td>
-       </tr>
-       <tr>
-         <th>Numéro de téléphone fixe père :</th>
-         <td>NULL</td>
-       </tr>
-       <tr>
-         <th>Numéro de téléphone portable mère :</th>
-         <td>NULL</td>
-       </tr>
-       <tr>
-         <th>Numéro de téléphone fixe mère :</th>
-         <td>NULL</td>
+         <td>Président</td>
        </tr>
 			</table>
 
@@ -183,10 +167,12 @@
 					<div class="col-md-6 widget">
 						<div class="widget-body">
 							<p class="simplenav">
-								<a href="indexP.View.php">Accueil</a> |
-								<b><a href="presidentAdherents.View.php">Gestion des adhérents</a></b> |
-                <a href="lesmatchs.View.php">Gestion des matchs</a> |
-							  <a href="monCompte.View.php">Mon compte</a>
+								<a href="indexE.View.php">Accueil</a> |
+								<a href="gestionJoueur.View.php">Gestion des joueurs</a>|
+								<a href="gestionEquipe.View.php">Gestion de l'équipe</a> |
+								<a href="matchsPassesE.View.php">Matchs passés</a> |
+								<a href="matchsVenirE.View.php">Matchs à venir</a> |
+								<b><a href="monCompteE.View.php">Mon compte</a></b>  |
 								<a href="index.View.php">Déconnexion</a>
 							</p>
 						</div>

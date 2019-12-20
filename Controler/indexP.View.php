@@ -24,13 +24,15 @@
 			<div class="navbar-header">
 				<!-- Button for smallest screens -->
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="index.View.php"><img src="../View/images/logo.png" alt="logo club" width = 5% height = 100% class="logo"><h1>Vaillante Chatillonnaise Handball</h1></a>
+				<a class="navbar-brand" href="indexP.View.php"><img src="../View/images/logo.png" alt="logo club" width = 5% height = 100% class="logo"><h1>Vaillante Chatillonnaise Handball</h1></a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
-					<li class="active"><a class="btn2" href="#">Accueil</a></li>
-					<li><a class="btn2" href="contact.View.php">Nous contacter</a></li>
-					<li><a class="btn2" href="signin.View.php">Se connecter</a></li>
+					<li class="active"><a class="btn2" href="indexP.View.php">Accueil</a></li>
+					<li><a class="btn2" href="presidentAdherents.View.php">Gestion des adhérents</a></li>
+					<li><a class="btn2" href="lesmatchs.View.php">Gestion des matchs</a></li>
+					<li><a class="btn2" href="monCompte.View.php">Mon compte</a></li>
+					<li><a class="btn2" href="index.View.php">Déconnexion</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -164,9 +166,11 @@
 					<div class="col-md-6 widget">
 						<div class="widget-body">
 							<p class="simplenav">
-								<b><a href="index.View.php">Accueil</a></b> |
-								<a href="contact.View.php">Nous contacter</a> |
-								<a href="signin.View.php">Se connecter</a>
+								<b><a href="indexP.View.php">Accueil</a></b> |
+								<a href="presidentAdherents.View.php">Gestion des adhérents</a> |
+								<a href="lesmatchs.View.php">Gestion des matchs</a> |
+								<a href="monCompte.View.php">Mon compte</a> |
+								<a href="index.View.php">Déconnexion</a>
 							</p>
 						</div>
 					</div>

@@ -15,18 +15,14 @@
 	<link rel="stylesheet" href="../View/css/bootstrap-theme.css" media="screen" >
 	<link rel="stylesheet" href="../View/css/main.css">
 
-  <style media="screen">
-	th {
-	 text-align:left;
-	 padding-bottom: 10px;
-	}
-
-	td {
-	 padding-bottom: 10px;
-	}
+	<style media="screen">
+    th {
+     text-align:center;
+    }
   </style>
 
 </head>
+
 <body>
 	<!-- Fixed navbar -->
 	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
@@ -34,13 +30,15 @@
 			<div class="navbar-header">
 				<!-- Button for smallest screens -->
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="indexP.View.php"><img src="../View/images/logo.png" width = 5% height = 100% alt="" class="logo"><h1>Vaillante Chatillonnaise Handball</h1></a>
+				<a class="navbar-brand" href="indexE.View.php"><img src="../View/images/logo.png" width = 5% height = 100% alt="" class="logo"><h1>Vaillante Chatillonnaise Handball</h1></a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
-					<li><a class="btn2" href="indexP.View.php">Accueil</a></li>
-					<li class="active"><a class="btn2" href="presidentAdherents.View.php">Gestion des adhérents</a></li>
-          <li><a class="btn2" href="lesmatchs.View.php">Gestion des matchs</a></li>
+					<li><a class="btn2" href="indexE.View.php">Accueil</a></li>
+					<li class="active"><a class="btn2" href="gestionJoueur.View.php">Gestion des joueurs</a></li>
+					<li><a class="btn2" href="gestionEquipe.View.php">Gestion de l'équipe</a></li>
+					<li><a class="btn2" href="matchsPassesE.View.php">Matchs passés</a></li>
+					<li><a class="btn2" href="matchsVenirE.View.php">Matchs à venir</a></li>
 					<li><a class="btn2" href="monCompte.View.php">Mon compte</a></li>
 					<li><a class="btn2" href="index.View.php">Déconnexion</a></li>
 				</ul>
@@ -55,9 +53,8 @@
 	<div class="container">
 
 		<ol class="breadcrumb">
-			<li><a href="indexP.View.php">Accueil</a></li>
-			<li><a href="presidentAdherents.View.php">Gestion des adhérents</a></li>
-      <li class="active"> Plus d'informations</li>
+			<li><a href="indexE.View.php">Accueil</a></li>
+			<li class="active">Gestion des joueurs</li>
 		</ol>
 
 		<div class="row">
@@ -65,67 +62,74 @@
 			<!-- Article main content -->
 			<article class="col-sm-9 maincontent">
 				<header class="page-header">
-					<h2 class="page-title">Plus d'informations</h2>
+					<h2 class="page-title">Gestion des adhérents</h2>
 				</header>
 				<br>
-				<a href="modifier.View.php"><input type="submit" value="Modifier" id="valider"></a><br><br><br>
 				<table style="width:100%">
 			 <tr>
-         <th>ID :</th>
-         <td>1</td>
-       </tr>
-       <tr>
-				 <th>Nom :</th>
-         <td>LOCATELLI</td>
-       </tr>
-       <tr>
-				 <th>Prénom :</th>
-         <td>Antoine</td>
-       </tr>
-       <tr>
-         <th>Date de naissance :</th>
-         <td>01/01/2000</td>
-       </tr>
-       <tr>
-         <th>Sexe : </th>
-         <td>Homme</td>
-       </tr>
-       <tr>
-				 <th>Numéro de téléphone :</th>
-         <td>0651213520</td>
-       </tr>
-       <tr>
-				 <th>Adresse mail :</th>
-         <td>antoine.locatelli@iut2.univ-grenoble-alpes.fr</td>
-       </tr>
-       <tr>
-				 <th>Numéro de licence :</th>
-         <td>123456789</td>
-       </tr>
-       <tr>
-         <th>Rôle :</th>
-         <td>Joueur</td>
-       </tr>
-       <tr>
-         <th>Bureau :</th>
-         <td>NULL</td>
-       </tr>
-       <tr>
-         <th>Numéro de téléphone portable père :</th>
-         <td>NULL</td>
-       </tr>
-       <tr>
-         <th>Numéro de téléphone fixe père :</th>
-         <td>NULL</td>
-       </tr>
-       <tr>
-         <th>Numéro de téléphone portable mère :</th>
-         <td>NULL</td>
-       </tr>
-       <tr>
-         <th>Numéro de téléphone fixe mère :</th>
-         <td>NULL</td>
-       </tr>
+				 <th>Nom</th>
+				 <th>Prénom</th>
+				 <th>Age</th>
+				 <th>Sexe</th>
+				 <th>Rôle</th>
+				 <th></th>
+			 </tr>
+			 <tr>
+				 <td>LOCATELLI</td>
+				 <td>Antoine</td>
+				 <td>19</td>
+				 <td>M</td>
+				 <td>Président</td>
+				 <td><a href="plusInfosE.html">Plus d'informations</a></td>
+			 </tr>
+			 <tr>
+				 <td>FABRY</td>
+				 <td>Dorian</td>
+				 <td>19</td>
+				 <td>M</td>
+				 <td>Joueur</td>
+				 <td><a href="plusInfosE.html">Plus d'informations</a></td>
+			 </tr>
+			 <tr>
+				 <td>BEKELE</td>
+				 <td>Naod</td>
+				 <td>19</td>
+				 <td>M</td>
+				 <td>Joueur</td>
+				 <td><a href="plusInfosE.html">Plus d'informations</a></td>
+			 </tr>
+			 <tr>
+				 <td>LARAICHI</td>
+				 <td>Aymane</td>
+				 <td>19</td>
+				 <td>M</td>
+				 <td>Joueur</td>
+				 <td><a href="plusInfosE.html">Plus d'informations</a></td>
+			 </tr>
+			 <tr>
+				 <td>ALIDA</td>
+				 <td>Marie</td>
+				 <td>19</td>
+				 <td>F</td>
+				 <td>Joueur</td>
+				 <td><a href="plusInfosE.html">Plus d'informations</a></td>
+			 </tr>
+			 <tr>
+				 <td>NULL</td>
+				 <td>Kamal</td>
+				 <td>19</td>
+				 <td>M</td>
+				 <td>Joueur</td>
+				 <td><a href="plusInfosE.html">Plus d'informations</a></td>
+			 </tr>
+			 <tr>
+				 <td>NULL</td>
+				 <td>Dimitri</td>
+				 <td>19</td>
+				 <td>M</td>
+				 <td>Joueur</td>
+				 <td><a href="plusInfosE.html">Plus d'informations</a></td>
+			 </tr>
 			</table>
 
 			</article>
@@ -183,10 +187,12 @@
 					<div class="col-md-6 widget">
 						<div class="widget-body">
 							<p class="simplenav">
-								<a href="indexP.View.php">Accueil</a> |
-								<b><a href="presidentAdherents.View.php">Gestion des adhérents</a></b> |
-                <a href="lesmatchs.View.php">Gestion des matchs</a> |
-							  <a href="monCompte.View.php">Mon compte</a>
+								<a href="indexE.View.php">Accueil</a> |
+								<b><a href="gestionJoueur.View.php">Gestion des joueurs</a></b> |
+								<a href="gestionEquipe.View.php">Gestion de l'équipe</a> |
+								<a href="matchsPassesE.View.php">Matchs passés</a> |
+								<a href="matchsVenirE.View.php">Matchs à venir</a> |
+								<a href="monCompteE.View.php">Mon compte</a> |
 								<a href="index.View.php">Déconnexion</a>
 							</p>
 						</div>

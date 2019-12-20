@@ -24,15 +24,15 @@
 			<div class="navbar-header">
 				<!-- Button for smallest screens -->
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="index.html"><img src="../View/images/logo.png" width = 5% height = 100% alt="" class="logo"><h1>Vaillante Chatillonnaise Handball</h1></a>
+				<a class="navbar-brand" href="indexP.View.php"><img src="../View/images/logo.png" width = 5% height = 100% alt="" class="logo"><h1>Vaillante Chatillonnaise Handball</h1></a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
-					<li><a class="btn2" href="indexP.html">Accueil</a></li>
+					<li><a class="btn2" href="indexP.View.php">Accueil</a></li>
 					<li class="active"><a class="btn2" href="presidentAdherents.html">Gestion des adhérents</a></li>
-					<li><a class="btn2" href="lesmatchs.html">Gestion des matchs</a></li>
-					<li><a class="btn2" href="monCompte.html">Mon compte</a></li>
-					<li><a class="btn2" href="index.html">Déconnexion</a></li>
+					<li><a class="btn2" href="lesmatchs.View.php">Gestion des matchs</a></li>
+					<li><a class="btn2" href="monCompte.View.php">Mon compte</a></li>
+					<li><a class="btn2" href="index.View.php">Déconnexion</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -45,8 +45,8 @@
 	<div class="container">
 
 		<ol class="breadcrumb">
-			<li><a href="index.html">Accueil</a></li>
-			<li><a href="presidentAdherents.html">Gestion des adhérents</a></li>
+			<li><a href="index.View.php">Accueil</a></li>
+			<li><a href="presidentAdherents.View.php">Gestion des adhérents</a></li>
 			<li class="active"> Ajouter un adhérent</li>
 		</ol>
 
@@ -68,7 +68,7 @@
 	           <label for="lastname">Prénom * :</label>
 	           <input type="text" name="lastname" placeholder="Alain" required><br><br>
 	           <label for="date">Date de naissance * :</label>
-	           <input type="text" name="date" placeholder="jj/mm/aaaa" required><br><br>
+	           <input type="date" name="date" placeholder="jj/mm/aaaa" required><br><br>
 	           <label for="gender">Sexe * :</label>
 						<input type="radio" name="gender" value="male" checked>     Homme
 	          <input type="radio" name="gender" value="female">     Femme<br><br>
@@ -113,7 +113,7 @@
 	           <input type="text" name="phoneMF" placeholder="0456358975"><br><br>
 	        </fieldset>
 	        </form><br>
-						<input type="submit" value="Valider" id="valider">
+						<a href="confirmation.View.php"><input type="submit" value="Valider" id="valider"></a>
 				</div>
 
 			</article>
@@ -171,11 +171,11 @@
 					<div class="col-md-6 widget">
 						<div class="widget-body">
 							<p class="simplenav">
-								<a href="index.html">Accueil</a> |
-								<b><a href="presidentAdherents.html">Gestion des adhérents</a></b> |
-								<a href="lesmatchs.html">Gestion des matchs</a> |
-								<a href="monCompte.html">Mon compte</a> |
-								<a href="indexP.html">Déconnexion</a>
+								<a href="indexP.View.php">Accueil</a> |
+								<b><a href="presidentAdherents.View.php">Gestion des adhérents</a></b> |
+								<a href="lesmatchs.View.php">Gestion des matchs</a> |
+								<a href="monCompte.View.php">Mon compte</a>
+								<a href="index.View.php">Déconnexion</a>
 							</p>
 						</div>
 					</div>
