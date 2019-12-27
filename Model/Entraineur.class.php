@@ -1,5 +1,5 @@
 <?php
-  class Bureau{
+  class Entraineur{
     private $categorie;
     private $idAdh;
 
