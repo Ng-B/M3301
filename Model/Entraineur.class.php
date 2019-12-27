@@ -7,7 +7,7 @@
       return $categorie;
     }
 
-    public function getidAdh(){
+    public function getIdAdh(){
       return $idAdh;
     }
   }

@@ -5,11 +5,11 @@
       private $nbButs;
       private $nbTirs;
 
-      public function getIDJoueur(){
+      public function getIdJoueur(){
         return $idJoueur;
       }
 
-      public function getIDMatch(){
+      public function getIdMatch(){
         return $idMatch;
       }
 
