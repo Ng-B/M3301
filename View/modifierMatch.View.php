@@ -28,11 +28,11 @@
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
-					<li><a class="btn2" href="indexP.View.php">Accueil</a></li>
-					<li><a class="btn2" href="presidentAdherents.View.php">Gestion des adhérents</a></li>
-					<li class="active"><a class="btn2" href="lesmatchs.View.php">Gestion des matchs</a></li>
-					<li><a class="btn2" href="monCompte.View.php">Mon compte</a></li>
-					<li><a class="btn2" href="index.View.php">Déconnexion</a></li>
+					<li><a class="btn2" href="../View/indexP.View.php">Accueil</a></li>
+					<li><a class="btn2" href="../View/presidentAdherents.View.php">Gestion des adhérents</a></li>
+					<li class="active"><a class="btn2" href="../View/lesmatchs.View.php">Gestion des matchs</a></li>
+					<li><a class="btn2" href="../View/monCompte.View.php">Mon compte</a></li>
+					<li><a class="btn2" href="../View/index.View.php">Déconnexion</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -45,9 +45,9 @@
 	<div class="container">
 
 		<ol class="breadcrumb">
-			<li><a href="indexP.View.php">Accueil</a></li>
-			<li><a href="lesmatchs.View.php">Gestion des matchs</a></li>
-			<li><a href="ajouterMatch.View.php">Ajouter un match</a></li>
+			<li><a href="../View/indexP.View.php">Accueil</a></li>
+			<li><a href="../View/lesmatchs.View.php">Gestion des matchs</a></li>
+			<li><a href="../View/ajouterMatch.View.php">Ajouter un match</a></li>
       <li class="active">Modifier un match</li>
 		</ol>
 
@@ -89,7 +89,7 @@
 						 </select>
 				 </fieldset>
 				 </form><br>
-					 <a href="confirmationMatch.View.php"><input type="submit" value="Valider" id="valider"></a>
+					 <a href="../View/confirmationMatch.View.php"><input type="submit" value="Valider" id="valider"></a>
 				</div>
 
 			</article>
@@ -147,11 +147,11 @@
 					<div class="col-md-6 widget">
 						<div class="widget-body">
 							<p class="simplenav">
-								<a href="indexP.View.php">Accueil</a> |
-								<b><a href="presidentAdherents.View.php">Gestion des adhérents</a></b> |
-								<a href="lesmatchs.View.php">Gestion des matchs</a> |
-								<a href="monCompte.View.php">Mon compte</a>
-								<a href="index.View.php">Déconnexion</a>
+								<a href="../View/indexP.View.php">Accueil</a> |
+								<b><a href="../View/presidentAdherents.View.php">Gestion des adhérents</a></b> |
+								<a href="../View/lesmatchs.View.php">Gestion des matchs</a> |
+								<a href="../View/monCompte.View.php">Mon compte</a>
+								<a href="../View/index.View.php">Déconnexion</a>
 							</p>
 						</div>
 					</div>

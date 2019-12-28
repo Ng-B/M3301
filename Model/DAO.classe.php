@@ -1,16 +1,18 @@
 <?php
-require_once("./Adherent.class.php");
+//require_once("./Adherent.class.php");
  class DAO{
    private $db;
 
-   public function __construct($path){
-     $database = 'pgsql:host=localhost;port=5432;dbname=HandBase;user=postgres;password=openthegates';
+   public function __construct(){
+     //$database = 'pgsql:host=localhost;port=5432;dbname=HandBase;user=postgres;password=openthegates';
+     //$database = 'pgsql:host=localhost;dbname='projet';user=nn;password=nn';
+    $myPDO = new PDO('pgsql:host=localhost;dbname=projet', 'nn', 'nn');
       try{
-        $this->db= new PDO($database,'','');
+        $this->db= $myPDO;
       }
 
       catch (PDOException $e){
-        die("erreur de connexion:".$database."--".$e->getMessage());
+        die("erreur de connexion:".$myPDO."--".$e->getMessage());
       }
    }
 
@@ -71,6 +73,16 @@ public function getAdherentParDateNaiisance(string $date /*pas de variable date*
    return count($donnees);
  }
 
+ public function getAdherentParLogin(string $login) {
+   $reponse=$this->db->query("SELECT * FROM ADHERENT WHERE login='$login' ");
+   $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"Adherent");
+   if(count($donnees) == 0) {
+     printf("Aucun adherent avec cette date de naissance");
+   } else {
+     $adherent= $donnees[0];
+     return $adherent;
+   }
+  }
  //--------------------------------JOUEUR----------------------------------//
  public function getJoueurParID(int $id): Joueur {
    $reponse=$this->db->query("SELECT * FROM Joueur WHERE idAdh=$id ");

@@ -88,6 +88,10 @@ h1 {position: absolute; top:0px; left: 130px;}
 	.widget-simplenav { margin-left:-5px; }
 	.widget-simplenav a{ margin:0 5px; }
 
+.password_incorrect_message {
+	color: red;
+}
+
 .formulaire label {
 	width: 275px;
 }

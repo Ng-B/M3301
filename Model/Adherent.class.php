@@ -5,31 +5,40 @@ class Adherent{
   private $prenom;
   private $dateNaissance;
   private $sexe;
-  private $telephone;
-  private $idContact;
+  private $telperso;
+  private $login;
+  private $password;
+  private $numlicense;
+  private $validation;
+  private $montant;
+  private $mail;
 
   public function getNom(): string{
-    return $nom;
+    return $this->nom;
   }
 
   public function getId(): int{
-    return $id;
+    return $this->id;
   }
 
   public function getPrenom(): string{
-    return $prenom;
+    return $this->prenom;
   }
 
   public function getDateNaissance(): string{
-    return $dateNaissance;
+    return $this->dateNaissance;
   }
 
   public function getSexe(): string{
-    return $sexe;
+    return $this->sexe;
+  }
+
+  public function getPassword(): string {
+    return $this->password;
   }
 
   public function getTelephone(): string{
-    return $telephone;
+    return $this->telephone;
   }
 
   public function setNom(string $nom){

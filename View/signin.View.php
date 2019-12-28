@@ -61,18 +61,27 @@
 							<h3 class="thin text-center">Se connecter à votre compte</h3>
 							<hr>
 
-							<form>
+							<form action="http://localhost:5555/Controler/signin.ctrl.php" method="post">
 								<div class="top-margin">
 									<label>Nom d'utilisateur/Email <span class="text-danger">*</span></label>
-									<input type="text" class="form-control">
+									<input type="text" name="login" class="form-control">
 								</div>
 								<div class="top-margin">
 									<label>Mot de passe <span class="text-danger">*</span></label>
-									<input type="password" class="form-control">
+									<input type="password" name="password" class="form-control">
 								</div>
 
 								<hr>
+								<?php
+		 					if($this->errorLogin == true ) {
 
+								?>
+
+								<div class="password incorrect message">
+								<font color="red">	<b> Mot de passe ou login incorrect, veuillez réessayer </b> </font>
+								</div>
+									<br>
+								<?php } ?>
 								<div class="row">
 									<div class="col-lg-8">
 										<b><a href="forgot.View.php">Mot de passe oublié</a></b>
@@ -81,6 +90,7 @@
 										<button class="btn btn-action" type="submit">Connexion</button>
 									</div>
 								</div>
+
 							</form>
 						</div>
 					</div>
