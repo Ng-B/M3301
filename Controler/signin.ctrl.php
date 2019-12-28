@@ -19,8 +19,9 @@ echo $NTA;
     }
 */
 //---------------------------------------------Tri par prix, méthode TRIX PAR BULLE-------------------------------------//
-$myPDO = new DAO();
+
 if(isset($_POST["login"]) && isset($_POST["password"])){
+	$myPDO = new DAO();
 	$m = $myPDO->getAdherentParLogin($_POST["login"]);
 		if(is_null($m)){
 			$view= new View("../View/signin.View.php");

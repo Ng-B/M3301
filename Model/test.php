@@ -10,6 +10,6 @@ $m = $myPDO->getAdherentParId(45);
 print($m->getNom());*/
 
 $myPDO = new DAO();
-$m = $myPDO->getAdherentParLogin('bnaod');
+$m = $myPDO->getAdherentParLogin('fabryd');
 print($m->getNom());
 ?>

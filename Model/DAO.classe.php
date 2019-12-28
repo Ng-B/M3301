@@ -4,9 +4,9 @@
    private $db;
 
    public function __construct(){
-     //$database = 'pgsql:host=localhost;port=5432;dbname=HandBase;user=postgres;password=openthegates';
-     //$database = 'pgsql:host=localhost;dbname='projet';user=nn;password=nn';
-    $myPDO = new PDO('pgsql:host=localhost;dbname=projet', 'nn', 'nn');
+     //$myPDO = new PDO('pgsql:host=localhost;dbname=projet', 'nn', 'nn');
+     $myPDO = new PDO('pgsql:host=localhost;port=5432;dbname=HandBase;user=postgres;password=openthegates');
+
       try{
         $this->db= $myPDO;
       }
@@ -100,7 +100,7 @@ public function getAdherentParDateNaiisance(string $date /*pas de variable date*
 
 //--------------------------------ENTRAINEUR----------------------------------//
   public function getEntraineurParID(int $id): Entraineur {
-    $reponse=$this->db->query("SELECT * FROM Entraineurs WHERE idAdh=$id ");
+    $reponse=getPDO()->query("SELECT * FROM Entraineurs WHERE idAdh=$id ");
     $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"Entraineurs");
     if(count($donnees)>1) {
       printf("Plusieurs entraineurs avec cet id");
@@ -187,6 +187,9 @@ public function getAdherentParDateNaiisance(string $date /*pas de variable date*
             }
           }
 
+          public function getPDO() {
+            return $this->db;
+          }
 }
 
 
