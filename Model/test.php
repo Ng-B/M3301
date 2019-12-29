@@ -14,6 +14,6 @@ $m = $myPDO->getAdherentParLogin('fabryd');
 print($m->getNom());*/
 
 $myPDO = new DAO();
-$m = $myPDO->getMatchsPasses('KamalLag');
-print($m[0]->getLieu());
+$m = $myPDO->estMembreDuBureau(928);
+print($m);
 ?>

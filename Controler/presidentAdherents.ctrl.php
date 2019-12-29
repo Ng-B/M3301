@@ -1,225 +1,48 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<?php
+require_once("../Framework/view.class.php");
+// Récupération des données de configuration
+
+require_once("../Model/Adherent.class.php");
+include("../Model/DAO.classe.php");
 
 
-
-	<link rel="shortcut icon" href="../View/images/logo.png">
-
-	<link rel="stylesheet" href="../View/css/bootstrap.min.css">
-	<link rel="stylesheet" href="../View/css/font-awesome.min.css">
-
-	<!-- Custom styles for our template -->
-	<link rel="stylesheet" href="../View/css/bootstrap-theme.css" media="screen" >
-	<link rel="stylesheet" href="../View/css/main.css">
-
-	<style media="screen">
-    th {
-     text-align:center;
-		 padding-bottom: 10px;
+// Creation de l'instace DAO
+/*
+$adherents = new DAO("/users/info/etu-s3/bekelen/public_html/M3301/Model/data");
+$NTA=$adherents->getNombreTotalAdherents();
+echo $NTA;
+  for($i=1;$i<7;$i++){
+      // Récupération de tous les objets Music
+      $m = $adherents->getAdherentParId($i);
+      // Ajout à la liste des telephones à afficher
+      $list[$i] = $m;
     }
+*/
+//---------------------------------------------Tri par prix, méthode TRIX PAR BULLE-------------------------------------//
 
-		td {
-     text-align:center;
-		 padding-bottom: 10px;
-    }
-  </style>
+if(isset($_GET["login"]) ){
+	$myPDO = new DAO();
+	$adherents= $myPDO->get_All_Adherent();
+		if(is_null($adherents) ){
+			$view= new View("../View/presidentAdherents.View.php");
+			$view->no_adherents=true;
+			$view->show();
+			} else {
+				$view= new View("../View/presidentAdherents.View.php");
+				$view->adherents=$adherents;
+				$view->show();
 
-</head>
+			}
 
-<body>
-	<!-- Fixed navbar -->
-	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
-		<div class="container2" >
-			<div class="navbar-header">
-				<!-- Button for smallest screens -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="indexP.View.php"><img src="../View/images/logo.png" width = 5% height = 100% alt="" class="logo"><h1>Vaillante Chatillonnaise Handball</h1></a>
-			</div>
-			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav pull-right">
-					<li><a class="btn2" href="indexP.View.php">Accueil</a></li>
-					<li class="active"><a class="btn2" href="presidentAdherents.View.php">Gestion des adhérents</a></li>
-					<li><a class="btn2" href="lesmatchs.View.php">Gestion des matchs</a></li>
-					<li><a class="btn2" href="monCompte.View.php">Mon compte</a></li>
-					<li><a class="btn2" href="index.View.php">Déconnexion</a></li>
-				</ul>
-			</div><!--/.nav-collapse -->
-		</div>
-	</div>
-	<!-- /.navbar -->
-
-	<header id="head" class="secondary"></header>
-
-	<!-- container -->
-	<div class="container">
-
-		<ol class="breadcrumb">
-			<li><a href="indexP.View.php">Accueil</a></li>
-			<li class="active"> Gestion des adhérents </li>
-		</ol>
-
-		<div class="row">
-
-			<!-- Article main content -->
-			<article class="col-sm-9 maincontent">
-				<header class="page-header">
-					<h2 class="page-title">Gestion des adhérents</h2>
-				</header>
-				<br>
-				<a href="formulaire.View.php"><input type="submit" value="Ajouter un adhérent" id="valider"></a><br><br><br>
-				<table style="width:100%">
-			 <tr>
-				 <th>Nom</th>
-				 <th>Prénom</th>
-				 <th>Age</th>
-				 <th>Sexe</th>
-				 <th>Rôle</th>
-				 <th>Catégorie</th>
-				 <th></th>
-			 </tr>
-			 <tr>
-				 <td>LOCATELLI</td>
-				 <td>Antoine</td>
-				 <td>19</td>
-				 <td>M</td>
-				 <td>Président</td>
-				 <td>-18M</td>
-				 <td><a href="plusInfos.View.php">Plus d'informations</a></td>
-			 </tr>
-			 <tr>
-				 <td>FABRY</td>
-				 <td>Dorian</td>
-				 <td>19</td>
-				 <td>M</td>
-				 <td>Joueur</td>
-				 <td>-18M</td>
-				 <td><a href="plusInfos.View.php">Plus d'informations</a></td>
-			 </tr>
-			 <tr>
-				 <td>BEKELE</td>
-				 <td>Naod</td>
-				 <td>19</td>
-				 <td>M</td>
-				 <td>Joueur</td>
-				 <td>-18M</td>
-				 <td><a href="plusInfos.View.php">Plus d'informations</a></td>
-			 </tr>
-			 <tr>
-				 <td>LARAICHI</td>
-				 <td>Aymane</td>
-				 <td>19</td>
-				 <td>M</td>
-				 <td>Joueur</td>
-				 <td>-18M</td>
-				 <td><a href="plusInfos.View.php">Plus d'informations</a></td>
-			 </tr>
-			 <tr>
-				 <td>ALIDA</td>
-				 <td>Marie</td>
-				 <td>19</td>
-				 <td>F</td>
-				 <td>Joueur</td>
-				 <td>-18M</td>
-				 <td><a href="plusInfos.View.php">Plus d'informations</a></td>
-			 </tr>
-			 <tr>
-				 <td>NULL</td>
-				 <td>Kamal</td>
-				 <td>19</td>
-				 <td>M</td>
-				 <td>Joueur</td>
-				 <td>-18M</td>
-				 <td><a href="plusInfos.View.php">Plus d'informations</a></td>
-			 </tr>
-			 <tr>
-				 <td>NULL</td>
-				 <td>Dimitri</td>
-				 <td>19</td>
-				 <td>M</td>
-				 <td>Joueur</td>
-				 <td>-18M</td>
-				 <td><a href="plusInfos.View.php">Plus d'informations</a></td>
-			 </tr>
-			</table>
-
-			</article>
-			<!-- /Article -->
-
-			<!-- Sidebar -->
-			<aside class="col-sm-3 sidebar sidebar-right">
-
-			</aside>
-			<!-- /Sidebar -->
-
-		</div>
-	</div>	<!-- /container -->
-
-	<section class="container-full top-space">
-		<div id="map"></div>
-	</section>
-
-	<footer id="footer" class="top-space">
-
-		<div class="footer1">
-			<div class="container">
-				<div class="row">
-
-					<div class="col-md-3 widget">
-						<h3 class="widget-title">Nous contacter</h3>
-						<div class="widget-body">
-							<p>0457659852<br>
-								<a href="mailto:#">test@test.com</a><br>
-								<br>
-								Gymnase de L'Europe, Avenue Francois Mitterand, 01400 Châtillon-sur-Chalaronne
-							</p>
-						</div>
-					</div>
-
-					<div class="col-md-3 widget">
-						<h3 class="widget-title">Nous suivre</h3>
-						<div class="widget-body">
-							<p class="follow-me-icons clearfix">
-								<a href="https://fr-fr.facebook.com/vaillantechatillonnaise/"><i class="fa fa-facebook fa-2"></i></a>
-							</p>
-						</div>
-					</div>
-
-
-
-				</div> <!-- /row of widgets -->
-			</div>
-		</div>
-
-		<div class="footer2">
-			<div class="container">
-				<div class="row">
-
-					<div class="col-md-6 widget">
-						<div class="widget-body">
-							<p class="simplenav">
-								<a href="indexP.View.php">Accueil</a> |
-								<b><a href="presidentAdherents.View.php">Gestion des adhérents</a></b> |
-								<a href="lesmatchs.View.php">Gestion des matchs</a> |
-							  <a href="monCompte.View.php">Mon compte</a>
-								<a href="index.View.php">Déconnexion</a>
-							</p>
-						</div>
-					</div>
-
-
-
-				</div> <!-- /row of widgets -->
-			</div>
-		</div>
-	</footer>
+} else {
+	$view= new View("../View/signin.ctrl.php");
+	//$view->list=$list;
+	$view->show();
+}
 
 
 
 
 
 
-</body>
-</html>
+?>

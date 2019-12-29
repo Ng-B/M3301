@@ -70,6 +70,10 @@
 				</header>
 				<br>
 				<a href="formulaire.View.php"><input type="submit" value="Ajouter un adhérent" id="valider"></a><br><br><br>
+				<?php if( isset($this->no_adherents)) ){
+					print("<h3> Aucun adherent trouve </h3>");
+				}else{
+					?>
 				<table style="width:100%">
 			 <tr>
 				 <th>Nom</th>
@@ -80,70 +84,19 @@
 				 <th>Catégorie</th>
 				 <th></th>
 			 </tr>
+			 <?php foreach ($this->adherents as $adherent) { ?>
 			 <tr>
-				 <td>LOCATELLI</td>
-				 <td>Antoine</td>
-				 <td>19</td>
-				 <td>M</td>
-				 <td>Président</td>
-				 <td>-18M</td>
-				 <td><a href="plusInfos.View.php">Plus d'informations</a></td>
+				 <td><?=echo $adherent->getNom(); ?> </td>
+				 <td><?=echo $adherent->getPrenom(); ?></td>
+				 <td><?=echo $adherent->getAge(); ?></td>
+				 <td><?=echo $adherent->getSexe(); ?></td>
+				 <td>-------</td>
+				 <td>-------</td>
+         <td><a href="plusInfos.View.php">Plus d'informations</a></td>
 			 </tr>
-			 <tr>
-				 <td>FABRY</td>
-				 <td>Dorian</td>
-				 <td>19</td>
-				 <td>M</td>
-				 <td>Joueur</td>
-				 <td>-18M</td>
-				 <td><a href="plusInfos.View.php">Plus d'informations</a></td>
-			 </tr>
-			 <tr>
-				 <td>BEKELE</td>
-				 <td>Naod</td>
-				 <td>19</td>
-				 <td>M</td>
-				 <td>Joueur</td>
-				 <td>-18M</td>
-				 <td><a href="plusInfos.View.php">Plus d'informations</a></td>
-			 </tr>
-			 <tr>
-				 <td>LARAICHI</td>
-				 <td>Aymane</td>
-				 <td>19</td>
-				 <td>M</td>
-				 <td>Joueur</td>
-				 <td>-18M</td>
-				 <td><a href="plusInfos.View.php">Plus d'informations</a></td>
-			 </tr>
-			 <tr>
-				 <td>ALIDA</td>
-				 <td>Marie</td>
-				 <td>19</td>
-				 <td>F</td>
-				 <td>Joueur</td>
-				 <td>-18M</td>
-				 <td><a href="plusInfos.View.php">Plus d'informations</a></td>
-			 </tr>
-			 <tr>
-				 <td>NULL</td>
-				 <td>Kamal</td>
-				 <td>19</td>
-				 <td>M</td>
-				 <td>Joueur</td>
-				 <td>-18M</td>
-				 <td><a href="plusInfos.View.php">Plus d'informations</a></td>
-			 </tr>
-			 <tr>
-				 <td>NULL</td>
-				 <td>Dimitri</td>
-				 <td>19</td>
-				 <td>M</td>
-				 <td>Joueur</td>
-				 <td>-18M</td>
-				 <td><a href="plusInfos.View.php">Plus d'informations</a></td>
-			 </tr>
-			</table>
+ <?php }
+ 		echo  "</table>" ;
+	 } ?>
 
 			</article>
 			<!-- /Article -->

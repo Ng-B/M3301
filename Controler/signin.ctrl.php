@@ -30,11 +30,18 @@ if(isset($_POST["login"]) && isset($_POST["password"])){
 			$view->show();
 		} else {
 			  if($m->getPassword()== $_POST["password"]){
-					$view= new View("../View/indexJ.View.php");
 					//$view->list=$list;
+					if($myPDO->estMembreDuBureau($m->getId()) == true){
+						$view= new View("../View/indexP.View.php");
+						$view->errorLogin=false;
+						$view->current_user=$_POST["login"];
+						$view->show();
+					} else {
+					$view= new View("../View/indexJ.View.php");
 					$view->errorLogin=false;
 					$view->current_user=$_POST["login"];
 					$view->show();
+				}
 				} else {
 					$view= new View("../View/signin.View.php");
 					$view->errorLogin=true;

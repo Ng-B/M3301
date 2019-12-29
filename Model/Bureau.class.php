@@ -1,14 +1,14 @@
 <?php
   class Bureau{
     private $role;
-    private $idAdh;
+    private $idhadh;
 
     public function getRole(){
       return $role;
     }
 
     public function getidAdh(){
-      return $idAdh;
+      return $idhadh;
     }
   }
  ?>

@@ -1,6 +1,8 @@
 <?php
 require_once("Match.class.php");
 require_once("Adherent.class.php");
+require_once("Bureau.class.php");
+
 
  class DAO{
    private $db;
@@ -85,6 +87,19 @@ public function getAdherentParDateNaiisance(string $date /*pas de variable date*
      return $adherent;
    }
   }
+
+  public function get_All_Adherent() {
+    $reponse=$this->db->query("SELECT * FROM ADHERENT ");
+    $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"Adherent");
+    if(count($donnees) == 0) {
+      print("Aucun adherent " );
+    } else {
+      for ($i=0; $i<count($donnees); $i++){
+        $adherents[$i]= $donnees[$i];
+      }
+      return $adherents;
+    } 
+   }
  //--------------------------------JOUEUR----------------------------------//
  public function getJoueurParID(int $id): Joueur {
    $reponse=$this->db->query("SELECT * FROM Joueur WHERE idAdh=$id ");
@@ -210,6 +225,16 @@ public function getAdherentParDateNaiisance(string $date /*pas de variable date*
             }
               return $matchs;
 
+          }
+
+          public function estMembreDuBureau(int $id)  {
+            $reponse=$this->db->query("SELECT * FROM bureau WHERE idhadh= $id");
+            $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"Bureau");
+            if(count($donnees)==0){
+              return false;
+            } else {
+              return true;
+            }
           }
 }
 ?>
