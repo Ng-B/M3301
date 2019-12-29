@@ -23,9 +23,11 @@ echo $NTA;
 if(isset($_GET["login"]) ){
 	$myPDO = new DAO();
 	$matchs= $myPDO->getMatchsPasses($_GET["login"]);
+	$current_login=$_GET["login"];
 		if(is_null($matchs)){
 			$view= new View("../View/matchsPasses.View.php");
 			$view->aucun_match_passe=true;
+			$view->current_login=$current_login;
 			//$view->list=$list;
 			$view->show();
 
@@ -33,6 +35,7 @@ if(isset($_GET["login"]) ){
 				$view= new View("../View/matchsPasses.View.php");
 				//$view->list=$list;
 				$view->les_matchs_passes=$matchs;
+				$view->current_login=$current_login;
 				$view->show();
 			}
 

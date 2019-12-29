@@ -40,11 +40,11 @@
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
-					<li><a class="btn2" href="indexJ.View.php">Accueil</a></li>
-					<li class="active"><a class="btn2" href="matchsPasses.View.php">Matchs passés</a></li>
-					<li><a class="btn2" href="matchsVenir.View.php">Matchs à venir</a></li>
-					<li><a class="btn2" href="monCompteJ.View.php">Mon compte</a></li>
-					<li><a class="btn2" href="index.View.php">Déconnexion</a></li>
+					<li><a class="btn2" href="../Controler/indexJ.ctrl.php?login=<?php echo $this->current_login; ?>">Accueil</a></li>
+					<li class="active"><a class="btn2" href="../Controler/matchsPasses.ctrl.php?login=<?php echo $this->current_login; ?>">Matchs passés</a></li>
+					<li><a class="btn2" href="../Controler/matchsVenir.ctrl.php?login=<?php echo $this->current_login; ?>">Matchs à venir</a></li>
+					<li><a class="btn2" href="../Controler/monCompteJ.ctrl.php?login=<?php echo $this->current_login; ?>">Mon compte</a></li>
+					<li><a class="btn2" href="../Controler/signin.ctrl.php">Déconnexion</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -69,7 +69,7 @@
 					<h2 class="page-title">Matchs passés</h2>
 				</header>
 				<br>
-				<?php if($this->aucun_match_passe == true ){
+				<?php if( isset($this->aucun_match_passe) ){
 					print("<h3> Aucun match passe trouve </h3>");
 				}else{
 					?>
@@ -77,9 +77,9 @@
 					<tr>
 						<th>Match ID</th>
 						<th>Date (aaaa-mm-jj)</th>
-						<th>Heure</th>
-						<th>Adresse</th>
-						<th>Nom de l'arbitre</th>
+						<th> Heure </th>
+						<th> Lieu </th>
+						<th>ID arbitre</th>
 						<th>Catégorie</th>
 					</tr>
 					<?php foreach ($this->les_matchs_passes as $match) { ?>
@@ -93,7 +93,9 @@
 
 					</tr>
 			</table>
-		<?php } ?>
+		<?php }
+			} ?>
+
 			</article>
 			<!-- /Article -->
 

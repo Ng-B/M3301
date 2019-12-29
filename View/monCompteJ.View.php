@@ -38,11 +38,11 @@
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
-					<li><a class="btn2" href="indexJ.View.php">Accueil</a></li>
-					<li><a class="btn2" href="matchsPasses.View.php">Matchs passés</a></li>
-          <li><a class="btn2" href="matchsVenir.View.php">Matchs à venir</a></li>
-					<li class="active"><a class="btn2" href="monCompteJ.View.php">Mon compte</a></li>
-          <li><a class="btn2" href="index.View.php">Déconnexion</a></li>
+					<li><a class="btn2" href="../Controler/indexJ.ctrl.php?login=<?php echo $this->adherent->getLogin(); ?>">Accueil</a></li>
+					<li><a class="btn2" href="../Controler/matchsPasses.ctrl.php?login=<?php echo $this->adherent->getLogin(); ?>">Matchs passés</a></li>
+          <li><a class="btn2" href="../Controler/matchsVenir.ctrl.php?login=<?php echo $this->adherent->getLogin(); ?>">Matchs à venir</a></li>
+					<li class="active"><a class="btn2" href="../Controler/monCompteJ.ctrl.php?login=<?php echo $this->adherent->getLogin(); ?>">Mon compte</a></li>
+          <li><a class="btn2" href="../Controler/signin.ctrl.php">Déconnexion</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -70,35 +70,35 @@
 				<table style="width:100%">
 			 <tr>
          <th>ID :</th>
-         <td>1</td>
+         <td><?php echo $this->adherent->getId(); ?></td>
        </tr>
        <tr>
 				 <th>Nom :</th>
-         <td>LOCATELLI</td>
+         <td><?php echo $this->adherent->getNom(); ?></td>
        </tr>
        <tr>
 				 <th>Prénom :</th>
-         <td>Antoine</td>
+         <td><?php echo $this->adherent->getPrenom(); ?></td>
        </tr>
        <tr>
-         <th>Date de naissance :</th>
-         <td>01/01/2000</td>
+         <th>Date de naissance(aaaa-mm-jj) :</th>
+         <td><?php echo $this->adherent->getDateNaissance(); ?></td>
        </tr>
        <tr>
          <th>Sexe : </th>
-         <td>Homme</td>
+         <td><?php if($this->adherent->getSexe() == 0) { echo "Femme"; }else{ echo "Homme"; } ?></td>
        </tr>
        <tr>
 				 <th>Numéro de téléphone :</th>
-         <td>0651213520</td>
+         <td><?php echo $this->adherent->getTelephone(); ?></td>
        </tr>
        <tr>
 				 <th>Adresse mail :</th>
-         <td>antoine.locatelli@iut2.univ-grenoble-alpes.fr</td>
+         <td><?php echo $this->adherent->getMail(); ?></td>
        </tr>
        <tr>
 				 <th>Numéro de licence :</th>
-         <td>123456789</td>
+         <td><?php echo $this->adherent->getNumLicense(); ?></td>
        </tr>
        <tr>
          <th>Rôle :</th>

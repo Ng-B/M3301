@@ -3,7 +3,7 @@ class Adherent{
   private $id;
   private $nom;
   private $prenom;
-  private $dateNaissance;
+  private $datenaissance;
   private $sexe;
   private $telperso;
   private $login;
@@ -13,33 +13,46 @@ class Adherent{
   private $montant;
   private $mail;
 
-  public function getNom(): string{
+  public function getNom(){
     return $this->nom;
   }
 
-  public function getId(): int{
+  public function getId(){
     return $this->id;
   }
 
-  public function getPrenom(): string{
+  public function getPrenom(){
     return $this->prenom;
   }
 
-  public function getDateNaissance(): string{
-    return $this->dateNaissance;
+  public function getDateNaissance(){
+    return $this->datenaissance;
   }
 
-  public function getSexe(): string{
+  public function getSexe(){
     return $this->sexe;
   }
 
-  public function getPassword(): string {
+  public function getLogin(){
+    return $this->login;
+  }
+
+  public function getPassword()  {
     return $this->password;
   }
 
-  public function getTelephone(): string{
-    return $this->telephone;
+  public function getTelephone() {
+    return $this->telperso;
   }
+
+  public function getMail() {
+    return $this->mail;
+  }
+
+  public function getNumLicense(){
+    return $this->numlicense;
+  }
+
 
   public function setNom(string $nom){
     $this->nom=$nom;

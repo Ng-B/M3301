@@ -28,11 +28,11 @@
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
-					<li class="active"><a class="btn2" href="indexJ.View.php">Accueil</a></li>
+					<li class="active"><a class="btn2" href="../Controler/indexJ.ctrl.php?login=<?php echo $this->current_user; ?>">Accueil</a></li>
 					<li><a class="btn2" href="../Controler/matchsPasses.ctrl.php?login=<?php echo $this->current_user; ?>">Matchs passés</a></li>
-					<li><a class="btn2" href="../View/matchsVenir.View.php">Matchs à venir</a></li>
-					<li><a class="btn2" href="../View/monCompteJ.View.php">Mon compte</a></li>
-					<li><a class="btn2" href="../View/index.View.php">Déconnexion</a></li>
+					<li><a class="btn2" href="../Controler/matchsVenir.ctrl.php?login=<?php echo $this->current_user; ?>">Matchs à venir</a></li>
+					<li><a class="btn2" href="../Controler/monCompteJ.ctrl.php?login=<?php echo $this->current_user; ?>">Mon compte</a></li>
+					<li><a class="btn2" href="../Controler/signin.ctrl.php">Déconnexion</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -169,8 +169,8 @@
 								<b><a href="../View/indexJ.View.php">Accueil</a></b>
 								<a href="../Controler/matchsPasses.ctrl.php?login=<?php echo $this->current_user ?>">Matchs passés</a> |
 								<a href="../Controler/matchsVenir.ctrl.php?login=<?php echo $this->current_user ?>">Matchs à venir</a> |
-								<a href="../View/monCompteJ.View.php">Mon compte</a> |
-								<a href="../View/index.View.php">Déconnexion</a>
+								<a href="../Controler/monCompteJ.ctrl.php?login=<?php echo $this->current_user ?>">Mon compte</a> |
+								<a href="../Controler/signin.ctrl.php">Déconnexion</a>
 							</p>
 						</div>
 					</div>

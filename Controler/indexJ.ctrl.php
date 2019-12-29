@@ -20,34 +20,11 @@ echo $NTA;
 */
 //---------------------------------------------Tri par prix, méthode TRIX PAR BULLE-------------------------------------//
 
-if(isset($_POST["login"]) && isset($_POST["password"])){
-	$myPDO = new DAO();
-	$m = $myPDO->getAdherentParLogin($_POST["login"]);
-		if(is_null($m)){
-			$view= new View("../View/signin.View.php");
-			$view->errorLogin=true;
-			//$view->list=$list;
-			$view->show();
-		} else {
-			  if($m->getPassword()== $_POST["password"]){
-					$view= new View("../View/indexJ.View.php");
-					//$view->list=$list;
-					$view->errorLogin=false;
-					$view->show();
-				} else {
-					$view= new View("../View/signin.View.php");
-					$view->errorLogin=true;
-					//$view->list=$list;
-					$view->show();
-				}
-
-		}
-} else {
-	$view= new View("../View/signin.View.php");
-	//$view->list=$list;
-	$view->errorLogin=false;
-	$view->show();
-}
+$view= new View("../View/indexJ.View.php");
+//$view->list=$list;
+$view->errorLogin=false;
+$view->current_user=$_GET["login"];
+$view->show();
 
 
 

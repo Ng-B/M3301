@@ -201,5 +201,15 @@ public function getAdherentParDateNaiisance(string $date /*pas de variable date*
               return $matchs;
 
           }
+
+          public function getMatchsVenir(string $login) {
+            $reponse=$this->db->query("SELECT M.idmatch,M.lieu,M.date,M.arbitre,M.heure,M.categorie FROM match M, estselectionne E WHERE E.idjoueur=(SELECT id FROM adherent WHERE login='$login') AND  E.idmatch=M.idmatch AND M.date >= CURRENT_DATE ");
+            $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"Match");
+            for ($i=0; $i<count($donnees); $i++){
+              $matchs[$i]= $donnees[0];
+            }
+              return $matchs;
+
+          }
 }
 ?>
