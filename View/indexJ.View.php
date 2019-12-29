@@ -29,7 +29,7 @@
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
 					<li class="active"><a class="btn2" href="indexJ.View.php">Accueil</a></li>
-					<li><a class="btn2" href="../View/matchsPasses.View.php">Matchs passés</a></li>
+					<li><a class="btn2" href="../Controler/matchsPasses.ctrl.php?login=<?php echo $this->current_user; ?>">Matchs passés</a></li>
 					<li><a class="btn2" href="../View/matchsVenir.View.php">Matchs à venir</a></li>
 					<li><a class="btn2" href="../View/monCompteJ.View.php">Mon compte</a></li>
 					<li><a class="btn2" href="../View/index.View.php">Déconnexion</a></li>
@@ -166,9 +166,9 @@
 					<div class="col-md-6 widget">
 						<div class="widget-body">
 							<p class="simplenav">
-								<b><a href="../View/indexJ.View.php">Accueil</a></b> |
-								<a href="../Controler/matchsPasses.ctrl.php">Matchs passés</a> |
-								<a href="../View/matchsVenir.View.php">Matchs à venir</a> |
+								<b><a href="../View/indexJ.View.php">Accueil</a></b>
+								<a href="../Controler/matchsPasses.ctrl.php?login=<?php echo $this->current_user ?>">Matchs passés</a> |
+								<a href="../Controler/matchsVenir.ctrl.php?login=<?php echo $this->current_user ?>">Matchs à venir</a> |
 								<a href="../View/monCompteJ.View.php">Mon compte</a> |
 								<a href="../View/index.View.php">Déconnexion</a>
 							</p>

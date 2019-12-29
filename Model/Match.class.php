@@ -1,33 +1,36 @@
 <?php
     class Match{
+      private $idmatch;
       private $lieu;
       private $date;
-      private $heure;
       private $arbitre;
-      private $id;
+      private $heure;
       private $categorie;
 
       public function getId(){
-        return $id;
+        return $this->idmatch;
       }
 
       public function getLieu(){
-        return $lieu;
+        return $this->lieu;
       }
 
       public function getDate(){
-        return $date;
+        return $this->date;
     }
 
     public function getHeure(){
-      return $heure;
+      return $this->heure;
     }
 
     public function getArbitre(){
-      return $arbitre;
+      return $this->arbitre;
     }
 
     public function getCategorie(){
-      return $categorie;
+      return $this->categorie;
     }
+
+  }
+
  ?>

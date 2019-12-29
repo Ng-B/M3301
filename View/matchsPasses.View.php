@@ -69,58 +69,31 @@
 					<h2 class="page-title">Matchs passés</h2>
 				</header>
 				<br>
+				<?php if($this->aucun_match_passe == true ){
+					print("<h3> Aucun match passe trouve </h3>");
+				}else{
+					?>
 				<table style="width:100%">
 					<tr>
-						<th>Match</th>
-						<th>Date</th>
+						<th>Match ID</th>
+						<th>Date (aaaa-mm-jj)</th>
 						<th>Heure</th>
 						<th>Adresse</th>
 						<th>Nom de l'arbitre</th>
 						<th>Catégorie</th>
 					</tr>
+					<?php foreach ($this->les_matchs_passes as $match) { ?>
 					<tr>
-						<td>Grenoble - Echirolles</td>
-						<td>14/07/2019</td>
-						<td>15h15</td>
-						<td>14 avenue Jean Paul</td>
-						<td>Jean</td>
-						<td>-18M</td>
+						<td><?=$match->getId() ?> </td>
+						<td><?=$match->getDate() ?></td>
+						<td><?=$match->getHeure() ?></td>
+						<td><?=$match->getLieu() ?></td>
+						<td><?=$match->getArbitre() ?></td>
+						<td><?=$match->getCategorie() ?></td>
 
-					</tr>
-					<tr>
-						<td>Grenoble - Echirolles</td>
-						<td>14/07/2019</td>
-						<td>15h15</td>
-						<td>14 avenue Jean Paul</td>
-						<td>Jean</td>
-						<td>-18M</td>
-					</tr>
-					<tr>
-						<td>Grenoble - Echirolles</td>
-						<td>14/07/2019</td>
-						<td>15h15</td>
-						<td>14 avenue Jean Paul</td>
-						<td>Jean</td>
-						<td>-18M</td>
-					</tr>
-					<tr>
-						<td>Grenoble - Echirolles</td>
-						<td>14/07/2019</td>
-						<td>15h15</td>
-						<td>14 avenue Jean Paul</td>
-						<td>Jean</td>
-						<td>-18M</td>
-					</tr>
-					<tr>
-						<td>Grenoble - Echirolles</td>
-						<td>14/07/2019</td>
-						<td>15h15</td>
-						<td>14 avenue Jean Paul</td>
-						<td>Jean</td>
-						<td>-18M</td>
 					</tr>
 			</table>
-
+		<?php } ?>
 			</article>
 			<!-- /Article -->
 

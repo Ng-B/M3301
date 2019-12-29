@@ -9,7 +9,11 @@ $myPDO = new DAO();
 $m = $myPDO->getAdherentParId(45);
 print($m->getNom());*/
 
-$myPDO = new DAO();
+/*$myPDO = new DAO();
 $m = $myPDO->getAdherentParLogin('fabryd');
-print($m->getNom());
+print($m->getNom());*/
+
+$myPDO = new DAO();
+$m = $myPDO->getMatchsPasses('KamalLag');
+print($m[0]->getLieu());
 ?>
