@@ -60,22 +60,22 @@
 					Nous ferons notre maximum pour vous répondre au plus vite.
 				</p>
 				<br>
-					<form>
+					<form method="post" action="http://handbase.ddns.net/projet/Controler/contact.ctrl.php">
 						<div class="row">
 							<div class="col-sm-4">
-								<input class="form-control" type="text" placeholder="Nom">
+								<input class="form-control" type="text" name="name" placeholder="Nom">
 							</div>
 							<div class="col-sm-4">
-								<input class="form-control" type="text" placeholder="Email">
+								<input class="form-control" type="text" name="email" placeholder="Email">
 							</div>
 							<div class="col-sm-4">
-								<input class="form-control" type="text" placeholder="Telephone">
+								<input class="form-control" type="text" name="telephone" placeholder="Telephone">
 							</div>
 						</div>
 						<br>
 						<div class="row">
 							<div class="col-sm-12">
-								<textarea placeholder="Inserez vos messages ici..." class="form-control" rows="9"></textarea>
+								<textarea placeholder="Inserez vos messages ici..." name="message" class="form-control" rows="9"></textarea>
 							</div>
 						</div>
 						<br>
