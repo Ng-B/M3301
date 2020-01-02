@@ -41,10 +41,10 @@
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
 					<li><a class="btn2" href="indexP.View.php">Accueil</a></li>
-					<li class="active"><a class="btn2" href="presidentAdherents.View.php">Gestion des adhérents</a></li>
-					<li><a class="btn2" href="lesmatchs.View.php">Gestion des matchs</a></li>
-					<li><a class="btn2" href="monCompte.View.php">Mon compte</a></li>
-					<li><a class="btn2" href="index.View.php">Déconnexion</a></li>
+					<li class="active"><a class="btn2" href="../Controler/presidentAdherents.ctrl.php?login=<?= $this->current_login?>">Gestion des adhérents</a></li>
+					<li><a class="btn2" href="../Controler/lesmatchs.ctrl.php?login=<?= $this->current_login?>">Gestion des matchs</a></li>
+					<li><a class="btn2" href="../Controler/monCompte.ctrl.php?login=<?= $this->current_login?>">Mon compte</a></li>
+					<li><a class="btn2" href="../Controler/signin.ctrl.php">Déconnexion</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -70,7 +70,7 @@
 				</header>
 				<br>
 				<a href="formulaire.View.php"><input type="submit" value="Ajouter un adhérent" id="valider"></a><br><br><br>
-				<?php if( isset($this->no_adherents)) ){
+				<?php if( isset($this->no_adherents)  ){
 					print("<h3> Aucun adherent trouve </h3>");
 				}else{
 					?>
@@ -86,10 +86,10 @@
 			 </tr>
 			 <?php foreach ($this->adherents as $adherent) { ?>
 			 <tr>
-				 <td><?=echo $adherent->getNom(); ?> </td>
-				 <td><?=echo $adherent->getPrenom(); ?></td>
-				 <td><?=echo $adherent->getAge(); ?></td>
-				 <td><?=echo $adherent->getSexe(); ?></td>
+				 <td><?= $adherent->getNom() ?> </td>
+				 <td><?= $adherent->getPrenom() ?></td>
+				 <td><?= $adherent->getAge() ?></td>
+				 <td><?php  if($adherent->getSexe()==0){ echo "Femme"; }else{ echo "Homme"; } ?></td>
 				 <td>-------</td>
 				 <td>-------</td>
          <td><a href="plusInfos.View.php">Plus d'informations</a></td>

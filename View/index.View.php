@@ -6,14 +6,14 @@
 
 	<title>Accueil</title>
 
-	<link rel="shortcut icon" href="../View/images/logo.png">
+	<link rel="shortcut icon" href="../projet/View/images/logo.png">
 
-	<link rel="stylesheet" href="../View/css/bootstrap.min.css">
-	<link rel="stylesheet" href="../View/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../projet/View/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../projet/View/css/font-awesome.min.css">
 
 	<!-- Custom styles for our template -->
-	<link rel="stylesheet" href="../View/css/bootstrap-theme.css" media="screen" >
-	<link rel="stylesheet" href="../View/css/main.css">
+	<link rel="stylesheet" href="../projet/View/css/bootstrap-theme.css" media="screen" >
+	<link rel="stylesheet" href="../projet/View/css/main.css">
 
 </head>
 
@@ -24,13 +24,13 @@
 			<div class="navbar-header">
 				<!-- Button for smallest screens -->
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="index.View.php"><img src="../View/images/logo.png" alt="logo club" width = 5% height = 100% class="logo"><h1>Vaillante Chatillonnaise Handball</h1></a>
+				<a class="navbar-brand" href="index.View.php"><img src="..projet/View/images/logo.png" alt="logo club" width = 5% height = 100% class="logo"><h1>Vaillante Chatillonnaise Handball</h1></a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
 					<li class="active"><a class="btn2" href="#">Accueil</a></li>
-					<li><a class="btn2" href="contact.View.php">Nous contacter</a></li>
-					<li><a class="btn2" href="signin.View.php">Se connecter</a></li>
+					<li><a class="btn2" href="../projet/Controler/contact.ctrl.php">Nous contacter</a></li>
+					<li><a class="btn2" href="../projet/Controler/signin.ctrl.php">Se connecter</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -164,9 +164,9 @@
 					<div class="col-md-6 widget">
 						<div class="widget-body">
 							<p class="simplenav">
-								<b><a href="index.View.php">Accueil</a></b> |
+								<b><a href="index.php">Accueil</a></b> |
 								<a href="contact.View.php">Nous contacter</a> |
-								<a href="signin.View.php">Se connecter</a>
+								<a href="../projet/signin.ctrl.php">Se connecter</a>
 							</p>
 						</div>
 					</div>

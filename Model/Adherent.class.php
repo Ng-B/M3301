@@ -29,6 +29,14 @@ class Adherent{
     return $this->datenaissance;
   }
 
+  public function getAge(){
+
+      $from = new DateTime($this->datenaissance);
+      $to   = new DateTime('today');
+
+     return $from->diff($to)->y;
+  }
+
   public function getSexe(){
     return $this->sexe;
   }

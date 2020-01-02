@@ -26,11 +26,13 @@ if(isset($_GET["login"]) ){
 		if(is_null($adherents) ){
 			$view= new View("../View/presidentAdherents.View.php");
 			$view->no_adherents=true;
+			$view->current_login=$_GET["login"];
 			$view->show();
 			} else {
-				$view= new View("../View/presidentAdherents.View.php");
-				$view->adherents=$adherents;
-				$view->show();
+			$view= new View("../View/presidentAdherents.View.php");
+			$view->adherents=$adherents;
+			$view->current_login=$_GET["login"];
+			$view->show();
 
 			}
 

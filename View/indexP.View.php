@@ -28,11 +28,11 @@
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
-					<li class="active"><a class="btn2" href="indexP.View.php">Accueil</a></li>
+					<li class="active"><a class="btn2" href="../Controler/indexP.ctrl.php?login=<?php echo $this->current_user; ?>">Accueil</a></li>
 					<li><a class="btn2" href="../Controler/presidentAdherents.ctrl.php?login=<?php echo $this->current_user; ?>">Gestion des adhérents</a></li>
-					<li><a class="btn2" href="lesmatchs.View.php">Gestion des matchs</a></li>
-					<li><a class="btn2" href="monCompte.View.php">Mon compte</a></li>
-					<li><a class="btn2" href="index.View.php">Déconqnexion</a></li>
+					<li><a class="btn2" href="../Controler/lesmatchs.ctrl.php?login=<?= $this->current_user?>">Gestion des matchs</a></li>
+					<li><a class="btn2" href="../Controler/monCompte.ctrl.php?login=<?= $this->current_user?>">Mon compte</a></li>
+					<li><a class="btn2" href="../Controler/signin.ctrl.php">Déconnexion</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>

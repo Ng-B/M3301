@@ -41,10 +41,10 @@
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
 					<li><a class="btn2" href="indexP.View.php">Accueil</a></li>
-					<li><a class="btn2" href="presidentAdherents.View.php">Gestion des adhérents</a></li>
-					<li class="active"><a class="btn2" href="lesmatchs.View.php">Gestion des matchs</a></li>
-					<li><a class="btn2" href="monCompte.View.php">Mon compte</a></li>
-					<li><a class="btn2" href="index.View.php">Déconnexion</a></li>
+					<li><a class="btn2" href="../Controler/presidentAdherents.ctrl.php?login=<?= $this->current_login?>">Gestion des adhérents</a></li>
+					<li class="active"><a class="btn2" href="../Controler/lesmatchs.ctrl.php?login=<?= $this->current_login?>">Gestion des matchs</a></li>
+					<li><a class="btn2" href="../Controler/monCompte.ctrl.php?login=<?= $this->current_login?>">Mon compte</a></li>
+					<li><a class="btn2" href="../Controler/signin.ctrl.php">Déconnexion</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -70,58 +70,32 @@
 				</header>
 				<br>
 				<a href="ajouterMatch.View.php"><input type="submit" value="Ajouter un match" id="valider"></a><br><br><br>
+				<?php if( isset($this->aucun_match_venir) ){
+					print("<h3> Aucun match a venir trouve </h3>");
+				}else{
+					?>
 				<table style="width:100%">
-			 <tr>
-				 <th>Match</th>
-				 <th>Date</th>
-				 <th>Heure</th>
-				 <th>Adresse</th>
-				 <th>Nom de l'arbitre</th>
-				 <th>Catégorie</th>
-			 </tr>
-			 <tr>
-				 <td>Grenoble - Echirolles</td>
-				 <td>14/07/2019</td>
-				 <td>15h15</td>
-				 <td>14 avenue Jean Paul</td>
-			   <td>Jean</td>
-				 <td>-18M</td>
+					<tr>
+	 				 <th>Match ID</th>
+	 				 <th>Date (aaaa-mm-jj)</th>
+	 				 <th> Heure </th>
+	 				 <th>Lieu</th>
+	 				 <th>ID arbitre</th>
+	 				 <th>Catégorie</th>
+	 			 </tr>
+				 <?php foreach ($this->les_matchs_venir as $match) { ?>
+ 				 <tr>
+ 					 <td><?=$match->getId() ?> </td>
+ 					 <td><?=$match->getDate() ?></td>
+ 					 <td><?=$match->getHeure() ?></td>
+ 					 <td><?=$match->getLieu() ?></td>
+ 					 <td><?=$match->getArbitre() ?></td>
+ 					 <td><?=$match->getCategorie() ?></td>
 
-			 </tr>
-			 <tr>
-				 <td>Grenoble - Echirolles</td>
-				 <td>14/07/2019</td>
-				 <td>15h15</td>
-				 <td>14 avenue Jean Paul</td>
-			   <td>Jean</td>
-				 <td>-18M</td>
-			 </tr>
-			 <tr>
-				 <td>Grenoble - Echirolles</td>
-				 <td>14/07/2019</td>
-				 <td>15h15</td>
-				 <td>14 avenue Jean Paul</td>
-			   <td>Jean</td>
-				 <td>-18M</td>
-			 </tr>
-			 <tr>
-				 <td>Grenoble - Echirolles</td>
-				 <td>14/07/2019</td>
-				 <td>15h15</td>
-				 <td>14 avenue Jean Paul</td>
-			   <td>Jean</td>
-				 <td>-18M</td>
-			 </tr>
-			 <tr>
-				 <td>Grenoble - Echirolles</td>
-				 <td>14/07/2019</td>
-				 <td>15h15</td>
-				 <td>14 avenue Jean Paul</td>
-			   <td>Jean</td>
-				 <td>-18M</td>
-			 </tr>
-			</table>
-
+ 				 </tr>
+ 	 <?php }
+ 	 echo "</table>";
+ 		 } ?>
 			</article>
 			<!-- /Article -->
 

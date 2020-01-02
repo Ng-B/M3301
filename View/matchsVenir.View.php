@@ -92,8 +92,8 @@
 						<td><?=$match->getCategorie() ?></td>
 
 					</tr>
-			</table>
 		<?php }
+		echo "</table>";
 			} ?>
 			</article>
 			<!-- /Article -->

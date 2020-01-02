@@ -89,7 +89,7 @@ public function getAdherentParDateNaiisance(string $date /*pas de variable date*
   }
 
   public function get_All_Adherent() {
-    $reponse=$this->db->query("SELECT * FROM ADHERENT ");
+    $reponse=$this->db->query("SELECT * FROM ADHERENT ORDER BY nom ASC");
     $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"Adherent");
     if(count($donnees) == 0) {
       print("Aucun adherent " );
@@ -98,7 +98,7 @@ public function getAdherentParDateNaiisance(string $date /*pas de variable date*
         $adherents[$i]= $donnees[$i];
       }
       return $adherents;
-    } 
+    }
    }
  //--------------------------------JOUEUR----------------------------------//
  public function getJoueurParID(int $id): Joueur {
@@ -219,6 +219,16 @@ public function getAdherentParDateNaiisance(string $date /*pas de variable date*
 
           public function getMatchsVenir(string $login) {
             $reponse=$this->db->query("SELECT M.idmatch,M.lieu,M.date,M.arbitre,M.heure,M.categorie FROM match M, estselectionne E WHERE E.idjoueur=(SELECT id FROM adherent WHERE login='$login') AND  E.idmatch=M.idmatch AND M.date >= CURRENT_DATE ");
+            $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"Match");
+            for ($i=0; $i<count($donnees); $i++){
+              $matchs[$i]= $donnees[0];
+            }
+              return $matchs;
+
+          }
+
+          public function getAllMatchsVenir() {
+            $reponse=$this->db->query("SELECT M.idmatch,M.lieu,M.date,M.arbitre,M.heure,M.categorie FROM match M WHERE  M.date >= CURRENT_DATE ");
             $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"Match");
             for ($i=0; $i<count($donnees); $i++){
               $matchs[$i]= $donnees[0];
