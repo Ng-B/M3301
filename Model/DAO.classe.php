@@ -89,7 +89,7 @@ public function getAdherentParDateNaiisance(string $date /*pas de variable date*
   }
 
   public function get_All_Adherent() {
-    $reponse=$this->db->query("SELECT * FROM ADHERENT ORDER BY nom ASC");
+    $reponse=$this->db->query("SELECT * FROM ADHERENT ");
     $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"Adherent");
     if(count($donnees) == 0) {
       print("Aucun adherent " );
@@ -227,16 +227,6 @@ public function getAdherentParDateNaiisance(string $date /*pas de variable date*
 
           }
 
-          public function getAllMatchsVenir() {
-            $reponse=$this->db->query("SELECT M.idmatch,M.lieu,M.date,M.arbitre,M.heure,M.categorie FROM match M WHERE  M.date >= CURRENT_DATE ");
-            $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"Match");
-            for ($i=0; $i<count($donnees); $i++){
-              $matchs[$i]= $donnees[0];
-            }
-              return $matchs;
-
-          }
-
           public function estMembreDuBureau(int $id)  {
             $reponse=$this->db->query("SELECT * FROM bureau WHERE idhadh= $id");
             $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"Bureau");
@@ -245,6 +235,11 @@ public function getAdherentParDateNaiisance(string $date /*pas de variable date*
             } else {
               return true;
             }
+          }
+
+          public function ajoutAdherent($nom, $prenom, $dateNaissance, $sexe, $telperso, $typelicense,$mail){
+            $this->db->query("INSERT INTO ADHERENT VALUES (SELECT MAX(id) FROM ADHERENT; +1), '$nom', '$prenom', $dateNaissance, '$sexe','$telperso','$prenom.$nom','$nom.$dateNaissance','00000000000','$typelicense',false,'000',$mail");
+
           }
 }
 ?>
