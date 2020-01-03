@@ -87,7 +87,7 @@
 								<?php } ?>
 								<div class="row">
 									<div class="col-lg-8">
-										<b><a href="forgot.View.php">Mot de passe oublié</a></b>
+										<b><a href="../View/forgot.View.php">Mot de passe oublié</a></b>
 									</div>
 									<div class="col-lg-4 text-right">
 										<button class="btn btn-action" type="submit">Connexion</button>

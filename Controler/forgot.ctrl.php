@@ -1,148 +1,53 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<?php
+require_once("../Framework/view.class.php");
+// Récupération des données de configuration
 
-	<title>Mot de passe oublié</title>
-
-	<link rel="shortcut icon" href="../View/images/logo.png">
-
-	<link rel="stylesheet" href="../View/css/bootstrap.min.css">
-	<link rel="stylesheet" href="../View/css/font-awesome.min.css">
-
-	<!-- Custom styles for our template -->
-	<link rel="stylesheet" href="../View/css/bootstrap-theme.css" media="screen" >
-	<link rel="stylesheet" href="../View/css/main.css">
-
-</head>
-
-<body>
-	<!-- Fixed navbar -->
-	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
-		<div class="container2">
-			<div class="navbar-header">
-				<!-- Button for smallest screens -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="index.View.php"><img src="../View/images/logo.png" alt="logo club" width = 5% height = 100% class="logo"><h1>Vaillante Chatillonnaise Handball</h1></a>
-			</div>
-			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav pull-right">
-					<li><a class="btn2" href="index.View.php">Accueil</a></li>
-					<li><a class="btn2" href="contact.View.php">Nous contacter</a></li>
-					<li class="active"><a class="btn2" href="signin.View.php">Se connecter</a></li>
-				</ul>
-			</div><!--/.nav-collapse -->
-		</div>
-	</div>
-	<!-- /.navbar -->
-
-	<header id="head" class="secondary"></header>
-
-	<!-- container -->
-	<div class="container">
-
-		<ol class="breadcrumb">
-			<li><a href="index.html">Accueil</a></li>
-			<li><a href="signin.html">Se connecter</a></li>
-			<li class="active">Mot de passe oublié</li>
-		</ol>
-
-		<div class="row">
-
-			<!-- Article main content -->
-			<article class="col-xs-12 maincontent">
-				<header class="page-header">
-					<h2 class="page-title">Mot de passe oublié</h2>
-				</header>
-
-				<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-					<div class="panel panel-default">
-						<div class="panel-body">
-							<hr>
-              <h3 class="thin text-center">Entrer l'adresse mail associée à votre compte</h3>
-							<form>
-								<div class="top-margin">
-									<label>Adresse mail <span class="text-danger">*</span></label>
-									<input type="text" class="form-control">
-								</div>
-
-								<hr>
-
-								<div class="row">
-									<div class="col-lg-4 text-right">
-										<button class="btn btn-action" type="submit">Envoyer</button>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-
-				</div>
-
-			</article>
-			<!-- /Article -->
-
-		</div>
-	</div>	<!-- /container -->
+require_once("../Model/Adherent.class.php");
+include("../Model/DAO.classe.php");
 
 
-  <footer id="footer" class="top-space">
+if(isset($_POST["email"])){
+	$myPDO = new DAO();
+	$m = $myPDO->isPresent_email($_POST["email"]);
+		if(is_null($m)){
+			$view= new View("../View/forgot.View.php");
+			$view->confirmationSent=false;
+			$view->errorMail=true;
+			//$view->list=$list;
+			$view->show();
+		} else {
+			$to = $m->getMail();
+			$subject = "REINITIALISATION DE MOT DE PASSE";
+		  $txt = "Voici votre mot de passe pour votre compte : ".$m->getPassword()." \n \n Si vou n'avez pas demande votre mot de passe cela signifie que quelqu'un essaye d'avoir acces a votre compte. Veuillez le securiser en ne partageant pas votre mot de passe. ";
+			$headers = "From: vaillante.chatillonnaise@gmail.com";
 
-    <div class="footer1">
-      <div class="container">
-        <div class="row">
+			if(mail($to,$subject,$txt,$headers)) {
+				$view= new View("../View/forgot.View.php");
+				//$view->list=$list;
+				$view->confirmationSent=true;
+				$view->errorMail=false;
+				$view->show();
+			}else{
+				$view= new View("../View/forgot.View.php");
+				//$view->list=$list;
+				$view->confirmationSent=false;
+				$view->errorMail=false;
+				$view->show();
+			}
 
-          <div class="col-md-3 widget">
-            <h3 class="widget-title">Nous contacter</h3>
-            <div class="widget-body">
-              <p>0457659852<br>
-                <a href="mailto:#">test@test.com</a><br>
-                <br>
-                Gymnase de L'Europe, Avenue Francois Mitterand, 01400 Châtillon-sur-Chalaronne
-              </p>
-            </div>
-          </div>
-
-          <div class="col-md-3 widget">
-            <h3 class="widget-title">Nous suivre</h3>
-            <div class="widget-body">
-              <p class="follow-me-icons clearfix">
-                <a href="https://fr-fr.facebook.com/vaillantechatillonnaise/"><i class="fa fa-facebook fa-2"></i></a>
-              </p>
-            </div>
-          </div>
-
-
-
-        </div> <!-- /row of widgets -->
-      </div>
-    </div>
-
-
-    <div class="footer2">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-md-6 widget">
-            <div class="widget-body">
-              <p class="simplenav">
-                <a href="index.View.php">Accueil</a> |
-                <a href="contact.View.php">Nous contacter</a> |
-                <b><a href="signin.View.php">Se connecter</a></b>
-              </p>
-            </div>
-          </div>
-
-
-
-        </div> <!-- /row of widgets -->
-      </div>
-    </div>
-  </footer>
+		}
+} else {
+	$view= new View("../View/forgot.View.php");
+	//$view->list=$list;
+	$view->errorMail=false;
+	$view->show();
+}
 
 
 
 
-</body>
-</html>
+
+
+
+
+?>

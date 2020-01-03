@@ -100,6 +100,18 @@ public function getAdherentParDateNaiisance(string $date /*pas de variable date*
       return $adherents;
     }
    }
+
+   public function isPresent_email(string $email) {
+     $reponse=$this->db->query("SELECT * FROM ADHERENT WHERE mail='$email' ");
+     $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"Adherent");
+     if(count($donnees) == 0) {
+       printf("Aucun adherent avec cette date de naissance");
+     } else {
+       $adherent= $donnees[0];
+       return $adherent;
+     }
+    }
+
  //--------------------------------JOUEUR----------------------------------//
  public function getJoueurParID(int $id): Joueur {
    $reponse=$this->db->query("SELECT * FROM Joueur WHERE idAdh=$id ");

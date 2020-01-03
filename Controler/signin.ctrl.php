@@ -5,21 +5,6 @@ require_once("../Framework/view.class.php");
 require_once("../Model/Adherent.class.php");
 include("../Model/DAO.classe.php");
 
-
-// Creation de l'instace DAO
-/*
-$adherents = new DAO("/users/info/etu-s3/bekelen/public_html/M3301/Model/data");
-$NTA=$adherents->getNombreTotalAdherents();
-echo $NTA;
-  for($i=1;$i<7;$i++){
-      // Récupération de tous les objets Music
-      $m = $adherents->getAdherentParId($i);
-      // Ajout à la liste des telephones à afficher
-      $list[$i] = $m;
-    }
-*/
-//---------------------------------------------Tri par prix, méthode TRIX PAR BULLE-------------------------------------//
-
 if(isset($_POST["login"]) && isset($_POST["password"])){
 	$myPDO = new DAO();
 	$m = $myPDO->getAdherentParLogin($_POST["login"]);

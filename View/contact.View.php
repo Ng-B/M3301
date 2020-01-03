@@ -29,8 +29,8 @@
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
 					<li><a class="btn2" href="http://handbase.ddns.net">Accueil</a></li>
-					<li class="active"><a class="btn2" href="contact.View.php">Nous contacter</a></li>
-					<li><a class="btn2" href="signin.View.php">Se connecter</a></li>
+					<li class="active"><a class="btn2" href="../View/contact.View.php">Nous contacter</a></li>
+					<li><a class="btn2" href="../Controler/signin.ctrl.php">Se connecter</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -139,8 +139,8 @@
 						<div class="widget-body">
 							<p class="simplenav">
 								<a href="http://handbase.ddns.net">Accueil</a> |
-								<b><a href="contact.View.php">Nous contacter</a></b> |
-								<a href="signin.View.php">Se connecter</a>
+								<b><a href="../Projet/contact.View.php">Nous contacter</a></b> |
+								<a href="../Controler/signin.ctrl.php">Se connecter</a>
 							</p>
 						</div>
 					</div>
