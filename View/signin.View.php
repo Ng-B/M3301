@@ -24,11 +24,11 @@
 			<div class="navbar-header">
 				<!-- Button for smallest screens -->
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="index.View.php"><img src="../View/images/logo.png" alt="logo club" width = 5% height = 100% class="logo"><h1>Vaillante Chatillonnaise Handball</h1></a>
+				<a class="navbar-brand" href="http://handbase.ddns.net"><img src="../View/images/logo.png" alt="logo club" width = 5% height = 100% class="logo"><h1>Vaillante Chatillonnaise Handball</h1></a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
-					<li><a class="btn2" href="index.View.php">Accueil</a></li>
+					<li><a class="btn2" href="http://handbase.ddns.net">Accueil</a></li>
 					<li><a class="btn2" href="contact.View.php">Nous contacter</a></li>
 					<li class="active"><a class="btn2" href="signin.View.php">Se connecter</a></li>
 				</ul>
@@ -43,7 +43,7 @@
 	<div class="container">
 
 		<ol class="breadcrumb">
-			<li><a href="index.View.php">Accueil</a></li>
+			<li><a href="http://handbase.ddns.net">Accueil</a></li>
 			<li class="active">Se connecter</li>
 		</ol>
 
@@ -146,7 +146,7 @@
 					<div class="col-md-6 widget">
 						<div class="widget-body">
 							<p class="simplenav">
-								<a href="index.View.php">Accueil</a> |
+								<a href="http://handbase.ddns.net/">Accueil</a> |
 								<a href="contact.View.php">Nous contacter</a> |
 								<b><a href="signin.View.php">Se connecter</a></b>
 							</p>
