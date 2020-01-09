@@ -1,4 +1,11 @@
 <?php
+require_once("../Framework/view.class.php");
+// Récupération des données de configuration
 
+require_once("../Model/Adherent.class.php");
+include("../Model/DAO.classe.php");
 
-require_once("../View/formulaire.View.php") ?>
+$view= new View("../View/formulaire.View.php");
+
+$view->show();
+?>
