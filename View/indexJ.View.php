@@ -75,7 +75,10 @@ session_start();
 	<div class="container">
 
 		<h2 class="text-center top-space">Questions fréquements posées</h2>
-		<br>
+		<br>session_unset();
+
+// destroy the session
+session_destroy();
 
 		<div class="row">
 			<div class="col-sm-6">

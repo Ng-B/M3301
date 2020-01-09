@@ -1,15 +1,18 @@
 <?php
-
 session_start();
 require_once("../Framework/view.class.php");
 // Récupération des données de configuration
-
 require_once("../Model/Adherent.class.php");
 include("../Model/DAO.classe.php");
-
 if(isset($_POST["login"]) && isset($_POST["password"])){
 	$myPDO = new DAO();
+
 	$m = $myPDO->getAdherentParLogin($_POST["login"]);
+
+	if(is_null($m)){
+  $m = $myPDO->getAdherentParMail($_POST["login"]);
+	}
+
 		if(is_null($m)){
 			$view= new View("../View/signin.View.php");
 			$view->errorLogin=true;
@@ -37,24 +40,12 @@ if(isset($_POST["login"]) && isset($_POST["password"])){
 					//$view->list=$list;
 					$view->show();
 				}
-
 		}
 } else {
-	session_unset();
-
-// destroy the session
 session_destroy();
 	$view= new View("../View/signin.View.php");
 	//$view->list=$list;
 	$view->errorLogin=false;
 	$view->show();
 }
-
-
-
-
-
-
-
-
 ?>
