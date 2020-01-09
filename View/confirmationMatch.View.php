@@ -63,7 +63,7 @@
 	         <fieldset>
 	           <legend>Informations</legend>
 						<label for="id">Match * : </label>
-						<input type="text" name="id" placeholder="Grenoble - Echirolles" readonly="readonly" required><br><br>
+						<input type="text" name="id" placeholder="<?=$_POST['lastname']?>" readonly="readonly" required><br><br>
 	           <label for="date">Date du match * : </label>
 	           <input type="date" name="date" placeholder="28/12/2019" readonly="readonly" required><br><br>
 						 <label for="heure">Heure * : </label>
