@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<?php echo $lastname ?>
 <html lang="fr">
 <head>
 	<meta charset="utf-8">
@@ -66,7 +65,7 @@
 	         <fieldset>
 	           <legend>Informations personnelles</legend>
 	           <label for="firstname">Nom * : </label>
-	           <input type="text" name="firstname" value="<?=$lastname?>" readonly="readonly" required><br><br>
+	           <input type="text" name="firstname" value="<?php echo $lastname; ?>" readonly="readonly" required><br><br>
 	           <label for="lastname">Prénom * :</label>
 	           <input type="text" name="lastname" value="Alain" readonly="readonly" required><br><br>
 	           <label for="date">Date de naissance * :</label>
