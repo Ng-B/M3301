@@ -1,4 +1,4 @@
 <?php
 
 
-require_once("../View/formulaire.View.php") ?>
+include "../View/formulaire.View.php" ?>
