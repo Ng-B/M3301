@@ -113,7 +113,7 @@
 	           <input type="text" name="phoneMF" placeholder="0456358975"><br><br>
 	        </fieldset>
 	        </form><br>
-						<a href="confirmation.View.php"><input type="submit" value="Valider" id="valider"></a>
+						<a href="../Controler/confirmation.ctrl.php"><input type="submit" value="Valider" id="valider"></a>
 				</div>
 
 			</article>
