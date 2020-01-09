@@ -40,10 +40,11 @@ if(isset($_POST["login"]) && isset($_POST["password"])){
 
 		}
 } else {
-	session_unset();
 
-// destroy the session
-session_destroy();
+	session_unset();
+	// destroy the session
+	session_destroy();
+
 	$view= new View("../View/signin.View.php");
 	//$view->list=$list;
 	$view->errorLogin=false;
