@@ -60,7 +60,7 @@
 				<br>
 				<p>* champs obligatoires</p>
 				<div class="formulaire">
-					<form action="../Controler/formulaire.ctrl.php">
+					<form action="../Controler/confirmation.ctrl.php">
 	         <fieldset>
 	           <legend>Informations personnelles</legend>
 	           <label for="firstname">Nom * : </label>
