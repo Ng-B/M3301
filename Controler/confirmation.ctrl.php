@@ -1,5 +1,6 @@
 <?php
-$lastname=$_POST['firstname'];
+$lastname=$_POST["firstname"];
 echo $lastname;
-include "../View/confirmation.View.php"
+echo "2";
+//include "../View/confirmation.View.php"*/
 ?>
