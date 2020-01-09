@@ -188,8 +188,21 @@ public function getAdherentParDateNaiisance(string $date /*pas de variable date*
           }
         }
 
+
+        public function getContactParent(int $tel1,int $tel2): Contact {
+          $reponse=$this->db->query("SELECT * FROM Contact WHERE telPere=$tel1 AND telMere=$tel2 ");
+          $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"Contact");
+           if(count($donnees) == 0) {
+            printf("Aucun contact avec cet num tel");
+            $contact=NULL;
+          } else {
+            $contact= $donnees[0];
+            return $contact;
+          }
+        }
+
         public function getContactParTel(int $tel): Contact {
-          $reponse=$this->db->query("SELECT * FROM Contact WHERE telPere=$tel OR telMere=$tel ");
+          $reponse=$this->db->query("SELECT * FROM Contact WHERE telpere=$tel OR telmere=$tel ");
           $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"Contact");
           if(count($donnees)>1) {
             printf("Plusieurs contacts avec cet num tel");
@@ -215,7 +228,7 @@ public function getAdherentParDateNaiisance(string $date /*pas de variable date*
               $equipe= $donnees[0];
               return $equipe;
             }
-          }
+          }INSERT INTO ADHERENT VALUES ((SELECT MAX(id)+1 FROM ADHERENT ), '$nom', '$prenom', $dateNaissance, '$sexe','$telperso','$prenom.$nom','$nom.$dateNaissance',NULL,'$typelicense',false,'000',$mail,(SELECT id FROM Contact WHERE telPere=$tel1 AND telMere=$tel2 )
 
 
 
@@ -250,8 +263,12 @@ public function getAdherentParDateNaiisance(string $date /*pas de variable date*
             }
           }
 
-          public function ajoutAdherent($nom, $prenom, $dateNaissance, $sexe, $telperso, $typelicense,$mail){
-            $this->db->query("INSERT INTO ADHERENT VALUES (SELECT MAX(id) FROM ADHERENT; +1), '$nom', '$prenom', $dateNaissance, '$sexe','$telperso','$prenom.$nom','$nom.$dateNaissance','00000000000','$typelicense',false,'000',$mail");
+          public function ajoutAdherent($nom, $prenom, $dateNaissance, $sexe, $telperso, $typelicense,$mail,$tel1,$tel2,$tel3,$tel4){
+            $contactparent=getContactParent($tel1,$tel2);
+            if (!$contactparent){
+            $this->db->query("INSERT INTO contactparent VALUES ($tel1,$tel2,$tel3,$tel4,(SELECT MAX(id)+1 FROM contactparent ))");
+            }
+            $this->db->query("INSERT INTO ADHERENT VALUES ((SELECT MAX(id)+1 FROM ADHERENT ), '$nom', '$prenom', $dateNaissance, '$sexe','$telperso','$prenom.$nom','$nom.$dateNaissance',NULL,'$typelicense',false,'000',$mail,(SELECT id FROM Contact WHERE telpere=$tel1 AND telmere=$tel2 )");
 
           }
 }

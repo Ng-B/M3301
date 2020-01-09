@@ -69,7 +69,7 @@
 					<h2 class="page-title">Gestion des adhérents</h2>
 				</header>
 				<br>
-				<a href="formulaire.View.php"><input type="submit" value="Ajouter un adhérent" id="valider"></a><br><br><br>
+				<a href="../Controler/formulaire.ctrl.php"><input type="submit" value="Ajouter un adhérent" id="valider"></a><br><br><br>
 				<?php if( isset($this->no_adherents)  ){
 					print("<h3> Aucun adherent trouve </h3>");
 				}else{
