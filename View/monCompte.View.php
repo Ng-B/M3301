@@ -76,16 +76,7 @@ session_start();
 	          <td><?php echo $this->adherent->getId(); ?></td>
 	        </tr>
 	        <tr>
-	 				 <th>Nom :</th>Document Expired
-
-This document is no longer available.
-
-The requested document is not available in Firefox’s cache.
-
-    As a security precaution, Firefox does not automatically re-request sensitive documents.
-    Click Try Again to re-request the document from the website.
-
-
+	 				 <th>Nom :</th>
 	          <td><?php echo $this->adherent->getNom(); ?></td>
 	        </tr>
 	        <tr>
