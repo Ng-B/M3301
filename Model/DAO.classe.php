@@ -228,8 +228,7 @@ public function getAdherentParDateNaiisance(string $date /*pas de variable date*
               $equipe= $donnees[0];
               return $equipe;
             }
-          }INSERT INTO ADHERENT VALUES ((SELECT MAX(id)+1 FROM ADHERENT ), '$nom', '$prenom', $dateNaissance, '$sexe','$telperso','$prenom.$nom','$nom.$dateNaissance',NULL,'$typelicense',false,'000',$mail,(SELECT id FROM Contact WHERE telPere=$tel1 AND telMere=$tel2 )
-
+          }
 
 
     //--------------------------MATCHS----------------------------------------//
