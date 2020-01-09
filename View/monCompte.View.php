@@ -1,3 +1,6 @@
+<?php
+session_start();
+ if ( isset( $_SESSION['user_id'] ) ) {  ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -68,46 +71,55 @@
 				</header>
 				<br>
 				<table style="width:100%">
-			 <tr>
-         <th>ID :</th>
-         <td>1</td>
-       </tr>
-       <tr>
-				 <th>Nom :</th>
-         <td>LOCATELLI</td>
-       </tr>
-       <tr>
-				 <th>Prénom :</th>
-         <td>Antoine</td>
-       </tr>
-       <tr>
-         <th>Date de naissance :</th>
-         <td>01/01/2000</td>
-       </tr>
-       <tr>
-         <th>Sexe : </th>
-         <td>Homme</td>
-       </tr>
-       <tr>
-				 <th>Numéro de téléphone :</th>
-         <td>0651213520</td>
-       </tr>
-       <tr>
-				 <th>Adresse mail :</th>
-         <td>antoine.locatelli@iut2.univ-grenoble-alpes.fr</td>
-       </tr>
-       <tr>
-				 <th>Numéro de licence :</th>
-         <td>123456789</td>
-       </tr>
-       <tr>
-         <th>Rôle :</th>
-         <td>Joueur</td>
-       </tr>
-       <tr>
-         <th>Bureau :</th>
-         <td>Président</td>
-       </tr>
+					<tr>
+	          <th>ID :</th>
+	          <td><?php echo $this->adherent->getId(); ?></td>
+	        </tr>
+	        <tr>
+	 				 <th>Nom :</th>Document Expired
+
+This document is no longer available.
+
+The requested document is not available in Firefox’s cache.
+
+    As a security precaution, Firefox does not automatically re-request sensitive documents.
+    Click Try Again to re-request the document from the website.
+
+
+	          <td><?php echo $this->adherent->getNom(); ?></td>
+	        </tr>
+	        <tr>
+	 				 <th>Prénom :</th>
+	          <td><?php echo $this->adherent->getPrenom(); ?></td>
+	        </tr>
+	        <tr>
+	          <th>Date de naissance(aaaa-mm-jj) :</th>
+	          <td><?php echo $this->adherent->getDateNaissance(); ?></td>
+	        </tr>
+	        <tr>
+	          <th>Sexe : </th>
+	          <td><?php if($this->adherent->getSexe() == 0) { echo "Femme"; }else{ echo "Homme"; } ?></td>
+	        </tr>
+	        <tr>
+	 				 <th>Numéro de téléphone :</th>
+	          <td><?php echo $this->adherent->getTelephone(); ?></td>
+	        </tr>
+	        <tr>
+	 				 <th>Adresse mail :</th>
+	          <td><?php echo $this->adherent->getMail(); ?></td>
+	        </tr>
+	        <tr>
+	 				 <th>Numéro de licence :</th>
+	          <td><?php echo $this->adherent->getNumLicense(); ?></td>
+	        </tr>
+	        <tr>
+	          <th>Rôle :</th>
+	          <td>Joueur</td>
+	        </tr>
+	        <tr>
+	          <th>Bureau :</th>
+	          <td>Président</td>
+	        </tr>
 			</table>
 
 			</article>
@@ -188,3 +200,4 @@
 
 </body>
 </html>
+<?php }else{     header("Location: http://handbase.ddns.net/projet/Controler/signin.ctrl.php"); } ?>

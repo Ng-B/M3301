@@ -40,7 +40,7 @@
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
-					<li><a class="btn2" href="indexP.View.php">Accueil</a></li>
+					<li><a class="btn2" href="http://handbase.ddns.net">Accueil</a></li>
 					<li class="active"><a class="btn2" href="../Controler/presidentAdherents.ctrl.php?login=<?= $this->current_login?>">Gestion des adhérents</a></li>
 					<li><a class="btn2" href="../Controler/lesmatchs.ctrl.php?login=<?= $this->current_login?>">Gestion des matchs</a></li>
 					<li><a class="btn2" href="../Controler/monCompte.ctrl.php?login=<?= $this->current_login?>">Mon compte</a></li>
@@ -57,7 +57,7 @@
 	<div class="container">
 
 		<ol class="breadcrumb">
-			<li><a href="indexP.View.php">Accueil</a></li>
+			<li><a href="http://handbase.ddns.net">Accueil</a></li>
 			<li class="active"> Gestion des adhérents </li>
 		</ol>
 
