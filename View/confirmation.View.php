@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php echo $lastname ?>
 <html lang="fr">
 <head>
 	<meta charset="utf-8">
