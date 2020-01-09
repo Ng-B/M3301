@@ -13,6 +13,7 @@ require_once("Bureau.class.php");
 
       try{
         $this->db= $myPDO;
+        $this->db->query("set datestyle to european");
       }
 
       catch (PDOException $e){
