@@ -229,7 +229,10 @@ public function getAdherentParDateNaiisance(string $date /*pas de variable date*
               return $equipe;
             }
           }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 20c1ad49a1e7d9de90969b63b1a20898afd01a10
 
 
     //--------------------------MATCHS----------------------------------------//

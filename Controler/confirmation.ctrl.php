@@ -1,7 +1,3 @@
 <?php
-
-
-Baraddaada
-
-
-include "confirmation.View.php" ?>
+include "../View/confirmation.View.php"
+?>

@@ -61,11 +61,11 @@
 				<br>
 				<p>* champs obligatoires</p>
 				<div class="formulaire">
-					<form action="inscription.php">
+					<form action="inscription.php" method="post">
 	         <fieldset>
 	           <legend>Informations personnelles</legend>
 	           <label for="firstname">Nom * : </label>
-	           <input type="text" name="firstname" value="DUPONT" readonly="readonly" required><br><br>
+	           <input type="text" name="firstname" value="<?=$_POST['lastname']?>" readonly="readonly" required><br><br>
 	           <label for="lastname">Prénom * :</label>
 	           <input type="text" name="lastname" value="Alain" readonly="readonly" required><br><br>
 	           <label for="date">Date de naissance * :</label>

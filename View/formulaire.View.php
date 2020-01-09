@@ -60,7 +60,7 @@
 				<br>
 				<p>* champs obligatoires</p>
 				<div class="formulaire">
-					<form action="inscription.php">
+					<form action="../Controler/confirmation.ctrl.php" method="post">
 	         <fieldset>
 	           <legend>Informations personnelles</legend>
 	           <label for="firstname">Nom * : </label>
@@ -113,7 +113,7 @@
 	           <input type="text" name="phoneMF" placeholder="0456358975"><br><br>
 	        </fieldset>
 	        </form><br>
-						<a href="confirmation.View.php"><input type="submit" value="Valider" id="valider"></a>
+						<a href="../Controler/confirmation.ctrl.php"><input type="submit" value="Valider" id="valider"></a>
 				</div>
 
 			</article>
