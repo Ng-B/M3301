@@ -1,4 +1,6 @@
 <?php
+
+session_start();
 require_once("../Framework/view.class.php");
 // Récupération des données de configuration
 
@@ -20,11 +22,13 @@ if(isset($_POST["login"]) && isset($_POST["password"])){
 						$view= new View("../View/indexP.View.php");
 						$view->errorLogin=false;
 						$view->current_user=$_POST["login"];
+						$_SESSION['user_id']=$_POST["login"];
 						$view->show();
 					} else {
 					$view= new View("../View/indexJ.View.php");
 					$view->errorLogin=false;
 					$view->current_user=$_POST["login"];
+					$_SESSION['user_id']=$_POST["login"];
 					$view->show();
 				}
 				} else {
@@ -36,6 +40,10 @@ if(isset($_POST["login"]) && isset($_POST["password"])){
 
 		}
 } else {
+	session_unset();
+
+// destroy the session
+session_destroy();
 	$view= new View("../View/signin.View.php");
 	//$view->list=$list;
 	$view->errorLogin=false;
