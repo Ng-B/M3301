@@ -261,7 +261,7 @@ public function getAdherentParDateNaissance(string $date /*pas de variable date*
             }
           }
 
-          public function ajoutAdherent($nom, $prenom, $dateNaissance, $sexe, $telperso, $typelicense,$mail,$tel1,$tel2,$tel3,$tel4,$joueur,$bureau,$entraineur,$categorie){
+          public function ajoutAdherent($nom, $prenom, $dateNaissance, $sexe, $telperso,$mail,$tel1,$tel2,$tel3,$tel4,$joueur,$bureau,$entraineur,$categorie){
             $contactparent=getContactParent($tel1,$tel2);
             if (!$contactparent){
             $this->db->query("INSERT INTO contactparent VALUES ($tel1,$tel2,$tel3,$tel4,(SELECT MAX(id)+1 FROM contactparent ))");
