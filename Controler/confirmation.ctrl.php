@@ -1,8 +1,7 @@
 <?php
-
+$view= new View("../View/formulaire.View.php");
 $current_login=$_GET["login"];
 $view->current_login=$current_login;
-
 
 $lastname=$_POST["firstname"];
 $firstname=$_POST["lastname"];
@@ -18,5 +17,7 @@ $phoneP=$_POST["phoneP"];
 $phonePF=$_POST["phonePF"];
 $phoneM=$_POST["phoneM"];
 $phoneMF=$_POST["phoneMF"];
-include "../View/confirmation.View.php"
+
+
+$view->show();
 ?>
