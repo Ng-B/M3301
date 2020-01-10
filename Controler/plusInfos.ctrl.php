@@ -4,6 +4,7 @@ require_once("../Framework/view.class.php");
 
 require_once("../Model/Adherent.class.php");
 include("../Model/DAO.class.php");
+include("../Model/ContactParents.class.php");
 
 
 
@@ -17,8 +18,9 @@ if(isset($_GET["login"]) ){
 			$view->show();
 			} else {
 				$view= new View("../View/plusInfos.View.php");
-				//$view->list=$list;
+				$contact=$myPDO->getContactPourAdherent($adherent->getId());
 				$view->adherent=$adherent;
+				$view->contact=$contact;
 				$view->current_login=$current_login;
 				$view->show();
 			}

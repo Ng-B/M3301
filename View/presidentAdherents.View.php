@@ -95,7 +95,7 @@ session_start();
 				 <td><?php  if($adherent->getSexe()==0){ echo "Femme"; }else{ echo "Homme"; } ?></td>
 				 <td>-------</td>
 				 <td>-------</td>
-         <td><a href="plusInfos.View.php">Plus d'informations</a></td>
+         <td><a href="../Controler/plusInfos.ctrl.php?login=<?= $adherent->getLogin() ?>">Plus d'informations</a></td>
 			 </tr>
  <?php }
  		echo  "</table>" ;

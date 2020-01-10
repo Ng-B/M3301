@@ -2,6 +2,8 @@
 require_once("Match.class.php");
 require_once("Adherent.class.php");
 require_once("Bureau.class.php");
+require_once("ContactParents.class.php");
+
 
 
  class DAO{
@@ -279,6 +281,16 @@ public function getAdherentParDateNaissance(string $date /*pas de variable date*
                $matchs[$i]= $donnees[$i];
              }
                return $matchs;
+
+           }
+
+           public function getContactPourAdherent($id) {
+             $reponse=$this->db->query("SELECT * FROM contactparent WHERE id=$id ");
+             $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"ContactParent");
+             for ($i=0; $i<count($donnees); $i++){
+               $contact[$i]= $donnees[$i];
+             }
+               return $contact;
 
            }
 }

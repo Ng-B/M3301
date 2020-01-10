@@ -1,26 +1,25 @@
 <?php
   class ContactParent{
     private $telPere;
-
     private $telMere;
     private $fixePere;
     private $fixeMere;
     private $id;
 
     public function getTelPere(){
-      return $telPere;
+      return $this->telPere;
     }
 
     public function getFixePere(){
-      return $fixePere;
+      return $this->fixePere;
     }
 
     public function getTelMere(){
-      return $telMere;
+      return $this->telMere;
     }
 
     public function getFixeMere(){
-      return $fixeMere;
+      return $this->fixeMere;
     }
 
   }
