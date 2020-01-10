@@ -15,9 +15,9 @@ $phonePF=$_POST["phonePF"];
 $phoneM=$_POST["phoneM"];
 $phoneMF=$_POST["phoneMF"];
 if ($gender=='male'){
-ajoutAdherent($lastname, $firstname, $date, 1, $phone,$mail,$phoneP,$phonePF,$phoneM,$phoneMF,$joueur,$entraineur,$categorie);
+ajoutAdherent($lastname, $firstname, $date, 1, $phone,$mail,$phoneP,$phonePF,$phoneM,$phoneMF,$joueur,$bureau,$entraineur,$categorie);
 }else{
-ajoutAdherent($lastname, $firstname, $date, 0, $phone,$mail,$phoneP,$phonePF,$phoneM,$phoneMF,$joueur,$entraineur,$categorie);
+ajoutAdherent($lastname, $firstname, $date, 0, $phone,$mail,$phoneP,$phonePF,$phoneM,$phoneMF,$joueur,$bureau,$entraineur,$categorie);
 }
 
 
