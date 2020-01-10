@@ -1,5 +1,5 @@
 <?php
-include "../Model/DAO.class.php";
+require_once('../Model/DAO.class.php');
 $lastname=$_POST["firstname"];
 $firstname=$_POST["lastname"];
 $date=$_POST["date"];
