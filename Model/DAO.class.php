@@ -55,7 +55,7 @@ public function getAdherentParId(int $id): Adherent {
  }
 
 
-public function getAdherentParDateNaiisance(string $date /*pas de variable date*/): array {
+public function getAdherentParDateNaissance(string $date /*pas de variable date*/): array {
   $reponse=$this->db->query("SELECT * FROM ADHERENT WHERE dateDeNaissance=$date ");
   $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"Adherent");
   if(count($donnees)>1) {
@@ -261,7 +261,7 @@ public function getAdherentParDateNaiisance(string $date /*pas de variable date*
             }
           }
 
-          public function ajoutAdherent($nom, $prenom, $dateNaissance, $sexe, $telperso, $typelicense,$mail,$tel1,$tel2,$tel3,$tel4,$joueur,$bureau,$entraineur,$categorie){
+          public function ajoutAdherent($nom, $prenom, $dateNaissance, $sexe, $telperso,$mail,$tel1,$tel2,$tel3,$tel4,$joueur,$bureau,$entraineur,$categorie){
             $contactparent=getContactParent($tel1,$tel2);
             if (!$contactparent){
             $this->db->query("INSERT INTO contactparent VALUES ($tel1,$tel2,$tel3,$tel4,(SELECT MAX(id)+1 FROM contactparent ))");
