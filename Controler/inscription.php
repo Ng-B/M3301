@@ -14,6 +14,7 @@ $phoneP=$_POST["phoneP"];
 $phonePF=$_POST["phonePF"];
 $phoneM=$_POST["phoneM"];
 $phoneMF=$_POST["phoneMF"];
+
 $bdd=new DAO();
 if ($gender=="female"){
 $bdd->ajoutAdherent($lastname, $firstname, $date, 1, $phone,$mail,$phoneP,$phoneM,$phonePF,$phoneMF,$joueur,$bureau,$entraineur,$categorie);
