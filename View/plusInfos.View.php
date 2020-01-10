@@ -96,7 +96,7 @@
        </tr>
        <tr>
 				 <th>Adresse mail :</th>
-         <td><?= $this->adherent->getMail()) ?></td>
+         <td><?= $this->adherent->getMail() ?></td>
        </tr>
        <tr>
 				 <th>Numéro de licence :</th>
