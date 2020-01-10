@@ -284,7 +284,7 @@ public function getAdherentParDateNaissance(string $date /*pas de variable date*
 
            }
 
-           public function getContactPourAdherent($id) {
+           public function getContactPourAdherent(int $id) {
              $reponse=$this->db->query("SELECT * FROM contactparent WHERE id=$id ");
              $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"ContactParent");
              for ($i=0; $i<count($donnees); $i++){
