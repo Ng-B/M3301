@@ -124,8 +124,8 @@ session_start();
 	           <input type="text" name="phoneMF" value="<?=$phoneMF?>" readonly="readonly"><br><br>
 					 <?php } ?>
 					</fieldset>
+					<input type="submit" value="Valider" id="valider">
 	        </form><br>
-						<input type="submit" value="Valider" id="valider">
             <a href="modifier.View.php"><input type="submit" value="Modifier" id="valider"></a>
 				</div>
 
