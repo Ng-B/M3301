@@ -1,3 +1,6 @@
+<?php
+session_start();
+ if ( isset( $_SESSION['user_id'] ) ) {  ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -76,8 +79,6 @@
 	           <input type="text" name="phone" placeholder="0651236598" required><br><br>
 	           <label for="mail">Adresse mail * :</label>
 	           <input type="text" name="mail" placeholder="test@test.fr" required><br><br>
-						 <label for="mail">Numéro de licence * :</label>
-	           <input type="text" name="licence" placeholder="123456789" required><br><br>
 	           <label for="role">Rôle(s) :</label>
 						<input type="checkbox" name="joueur" value="joueur" checked>     Joueur
 	          <input type="checkbox" name="entraineur" value="entraineur">     Entraîneur (catégorie :
@@ -97,7 +98,7 @@
 						<select name="bureau" id="bureau">
  						<option value="president">Président</option>
 					  <option value="secretaire">Secrétaire</option>
-						<option value="secretaire" selected>Aucun des deux</option>
+						<option value="aucun" selected>Aucun des deux</option>
 					 </select>
 	         </fieldset>
 					 <br><br>
@@ -195,3 +196,4 @@
 
 </body>
 </html>
+<?php }else{     header("Location: http://handbase.ddns.net/projet/Controler/signin.ctrl.php"); } ?>

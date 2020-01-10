@@ -1,3 +1,6 @@
+<?php
+session_start();
+ if ( isset( $_SESSION['user_id'] ) ) {  ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -61,60 +64,72 @@
 				<br>
 				<p>* champs obligatoires</p>
 				<div class="formulaire">
-					<form action="inscription.php" method="post">
+					<form action="../Controler/inscription.php" method="post">
 	         <fieldset>
 	           <legend>Informations personnelles</legend>
 	           <label for="firstname">Nom * : </label>
 	           <input type="text" name="firstname" value="<?=$lastname?>" readonly="readonly" required><br><br>
 	           <label for="lastname">Prénom * :</label>
-	           <input type="text" name="lastname" value="Alain" readonly="readonly" required><br><br>
+	           <input type="text" name="lastname" value="<?=$firstname?>" readonly="readonly" required><br><br>
 	           <label for="date">Date de naissance * :</label>
-	           <input type="date" name="date" value="01/01/2000" readonly="readonly" required><br><br>
+	           <input type="date" name="date" value="<?=$date?>" readonly="readonly" required><br><br>
 	           <label for="gender">Sexe * :</label>
+						 <?php if($gender=="male"){ ?>
 						<input type="radio" name="gender" value="male" disabled="disabled" checked>     Homme
 	          <input type="radio" name="gender" value="female" disabled="disabled">     Femme<br><br>
-	           <label for="phone">Numéro de téléphone * :</label>
-	           <input type="text" name="phone" value="0651236598" readonly="readonly" required><br><br>
+					<?php }else{ ?>
+						<input type="radio" name="gender" value="male" disabled="disabled" >     Homme
+	          <input type="radio" name="gender" value="female" disabled="disabled" checked>     Femme<br><br>
+					<?php } ?>
+						 <label for="phone">Numéro de téléphone * :</label>
+	           <input type="text" name="phone" value="<?=$phone?>" readonly="readonly" required><br><br>
 	           <label for="mail">Adresse mail * :</label>
-	           <input type="text" name="mail" value="test@test.fr" readonly="readonly" required><br><br>
-						 <label for="mail">Numéro de licence * :</label>
-	           <input type="text" name="licence" value="123456789" readonly="readonly" required><br><br>
+	           <input type="text" name="mail" value="<?=$mail?>" readonly="readonly" required><br><br>
 	           <label for="role">Rôle(s) :</label>
+
+						 <?php if($joueur){ ?>
 						<input type="checkbox" name="joueur" value="joueur" disabled="disabled" checked>     Joueur
-	          <input type="checkbox" name="entraineur" value="entraineur" disabled="disabled">     Entraîneur (catégorie :
-						<select name="categorie" disabled="disabled">
- 						<option value="-9">-9</option>
-					  <option value="-11">-11</option>
-						<option value="-13M">-13M</option>
-						<option value="-13F">-13F</option>
-						<option value="-15M">-15M</option>
-						<option value="-15F">-15F</option>
-					  <option value="-18M">-18M</option>
-						<option value="-18F" selected >-18F</option>
-						<option value="SeniorM">-SéniorM</option>
-						<option value="SeniorF">-SéniorF</option>
-					  </select>)<br><br>
-	          <label for="bureau">Bureau :</label>
-						<select name="bureau" id="bureau" disabled="disabled">
- 						<option value="president">Président</option>
-					  <option value="secretaire">Secrétaire</option>
-						<option value="secretaire" selected>Aucun des deux</option>
-					 </select>
+						<?php }else{ ?>
+							<input type="checkbox" name="joueur" value="joueur" disabled="disabled" >     Joueur
+							<?php } ?>
+
+							<?php if($entraineur){ ?>
+								<input type="checkbox" name="entraineur" value="entraineur" disabled="disabled" checked>     Entraîneur (catégorie :
+								<input type="text" name="categorie" value="<?=$categorie?>" readonly="readonly" required>)<br><br>
+							<?php }else{ ?>
+								<input type="checkbox" name="entraineur" value="entraineur" disabled="disabled">     Entraîneur
+								<?php } ?>
+
+
+	          <label for="bureau">Rôle bureau :</label>
+						<input type="text" name="bureau" value="<?=$bureau?>" readonly="readonly" required><br><br>
 	         </fieldset>
 					 <br><br>
 	         <fieldset>
 	           <legend>Informations parents</legend>
+						 <?php if(isset($phoneP)){ ?>
 	           <label for="phoneP">Numéro de téléphone portable père :</label>
-	           <input type="text" name="phoneP" value="0651236589" readonly="readonly"><br><br>
-	           <label for="phonePF">Numéro de téléphone fixe père :</label>
-	           <input type="text" name="phonePF" value="0476589856" readonly="readonly"><br><br>
-	           <label for="phoneM">Numéro de téléphone portable mère :</label>
-	           <input type="text" name="phoneM" value="0652365987" readonly="readonly"><br><br>
-	           <label for="phoneMF">Numéro de téléphone fixe mère :</label>
-	           <input type="text" name="phoneMF" value="0456358975" readonly="readonly"><br><br>
-	        </fieldset>
+	           <input type="text" name="phoneP" value="<?=$phoneP?>" readonly="readonly"><br><br>
+					 <?php }
+					 if(isset($phonePF)){ ?>
+						 <label for="phonePF">Numéro de téléphone fixe père :</label>
+	           <input type="text" name="phonePF" value="<?=$phonePF?>" readonly="readonly"><br><br>
+					 <?php }
+					 if(isset($phoneM)){ ?>
+						 <label for="phoneM">Numéro de téléphone portable mère :</label>
+	           <input type="text" name="phoneM" value="<?=$phoneM?>" readonly="readonly"><br><br>
+					 <?php }
+					 if(isset($phoneMF)){ ?>
+						 <label for="phoneMF">Numéro de téléphone fixe mère :</label>
+	           <input type="text" name="phoneMF" value="<?=$phoneMF?>" readonly="readonly"><br><br>
+					 <?php } ?>
+					</fieldset>
+					<input type="submit" value="Valider" id="valider">
 	        </form><br>
-						<input type="submit" value="Valider" id="valider">
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9a2d87d572ec36d5214a240e7aeb98014a7d5897
             <a href="modifier.View.php"><input type="submit" value="Modifier" id="valider"></a>
 				</div>
 
@@ -196,3 +211,4 @@
 
 </body>
 </html>
+<?php }else{     header("Location: http://handbase.ddns.net/projet/Controler/signin.ctrl.php"); } ?>

@@ -5,7 +5,6 @@ require_once("../Framework/view.class.php");
 require_once("../Model/Adherent.class.php");
 include("../Model/DAO.classe.php");
 
-
 $view= new View("../View/formulaire.View.php");
 
 $view->show();

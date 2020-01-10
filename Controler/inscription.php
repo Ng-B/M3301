@@ -1,4 +1,5 @@
 <?php
+include('../Model/DAO.class.php');
 $lastname=$_POST["firstname"];
 $firstname=$_POST["lastname"];
 $date=$_POST["date"];
@@ -13,5 +14,12 @@ $phoneP=$_POST["phoneP"];
 $phonePF=$_POST["phonePF"];
 $phoneM=$_POST["phoneM"];
 $phoneMF=$_POST["phoneMF"];
-include "../View/confirmation.View.php"
-?>
+if ($gender=='male'){
+ajoutAdherent($lastname, $firstname, $date, 1, $phone,$mail,$phoneP,$phonePF,$phoneM,$phoneMF,$joueur,$bureau,$entraineur,$categorie);
+}else{
+ajoutAdherent($lastname, $firstname, $date, 0, $phone,$mail,$phoneP,$phonePF,$phoneM,$phoneMF,$joueur,$bureau,$entraineur,$categorie);
+}
+
+
+include('presidentAdherents.ctrl.php');
+ ?>

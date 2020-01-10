@@ -51,10 +51,8 @@
 		<br> <br>
 		<h2>Qui sommes-nous ?</h2>
 		<p>
-			Vaillante Chatillonnaise Handball est une association sportive de Handball.<br>
-			Située à Châtillon-sur-Chalaronne dans le département de l'Ain, elle est composée de différentes équipes triées selon l'âge.<br>
-			Des compétitions et des entraînements ont lieu régulièrement.<br>
-			Le club, composé de plus de 150 adhérents, ne cesse de croître.
+			La Vaillante Chatillonnaise Handball est une association sportive située à Châtillon-sur-Chalaronne dans le département de l'Ain.<br>
+			Nous sommes plus de 150 adhérentes et adhérents de tout âge rassemblés autour de la pratique du handball.<br>
 		</p>
 	</div>
 	<!-- /Intro-->
@@ -69,31 +67,31 @@
 	<!-- container -->
 	<div class="container">
 
-		<h2 class="text-center top-space">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h2>
+		<h2 class="text-center top-space">Questions fréquemment posées</h2>
 		<br>
 
 		<div class="row">
 			<div class="col-sm-6">
-				<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
-				<p>Depuis de nombreuses années, le club du Vaillante Châtillonnaise Handball a toujours porté une grande attention à la formation qui est au coeur de la stratégie sportive du club.
-					Nous considérons le handball non pas comme un sport mais un mode de vie. Avec un entrainnement intensive de 8h par semaine, l'association crée des experts.
+				<h3>Où nous trouver ?</h3>
+				<p>
+					La pratique, entraînement et matchs à domicile, se déroule au gymnase de l'Europe à Châtillon-sur-Chalaronne, Avenue François Mitterand.
 				</p>
 			</div>
 			<div class="col-sm-6">
-				<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				<h3>Comment se fait l'inscription?</h3>
+				<p>L'inscription ne se fait pas sur le site mais directement au club où il faut se présenter aux entraineurs aux horaires d'entraînement</p>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-sm-6">
-				<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
+				<h3>Niveau Requis ?</h3>
+				<p>Le club porté par des bénevoles rassemblés autour de la passion du hand acceuille toutes les personnes ayant envie de jouer. <br>
+					La variété des équipes et des niveaux permet à chacun de trouver sa place dans nos différentes équipes.</p>
 			</div>
 			<div class="col-sm-6">
-				<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				<h3>Pourquoi nous rejoindre ?</h3>
+				<p>Car les valeurs d'équipe, d'entraide, de fair-play et de bonne humeur sont à la base de notre engagement associatif.
 				</p>
 			</div>
 
