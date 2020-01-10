@@ -64,7 +64,7 @@ session_start();
 				<br>
 				<p>* champs obligatoires</p>
 				<div class="formulaire">
-					<form action="inscription.php" method="post">
+					<form action="../Controler/inscription.php" method="post">
 	         <fieldset>
 	           <legend>Informations personnelles</legend>
 	           <label for="firstname">Nom * : </label>
