@@ -189,31 +189,12 @@ public function getAdherentParDateNaissance(string $date /*pas de variable date*
         }
 
 
-        public function getContactParent( $tel1, $tel2): Contact {
-          $reponse=$this->db->query("SELECT * FROM Contact WHERE telPere=$tel1 AND telMere=$tel2 ");
-          $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"Contact");
-           if(count($donnees) == 0) {
-            printf("Aucun contact avec cet num tel");
-            $contact=NULL;
-          } else {
-            $contact= $donnees[0];
-            return $contact;
-          }
+        public function getContactParent( $tel1, $tel2): bool {
+          return $this->db->query("SELECT * FROM Contact WHERE telPere=$tel1 AND telMere=$tel2 ");
+
         }
 
-        public function getContactParTel(int $tel): Contact {
-          $reponse=$this->db->query("SELECT * FROM Contact WHERE telpere=$tel OR telmere=$tel ");
-          $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"Contact");
-          if(count($donnees)>1) {
-            printf("Plusieurs contacts avec cet num tel");
-          }
-          else if(count($donnees) == 0) {
-            printf("Aucun contact avec cet num tel");
-          } else {
-            $contact= $donnees[0];
-            return $contact;
-          }
-        }
+
 
         //--------------------------------EQUIPE----------------------------------//
           public function getEquipeParId(string $id): Equipe {
