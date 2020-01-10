@@ -55,7 +55,7 @@ public function getAdherentParId(int $id): Adherent {
  }
 
 
-public function getAdherentParDateNaiisance(string $date /*pas de variable date*/): array {
+public function getAdherentParDateNaissance(string $date /*pas de variable date*/): array {
   $reponse=$this->db->query("SELECT * FROM ADHERENT WHERE dateDeNaissance=$date ");
   $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"Adherent");
   if(count($donnees)>1) {
