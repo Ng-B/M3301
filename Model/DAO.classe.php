@@ -266,7 +266,7 @@ public function getAdherentParDateNaiisance(string $date /*pas de variable date*
             if (!$contactparent){
             $this->db->query("INSERT INTO contactparent VALUES ($tel1,$tel2,$tel3,$tel4,(SELECT MAX(id)+1 FROM contactparent ))");
             }
-            if(isset($tell1) && isset($tell2){
+            if(isset($tell1) && isset($tell2)){
             $this->db->query("INSERT INTO ADHERENT VALUES ((SELECT MAX(id)+1 FROM ADHERENT ), '$nom', '$prenom', $dateNaissance, '$sexe','$telperso','$prenom.$nom','$nom.$dateNaissance',NULL,'$typelicense',false,'000',$mail,(SELECT id FROM Contact WHERE telpere=$tel1 AND telmere=$tel2 )");
           }
           }
