@@ -1,3 +1,6 @@
+<?php
+session_start();
+ if ( isset( $_SESSION['user_id'] ) ) {  ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -30,8 +33,8 @@
 				<ul class="nav navbar-nav pull-right">
 					<li class="active"><a class="btn2" href="../Controler/indexP.ctrl.php?login=<?php echo $this->current_user; ?>">Accueil</a></li>
 					<li><a class="btn2" href="../Controler/presidentAdherents.ctrl.php?login=<?php echo $this->current_user; ?>">Gestion des adhérents</a></li>
-					<li><a class="btn2" href="../Controler/lesmatchs.ctrl.php?login=<?= echo $this->current_user?>">Gestion des matchs</a></li>
-					<li><a class="btn2" href="../Controler/monCompte.ctrl.php?login=<?= echo $this->current_user?>">Mon compte</a></li>
+					<li><a class="btn2" href="../Controler/lesmatchs.ctrl.php?login=<?=  $this->current_user?>">Gestion des matchs</a></li>
+					<li><a class="btn2" href="../Controler/monCompte.ctrl.php?login=<?=  $this->current_user?>">Mon compte</a></li>
 					<li><a class="btn2" href="../Controler/signin.ctrl.php">Déconnexion</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
@@ -189,3 +192,4 @@
 
 </body>
 </html>
+<?php }else{     header("Location: http://handbase.ddns.net/projet/Controler/signin.ctrl.php"); } ?>
