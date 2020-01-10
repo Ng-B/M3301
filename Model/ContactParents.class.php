@@ -1,8 +1,9 @@
 <?php
-  class ContactParents{
+  class ContactParent{
     private $telPere;
-    private $fixePere;
+
     private $telMere;
+    private $fixePere;
     private $fixeMere;
     private $id;
 
