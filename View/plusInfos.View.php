@@ -116,15 +116,15 @@
        </tr>
        <tr>
          <th>Numéro de téléphone portable mère :</th>
-         <td><?= $this->contact->getTelMere()?></td>
+         <td><?php if(is_null($this->contact)){ echo "Pas renseigne"; }else{  print($this->contact->getTelMere()) ; }?></td>
        </tr>
        <tr>
          <th>Numéro de téléphone fixe mère :</th>
-         <td><?= $this->contact->getFixeMere()?></td>
+         <td><?php if(is_null($this->contact)){ echo "Pas renseigne"; }else{  print($this->contact->getFixeMere()) ; }?></td>
        </tr>
        <tr>
          <th>Numéro de téléphone fixe père :</th>
-         <td><?= $this->contact->getFixePere()?></td>
+         <td><?php if(is_null($this->contact)){ echo "Pas renseigne"; }else{  print($this->contact->getFixePere()) ; }?></td>
        </tr>
 			</table>
 

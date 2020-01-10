@@ -4,7 +4,7 @@ require_once("../Framework/view.class.php");
 
 require_once("../Model/Adherent.class.php");
 require_once("../Model/DAO.class.php");
-require_once("../Model/ContactParents.class.php");
+require_once("../Model/ContactParent.class.php");
 
 
 
