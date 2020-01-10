@@ -1,5 +1,7 @@
 <?php
-require_once("../Model/DAO.class.php");
+include_once("../Model/DAO.class.php");
+include_once("../Framework/view.class.php");
+
 $lastname=$_POST["firstname"];
 $firstname=$_POST["lastname"];
 $date=$_POST["date"];
@@ -22,6 +24,9 @@ $bdd->ajoutAdherent($lastname, $firstname, $date, 1, $phone,$mail,$phoneP,$phone
 $bdd->ajoutAdherent($lastname, $firstname, $date, 0, $phone,$mail,$phoneP,$phoneM,$phonePF,$phoneMF,$joueur,$bureau,$entraineur,$categorie);
 }
 
+$view= new View("../View/presidentAdherents.View.php");
+$current_login=$_GET["login"];
+$view->current_login=$current_login;
+$view->show();
 
-include "presidentAdherents.ctrl.php";
  ?>
