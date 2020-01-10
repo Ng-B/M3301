@@ -77,8 +77,6 @@
 	           <input type="text" name="phone" value="0651236598" readonly="readonly" required><br><br>
 	           <label for="mail">Adresse mail * :</label>
 	           <input type="text" name="mail" value="test@test.fr" readonly="readonly" required><br><br>
-						 <label for="mail">Numéro de licence * :</label>
-	           <input type="text" name="licence" value="123456789" readonly="readonly" required><br><br>
 	           <label for="role">Rôle(s) :</label>
 						<input type="checkbox" name="joueur" value="joueur" disabled="disabled" checked>     Joueur
 	          <input type="checkbox" name="entraineur" value="entraineur" disabled="disabled">     Entraîneur (catégorie :
