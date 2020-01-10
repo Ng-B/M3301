@@ -261,7 +261,7 @@ public function getAdherentParDateNaiisance(string $date /*pas de variable date*
             }
           }
 
-          public function ajoutAdherent($nom, $prenom, $dateNaissance, $sexe, $telperso, $typelicense,$mail,$tel1,$tel2,$tel3,$tel4,$joueur,$entraineur,$categorie){
+          public function ajoutAdherent($nom, $prenom, $dateNaissance, $sexe, $telperso, $typelicense,$mail,$tel1,$tel2,$tel3,$tel4,$joueur,$bureau,$entraineur,$categorie){
             $contactparent=getContactParent($tel1,$tel2);
             if (!$contactparent){
             $this->db->query("INSERT INTO contactparent VALUES ($tel1,$tel2,$tel3,$tel4,(SELECT MAX(id)+1 FROM contactparent ))");
@@ -287,7 +287,10 @@ public function getAdherentParDateNaiisance(string $date /*pas de variable date*
             $this->db->query("INSERT INTO Joueurs VALUES ((SELECT MAX(id) FROM ADHERENT),'-9',0,0,0,false)");
           }
           if($entraineur){
-            $this->db->query("INSERT INTO Enraineur VALUES ((SELECT MAX(id) FROM ADHERENT),$categorie)");
+            $this->db->query("INSERT INTO Entraineur VALUES ((SELECT MAX(id) FROM ADHERENT),$categorie)");
+          }
+          if($bureau!='aucun'){
+            $this->db->query("INSERT INTO Bureau VALUES ((SELECT MAX(id) FROM ADHERENT),$bureau)");
           }
         }
 
