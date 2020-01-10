@@ -19,6 +19,32 @@
   h1{font-size: 15px;}
 }
 
+.menu
+{
+  height:50px;
+  position:relative;
+}
+
+.menu .burger
+{
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  color:inherit;
+  cursor:pointer;
+  font-family:'Material Icons';
+  font-size:30px;
+  line-height:50px;
+  margin:0;
+  outline:0;
+  padding:0;
+  position:absolute;
+  text-align:center;
+  top:0;
+  right:10px;
+  width:50px;
+}
+
 
 /* Highlights (in jumbotron in most cases) */
 .highlight { margin-top:40px; }
