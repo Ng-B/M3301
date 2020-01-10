@@ -112,8 +112,9 @@
 	           <label for="phoneMF">Numéro de téléphone fixe mère :</label>
 	           <input type="text" name="phoneMF" placeholder="0456358975"><br><br>
 	        </fieldset>
+					<input type="submit" value="Valider" id="valider"></a>
 	        </form><br>
-						<a href="../Controler/confirmation.ctrl.php"><input type="submit" value="Valider" id="valider"></a>
+
 				</div>
 
 			</article>
