@@ -3,8 +3,8 @@ require_once("../Framework/view.class.php");
 // Récupération des données de configuration
 
 require_once("../Model/Adherent.class.php");
-include("../Model/DAO.class.php");
-include("../Model/ContactParents.class.php");
+require_once("../Model/DAO.class.php");
+require_once("../Model/ContactParents.class.php");
 
 
 
