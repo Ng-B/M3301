@@ -18,8 +18,8 @@ if(isset($_GET["login"]) ){
 			$view->show();
 			} else {
 				$view= new View("../View/plusInfos.View.php");
-				$contact=$myPDO->getContactPourAdherent($adherent->getId());
 				$view->adherent=$adherent;
+				$contact=$myPDO->getContactPourAdherent($adherent->getId());
 				$view->contact=$contact;
 				$view->current_login=$current_login;
 				$view->show();
