@@ -126,10 +126,6 @@ session_start();
 					</fieldset>
 					<input type="submit" value="Valider" id="valider">
 	        </form><br>
-<<<<<<< HEAD
-=======
-
->>>>>>> 9a2d87d572ec36d5214a240e7aeb98014a7d5897
             <a href="modifier.View.php"><input type="submit" value="Modifier" id="valider"></a>
 				</div>
 
