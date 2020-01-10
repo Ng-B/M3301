@@ -112,7 +112,7 @@
        </tr>
        <tr>
          <th>Numéro de téléphone portable père :</th>
-         <td><?= $this->contact->getTelPere() ?></td>
+         <td><?php if(is_null($this->contact)){ echo "Pas renseigne"; }else{  print($this->contact->getTelPere()) ; }?></td>
        </tr>
        <tr>
          <th>Numéro de téléphone portable mère :</th>
