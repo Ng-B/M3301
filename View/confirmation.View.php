@@ -68,13 +68,13 @@ session_start();
 	         <fieldset>
 	           <legend>Informations personnelles</legend>
 	           <label for="firstname">Nom * : </label>
-	           <input type="text" name="firstname" value="<?=$lastname?>" readonly="readonly" required><br><br>
+	           <input type="text" name="firstname" value="<?=$this->lastname?>" readonly="readonly" required><br><br>
 	           <label for="lastname">Prénom * :</label>
-	           <input type="text" name="lastname" value="<?=$firstname?>" readonly="readonly" required><br><br>
+	           <input type="text" name="lastname" value="<?=$this->firstname?>" readonly="readonly" required><br><br>
 	           <label for="date">Date de naissance * :</label>
-	           <input type="date" name="date" value="<?=$date?>" readonly="readonly" required><br><br>
+	           <input type="date" name="date" value="<?=$this->date?>" readonly="readonly" required><br><br>
 	           <label for="gender">Sexe * :</label>
-						 <?php if($gender=="male"){ ?>
+						 <?php if($this->gender=="male"){ ?>
 						<input type="radio" name="gender" value="male" disabled="disabled" checked>     Homme
 	          <input type="radio" name="gender" value="female" disabled="disabled">     Femme<br><br>
 					<?php }else{ ?>
@@ -82,46 +82,46 @@ session_start();
 	          <input type="radio" name="gender" value="female" disabled="disabled" checked>     Femme<br><br>
 					<?php } ?>
 						 <label for="phone">Numéro de téléphone * :</label>
-	           <input type="text" name="phone" value="<?=$phone?>" readonly="readonly" required><br><br>
+	           <input type="text" name="phone" value="<?=$this->phone?>" readonly="readonly" required><br><br>
 	           <label for="mail">Adresse mail * :</label>
-	           <input type="text" name="mail" value="<?=$mail?>" readonly="readonly" required><br><br>
+	           <input type="text" name="mail" value="<?=$this->mail?>" readonly="readonly" required><br><br>
 	           <label for="role">Rôle(s) :</label>
 
-						 <?php if($joueur){ ?>
+						 <?php if($this->joueur){ ?>
 						<input type="checkbox" name="joueur" value="joueur" disabled="disabled" checked>     Joueur
 						<?php }else{ ?>
 							<input type="checkbox" name="joueur" value="joueur" disabled="disabled" >     Joueur
 							<?php } ?>
 
-							<?php if($entraineur){ ?>
+							<?php if($this->entraineur){ ?>
 								<input type="checkbox" name="entraineur" value="entraineur" disabled="disabled" checked>     Entraîneur (catégorie :
-								<input type="text" name="categorie" value="<?=$categorie?>" readonly="readonly" required>)<br><br>
+								<input type="text" name="categorie" value="<?=$this->categorie?>" readonly="readonly" required>)<br><br>
 							<?php }else{ ?>
 								<input type="checkbox" name="entraineur" value="entraineur" disabled="disabled">     Entraîneur
 								<?php } ?>
 
 
 	          <label for="bureau">Rôle bureau :</label>
-						<input type="text" name="bureau" value="<?=$bureau?>" readonly="readonly" required><br><br>
+						<input type="text" name="bureau" value="<?=$this->bureau?>" readonly="readonly" required><br><br>
 	         </fieldset>
 					 <br><br>
 	         <fieldset>
 	           <legend>Informations parents</legend>
-						 <?php if(isset($phoneP)){ ?>
+						 <?php if(isset($this->phoneP)){ ?>
 	           <label for="phoneP">Numéro de téléphone portable père :</label>
-	           <input type="text" name="phoneP" value="<?=$phoneP?>" readonly="readonly"><br><br>
+	           <input type="text" name="phoneP" value="<?=$this->phoneP?>" readonly="readonly"><br><br>
 					 <?php }
 					 if(isset($phonePF)){ ?>
 						 <label for="phonePF">Numéro de téléphone fixe père :</label>
-	           <input type="text" name="phonePF" value="<?=$phonePF?>" readonly="readonly"><br><br>
+	           <input type="text" name="phonePF" value="<?=$this->phonePF?>" readonly="readonly"><br><br>
 					 <?php }
-					 if(isset($phoneM)){ ?>
+					 if(isset($this->phoneM)){ ?>
 						 <label for="phoneM">Numéro de téléphone portable mère :</label>
-	           <input type="text" name="phoneM" value="<?=$phoneM?>" readonly="readonly"><br><br>
+	           <input type="text" name="phoneM" value="<?=$this->phoneM?>" readonly="readonly"><br><br>
 					 <?php }
-					 if(isset($phoneMF)){ ?>
+					 if(isset($this->phoneMF)){ ?>
 						 <label for="phoneMF">Numéro de téléphone fixe mère :</label>
-	           <input type="text" name="phoneMF" value="<?=$phoneMF?>" readonly="readonly"><br><br>
+	           <input type="text" name="phoneMF" value="<?=$this->phoneMF?>" readonly="readonly"><br><br>
 					 <?php } ?>
 					</fieldset>
 					<input type="submit" value="Valider" id="valider">
