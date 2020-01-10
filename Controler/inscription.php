@@ -14,10 +14,11 @@ $phoneP=$_POST["phoneP"];
 $phonePF=$_POST["phonePF"];
 $phoneM=$_POST["phoneM"];
 $phoneMF=$_POST["phoneMF"];
+$bdd=new DAO();
 if ($gender=="female"){
-ajoutAdherent($lastname, $firstname, $date, 1, $phone,$mail,$phoneP,$phonePF,$phoneM,$phoneMF,$joueur,$bureau,$entraineur,$categorie);
+$bdd->ajoutAdherent($lastname, $firstname, $date, 1, $phone,$mail,$phoneP,$phonePF,$phoneM,$phoneMF,$joueur,$bureau,$entraineur,$categorie);
 }else{
-ajoutAdherent($lastname, $firstname, $date, 0, $phone,$mail,$phoneP,$phonePF,$phoneM,$phoneMF,$joueur,$bureau,$entraineur,$categorie);
+$bdd->ajoutAdherent($lastname, $firstname, $date, 0, $phone,$mail,$phoneP,$phonePF,$phoneM,$phoneMF,$joueur,$bureau,$entraineur,$categorie);
 }
 
 

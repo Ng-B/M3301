@@ -189,7 +189,7 @@ public function getAdherentParDateNaissance(string $date /*pas de variable date*
         }
 
 
-        public function getContactParent(int $tel1,int $tel2): Contact {
+        public function getContactParent( $tel1, $tel2): Contact {
           $reponse=$this->db->query("SELECT * FROM Contact WHERE telPere=$tel1 AND telMere=$tel2 ");
           $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"Contact");
            if(count($donnees) == 0) {
@@ -262,7 +262,7 @@ public function getAdherentParDateNaissance(string $date /*pas de variable date*
           }
 
           public function ajoutAdherent($nom, $prenom, $dateNaissance, $sexe, $telperso,$mail,$tel1,$tel2,$tel3,$tel4,$joueur,$bureau,$entraineur,$categorie){
-            $contactparent=getContactParent($tel1,$tel2);
+            $contactparent=$this->getContactParent($tel1,$tel2);
             if (!$contactparent){
             $this->db->query("INSERT INTO contactparent VALUES ($tel1,$tel2,$tel3,$tel4,(SELECT MAX(id)+1 FROM contactparent ))");
             }
