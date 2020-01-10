@@ -98,7 +98,7 @@ session_start();
 						<select name="bureau" id="bureau">
  						<option value="president">Président</option>
 					  <option value="secretaire">Secrétaire</option>
-						<option value="secretaire" selected>Aucun des deux</option>
+						<option value="aucun" selected>Aucun des deux</option>
 					 </select>
 	         </fieldset>
 					 <br><br>
