@@ -10,6 +10,7 @@ include("../Model/DAO.classe.php");
 if(isset($_GET["login"]) ){
 	$myPDO = new DAO();
 	$adherent= $myPDO->getAdherentParLogin($_GET["login"]);
+	$current_login=$_GET["login"];
 		if(is_null($adherent)){
 			$view= new View("../View/signin.View.php");
 			//$view->list=$list;
@@ -18,6 +19,7 @@ if(isset($_GET["login"]) ){
 				$view= new View("../View/monCompte.View.php");
 				//$view->list=$list;
 				$view->adherent=$adherent;
+				$view->current_login=$current_login;
 				$view->show();
 			}
 
