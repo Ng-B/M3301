@@ -1,4 +1,9 @@
 <?php
+
+$current_login=$_GET["login"];
+$view->current_login=$current_login;
+
+
 $lastname=$_POST["firstname"];
 $firstname=$_POST["lastname"];
 $date=$_POST["date"];
