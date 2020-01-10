@@ -189,7 +189,7 @@ public function getAdherentParDateNaissance(string $date /*pas de variable date*
         }
 
 
-        public function getContactParent( $tel1, $tel2): boolean {
+        public function getContactParent( $tel1, $tel2): bool {
           return $this->db->query("SELECT * FROM Contact WHERE telPere=$tel1 AND telMere=$tel2 ");
 
         }
