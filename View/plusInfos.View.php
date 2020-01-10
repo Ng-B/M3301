@@ -39,7 +39,7 @@
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
 					<li><a class="btn2" href="../Controler/indexP.ctrl.php?login=<?php echo $this->current_login; ?>">Accueil</a></li>
-					<li class="active"><a class="btn2" href="../Controler/lesmatchs.ctrl.php?login=<?=  $this->current_login?>">Gestion des adhérents</a></li>
+					<li class="active"><a class="btn2" href="../Controler/presidentAdherents.ctrl.php?login=<?=  $this->current_login?>">Gestion des adhérents</a></li>
           <li><a class="btn2" href="../Controler/lesmatchs.ctrl.php?login=<?=  $this->current_login?>">Gestion des matchs</a></li>
 					<li><a class="btn2" href="../Controler/monCompte.ctrl.php?login=<?=  $this->current_login?>">Mon compte</a></li>
 					<li><a class="btn2" href="../Controler/signin.ctrl.php">Déconnexion</a></li>
@@ -72,7 +72,7 @@
 				<table style="width:100%">
 			 <tr>
          <th>ID :</th>
-         <td>1</td>
+         <td><?= $this->adherent->getId() ?></td>
        </tr>
        <tr>
 				 <th>Nom :</th>
