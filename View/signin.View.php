@@ -24,9 +24,11 @@
 			<div class="navbar-header">
 				<!-- Button for smallest screens -->
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+
 				<a class="navbar-brand" href="http://handbase.ddns.net"><img src="../View/images/logo.png" alt="logo club" width = 5% height = 100% class="logo"><h1>Vaillante Chatillonnaise Handball</h1></a>
 			</div>
-			<div class="navbar-collapse collapse">
+			<div class="menu">
+        <input class="burger" type="checkbox">
 				<ul class="nav navbar-nav pull-right">
 					<li><a class="btn2" href="http://handbase.ddns.net">Accueil</a></li>
 					<li><a class="btn2" href="../View/contact.View.php">Nous contacter</a></li>
