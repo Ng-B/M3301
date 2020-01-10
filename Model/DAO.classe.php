@@ -270,21 +270,24 @@ public function getAdherentParDateNaiisance(string $date /*pas de variable date*
             $this->db->query("INSERT INTO ADHERENT VALUES ((SELECT MAX(id)+1 FROM ADHERENT ), '$nom', '$prenom', $dateNaissance, '$sexe','$telperso','$prenom.$nom','$nom.$dateNaissance',NULL,'$typelicense',false,'000',$mail,(SELECT id FROM Contact WHERE telpere=$tel1 AND telmere=$tel2 )");
           }
           if($joueur){
-            $anneeNaiss=date_parse($date);
-            $m9=now()-
-            switch ($anneeNaiss["year"]) {
-              case :
+            //$anneeNaiss=date_parse($date);
+            //$m9=now()-
+            //switch ($anneeNaiss["year"]) {
+            //  case :
                 // code...
-                break;
+              //  break;
 
-              default:
+            //  default:
                 // code...
-                break;
-            }
-            case '':
+              //  break;
+            //}
+            //case '':
               // code...
-              break;
+            //  break;
             $this->db->query("INSERT INTO Joueurs VALUES ((SELECT MAX(id) FROM ADHERENT),'-9',0,0,0,false)");
+          }
+          if($entraineur){
+            $this->db->query("INSERT INTO Enraineur VALUES ((SELECT MAX(id) FROM ADHERENT),$categorie)");
           }
         }
 
