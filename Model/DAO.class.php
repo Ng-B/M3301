@@ -81,9 +81,7 @@ public function getAdherentParDateNaissance(string $date /*pas de variable date*
  public function getAdherentParLogin(string $login) {
    $reponse=$this->db->query("SELECT * FROM ADHERENT WHERE login='$login' ");
    $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"Adherent");
-   if(count($donnees) == 0) {
-     printf("Aucun adherent avec cette date de naissance");
-   } else {
+   if(count($donnees) != 0) {
      $adherent= $donnees[0];
      return $adherent;
    }
