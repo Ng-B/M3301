@@ -2,7 +2,7 @@
 require_once("Match.class.php");
 require_once("Adherent.class.php");
 require_once("Bureau.class.php");
-require_once("ContactParents.class.php");
+require_once("ContactParent.class.php");
 
 
 
@@ -285,12 +285,17 @@ public function getAdherentParDateNaissance(string $date /*pas de variable date*
            }
 
            public function getContactPourAdherent(int $id) {
-             $reponse=$this->db->query("SELECT * FROM contactparent WHERE id=$id ");
+             $reponse=$this->db->query("SELECT * FROM ContactParent WHERE id=$id ");
              $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"ContactParent");
-             for ($i=0; $i<count($donnees); $i++){
-               $contact[$i]= $donnees[$i];
+             if(count($donnees)>1) {
+               print("Plusieurs contacts pour cet id");
              }
+             else if(count($donnees) == 0) {
+               print("Aucun contact pour cet id");
+             } else {
+               $contact= $donnees[0];
                return $contact;
+             }
 
            }
 }
