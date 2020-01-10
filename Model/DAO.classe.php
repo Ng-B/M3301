@@ -235,7 +235,7 @@ public function getAdherentParDateNaiisance(string $date /*pas de variable date*
             $reponse=$this->db->query("SELECT M.idmatch,M.lieu,M.date,M.arbitre,M.heure,M.categorie FROM match M, estselectionne E WHERE E.idjoueur=(SELECT id FROM adherent WHERE login='$login') AND  E.idmatch=M.idmatch AND M.date < CURRENT_DATE ");
             $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"Match");
             for ($i=0; $i<count($donnees); $i++){
-              $matchs[$i]= $donnees[0];
+              $matchs[$i]= $donnees[$i];
             }
               return $matchs;
 
@@ -245,7 +245,7 @@ public function getAdherentParDateNaiisance(string $date /*pas de variable date*
             $reponse=$this->db->query("SELECT M.idmatch,M.lieu,M.date,M.arbitre,M.heure,M.categorie FROM match M, estselectionne E WHERE E.idjoueur=(SELECT id FROM adherent WHERE login='$login') AND  E.idmatch=M.idmatch AND M.date >= CURRENT_DATE ");
             $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"Match");
             for ($i=0; $i<count($donnees); $i++){
-              $matchs[$i]= $donnees[0];
+              $matchs[$i]= $donnees[$i];
             }
               return $matchs;
 
@@ -261,14 +261,35 @@ public function getAdherentParDateNaiisance(string $date /*pas de variable date*
             }
           }
 
-          public function ajoutAdherent($nom, $prenom, $dateNaissance, $sexe, $telperso, $typelicense,$mail,$tel1,$tel2,$tel3,$tel4){
+          public function ajoutAdherent($nom, $prenom, $dateNaissance, $sexe, $telperso, $typelicense,$mail,$tel1,$tel2,$tel3,$tel4,$joueur,$entraineur,$categorie){
             $contactparent=getContactParent($tel1,$tel2);
             if (!$contactparent){
             $this->db->query("INSERT INTO contactparent VALUES ($tel1,$tel2,$tel3,$tel4,(SELECT MAX(id)+1 FROM contactparent ))");
             }
+            if(isset($tell1) && isset($tell2)){
             $this->db->query("INSERT INTO ADHERENT VALUES ((SELECT MAX(id)+1 FROM ADHERENT ), '$nom', '$prenom', $dateNaissance, '$sexe','$telperso','$prenom.$nom','$nom.$dateNaissance',NULL,'$typelicense',false,'000',$mail,(SELECT id FROM Contact WHERE telpere=$tel1 AND telmere=$tel2 )");
-
           }
+          if($joueur){
+            //$anneeNaiss=date_parse($date);
+            //$m9=now()-
+            //switch ($anneeNaiss["year"]) {
+            //  case :
+                // code...
+              //  break;
+
+            //  default:
+                // code...
+              //  break;
+            //}
+            //case '':
+              // code...
+            //  break;
+            $this->db->query("INSERT INTO Joueurs VALUES ((SELECT MAX(id) FROM ADHERENT),'-9',0,0,0,false)");
+          }
+          if($entraineur){
+            $this->db->query("INSERT INTO Enraineur VALUES ((SELECT MAX(id) FROM ADHERENT),$categorie)");
+          }
+        }
 
           public function getAdherentParMail(string $mail) {
             $reponse=$this->db->query("SELECT * FROM ADHERENT WHERE mail='$mail' ");
@@ -279,6 +300,16 @@ public function getAdherentParDateNaiisance(string $date /*pas de variable date*
               $adherent= $donnees[0];
               return $adherent;
             }
+           }
+
+           public function getAllMatchsVenir() {
+             $reponse=$this->db->query("SELECT M.idmatch,M.lieu,M.date,M.arbitre,M.heure,M.categorie FROM match M WHERE M.date >= CURRENT_DATE ");
+             $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"Match");
+             for ($i=0; $i<count($donnees); $i++){
+               $matchs[$i]= $donnees[$i];
+             }
+               return $matchs;
+
            }
 }
 ?>
