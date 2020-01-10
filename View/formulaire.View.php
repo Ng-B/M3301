@@ -63,7 +63,7 @@ session_start();
 				<br>
 				<p>* champs obligatoires</p>
 				<div class="formulaire">
-					<form action="../Controler/confirmation.ctrl.php" method="post">
+					<form action="../Controler/confirmation.ctrl.php?login=<?=$this->current_login?>" method="post">
 	         <fieldset>
 	           <legend>Informations personnelles</legend>
 	           <label for="firstname">Nom * : </label>

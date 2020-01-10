@@ -31,11 +31,11 @@ session_start();
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
-					<li><a class="btn2" href="indexP.View.php">Accueil</a></li>
-					<li class="active"><a class="btn2" href="presidentAdherents.View.php">Gestion des adhérents</a></li>
-					<li><a class="btn2" href="lesmatchs.View.php">Gestion des matchs</a></li>
-					<li><a class="btn2" href="monCompte.View.php">Mon compte</a></li>
-					<li><a class="btn2" href="index.View.php">Déconnexion</a></li>
+					<li><a class="btn2" href="../Controler/indexP.ctrl.php?login=<?php echo $this->current_login; ?>">Accueil</a></li>
+					<li class="active"><a class="btn2" href="../Controler/presidentAdherents.ctrl.php?login=<?php echo $this->current_login; ?>">Gestion des adhérents</a></li>
+					<li><a class="btn2" href="../Controler/lesmatchs.ctrl.php?login=<?=  $this->current_login?>">Gestion des matchs</a></li>
+					<li><a class="btn2" href="../Controler/monCompte.ctrl.php?login=<?= $this->current_login?>">Mon compte</a></li>
+					<li><a class="btn2" href="../Controler/signin.ctrl.php">Déconnexion</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
