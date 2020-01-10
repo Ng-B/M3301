@@ -76,8 +76,6 @@
 	           <input type="text" name="phone" placeholder="0651236598" required><br><br>
 	           <label for="mail">Adresse mail * :</label>
 	           <input type="text" name="mail" placeholder="test@test.fr" required><br><br>
-						 <label for="mail">Numéro de licence * :</label>
-	           <input type="text" name="licence" placeholder="123456789" required><br><br>
 	           <label for="role">Rôle(s) :</label>
 						<input type="checkbox" name="joueur" value="joueur" checked>     Joueur
 	          <input type="checkbox" name="entraineur" value="entraineur">     Entraîneur (catégorie :
