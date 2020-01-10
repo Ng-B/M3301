@@ -109,19 +109,19 @@ session_start();
 	           <legend>Informations parents</legend>
 						 <?php if(isset($phoneP)){ ?>
 	           <label for="phoneP">Numéro de téléphone portable père :</label>
-	           <input type="text" name="phoneP" value="<?$phoneP?>" readonly="readonly"><br><br>
+	           <input type="text" name="phoneP" value="<?=$phoneP?>" readonly="readonly"><br><br>
 					 <?php }
 					 if(isset($phonePF)){ ?>
 						 <label for="phonePF">Numéro de téléphone fixe père :</label>
-	           <input type="text" name="phonePF" value="<?$phonePF?>" readonly="readonly"><br><br>
+	           <input type="text" name="phonePF" value="<?=$phonePF?>" readonly="readonly"><br><br>
 					 <?php }
 					 if(isset($phoneM)){ ?>
 						 <label for="phoneM">Numéro de téléphone portable mère :</label>
-	           <input type="text" name="phoneM" value="<?$phoneM?>" readonly="readonly"><br><br>
+	           <input type="text" name="phoneM" value="<?=$phoneM?>" readonly="readonly"><br><br>
 					 <?php }
 					 if(isset($phoneMF)){ ?>
 						 <label for="phoneMF">Numéro de téléphone fixe mère :</label>
-	           <input type="text" name="phoneMF" value="<?$phoneMF?>" readonly="readonly"><br><br>
+	           <input type="text" name="phoneMF" value="<?=$phoneMF?>" readonly="readonly"><br><br>
 					 <?php } ?>
 					</fieldset>
 	        </form><br>
