@@ -1,10 +1,11 @@
 <?php
-  class ContactParents{
-    private $id;
+  class ContactParent{
     private $telPere;
-    private $fixePere;
+
     private $telMere;
+    private $fixePere;
     private $fixeMere;
+    private $id;
 
     public function getTelPere(){
       return $telPere;
