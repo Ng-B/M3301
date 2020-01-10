@@ -189,16 +189,9 @@ public function getAdherentParDateNaissance(string $date /*pas de variable date*
         }
 
 
-        public function getContactParent( $tel1, $tel2): Contact {
-          $reponse=$this->db->query("SELECT * FROM Contact WHERE telPere=$tel1 AND telMere=$tel2 ");
-          $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"ContactParent");
-           if(count($donnees) == 0) {
-            printf("Aucun contact avec cet num tel");
-            $contact=NULL;
-          } else {
-            $contact= $donnees[0];
-            return $contact;
-          }
+        public function getContactParent( $tel1, $tel2): boolean {
+          return $this->db->query("SELECT * FROM Contact WHERE telPere=$tel1 AND telMere=$tel2 ");
+
         }
 
 
