@@ -15,9 +15,9 @@
 @media (max-width: 767px) {
 	#head { min-height:420px; padding-top:160px; }
 	#head .lead { font-size: 34px; }
-	.logo{width: 20%; height: 100%;}
-  h1{font-size: 15px;}
 }
+
+
 
 
 /* Highlights (in jumbotron in most cases) */
