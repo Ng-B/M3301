@@ -65,7 +65,7 @@
 							  <form action="http://handbase.ddns.net/projet/Controler/signin.ctrl.php" method="post">
 
 								<div class="top-margin">
-									<label>Nom d'utilisateur/Email <span class="text-danger">*</span></label>
+									<label>Nom d'utilisateur <span class="text-danger">*</span></label>
 									<input type="text" name="login" class="form-control">
 								</div>
 								<div class="top-margin">
