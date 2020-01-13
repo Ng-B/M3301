@@ -1,5 +1,5 @@
 <?php
-require_once("../Framework/view.class.php");
+include_once("../Framework/view.class.php");
 $view= new View("../View/confirmation.View.php");
 $current_login=$_GET["login"];
 $view->current_login=$current_login;

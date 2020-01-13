@@ -2,6 +2,8 @@
 require_once("Match.class.php");
 require_once("Adherent.class.php");
 require_once("Bureau.class.php");
+require_once("ContactParent.class.php");
+
 
 
  class DAO{
@@ -246,10 +248,9 @@ public function getAdherentParDateNaissance(string $date /*pas de variable date*
             $this->db->query("INSERT INTO contactparent VALUES ($tel1,$tel2,$tel3,$tel4,(SELECT MAX(id)+1 FROM contactparent ))");
             }
             if(isset($tell1) && isset($tell2)){
-            $this->db->query("INSERT INTO ADHERENT VALUES ((SELECT MAX(id)+1 FROM ADHERENT ), '$nom', '$prenom', $dateNaissance, '$sexe','$telperso','$prenom.$nom','$nom.$dateNaissance',NULL,'$typelicense',false,'000',$mail,(SELECT id FROM Contact WHERE telpere=$tel1 AND telmere=$tel2 )");
+            $this->db->query("INSERT INTO ADHERENT VALUES ((SELECT MAX(id)+1 FROM ADHERENT ), '$nom', '$prenom', $dateNaissance, '$sexe',$telperso,'$prenom.$nom','$nom.$dateNaissance',NULL,'$typelicense',false,00.0,$mail,(SELECT id FROM Contact WHERE telpere=$tel1 AND telmere=$tel2 )");
           }
           if($joueur){
-
 
             $this->db->query("INSERT INTO Joueurs VALUES ((SELECT MAX(id) FROM ADHERENT),'-9',0,0,0,false)");
           }
@@ -279,6 +280,21 @@ public function getAdherentParDateNaissance(string $date /*pas de variable date*
                $matchs[$i]= $donnees[$i];
              }
                return $matchs;
+
+           }
+
+           public function getContactPourAdherent(int $id) {
+             $reponse=$this->db->query("SELECT * FROM ContactParent WHERE id=$id ");
+             $donnees=$reponse-> fetchAll(PDO::FETCH_CLASS,"ContactParent");
+             if(count($donnees)>1) {
+               print("Plusieurs contacts pour cet id");
+             }
+             else if(count($donnees) == 0) {
+               print("Aucun contact pour cet id");
+             } else {
+               $contact= $donnees[0];
+               return $contact;
+             }
 
            }
 }

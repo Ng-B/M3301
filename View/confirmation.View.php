@@ -26,7 +26,6 @@ session_start();
 		<div class="container2" >
 			<div class="navbar-header">
 				<!-- Button for smallest screens -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
 				<a class="navbar-brand" href="indexP.View.php"><img src="../View/images/logo.png" width = 5% height = 100% alt="" class="logo"><h1>Vaillante Chatillonnaise Handball</h1></a>
 			</div>
 			<div class="navbar-collapse collapse">
@@ -64,7 +63,7 @@ session_start();
 				<br>
 				<p>* champs obligatoires</p>
 				<div class="formulaire">
-					<form action="../Controler/inscription.php" method="post">
+					<form action="../Controler/inscription.php?login=<?= $this->current_login ?>" method="post">
 	         <fieldset>
 	           <legend>Informations personnelles</legend>
 	           <label for="firstname">Nom * : </label>
@@ -126,7 +125,7 @@ session_start();
 					</fieldset>
 					<input type="submit" value="Valider" id="valider">
 	        </form><br>
-            <a href="modifier.View.php"><input type="submit" value="Modifier" id="valider"></a>
+            <a href="presidentAdherents.View.php"><input type="submit" value="Modifier" id="valider"></a>
 				</div>
 
 			</article>

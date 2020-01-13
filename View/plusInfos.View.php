@@ -33,16 +33,15 @@
 		<div class="container2" >
 			<div class="navbar-header">
 				<!-- Button for smallest screens -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
 				<a class="navbar-brand" href="indexP.View.php"><img src="../View/images/logo.png" width = 5% height = 100% alt="" class="logo"><h1>Vaillante Chatillonnaise Handball</h1></a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
-					<li><a class="btn2" href="indexP.View.php">Accueil</a></li>
-					<li class="active"><a class="btn2" href="presidentAdherents.View.php">Gestion des adhérents</a></li>
-          <li><a class="btn2" href="lesmatchs.View.php">Gestion des matchs</a></li>
-					<li><a class="btn2" href="monCompte.View.php">Mon compte</a></li>
-					<li><a class="btn2" href="index.View.php">Déconnexion</a></li>
+					<li><a class="btn2" href="../Controler/indexP.ctrl.php?login=<?php echo $this->current_login; ?>">Accueil</a></li>
+					<li class="active"><a class="btn2" href="../Controler/presidentAdherents.ctrl.php?login=<?=  $this->current_login?>">Gestion des adhérents</a></li>
+          <li><a class="btn2" href="../Controler/lesmatchs.ctrl.php?login=<?=  $this->current_login?>">Gestion des matchs</a></li>
+					<li><a class="btn2" href="../Controler/monCompte.ctrl.php?login=<?=  $this->current_login?>">Mon compte</a></li>
+					<li><a class="btn2" href="../Controler/signin.ctrl.php">Déconnexion</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -55,9 +54,9 @@
 	<div class="container">
 
 		<ol class="breadcrumb">
-			<li><a href="indexP.View.php">Accueil</a></li>
-			<li><a href="presidentAdherents.View.php">Gestion des adhérents</a></li>
-      <li class="active"> Plus d'informations</li>
+			<li><a href="../Controler/indexP.ctrl.php?login=<?php echo $this->current_login; ?>">Accueil</a></li>
+			<li><a href="../Controler/presidentAdherents.ctrl.php?login=<?= $this->current_login?>">Gestion des adhérents</a></li>
+      <li class="#"> Plus d'informations</li>
 		</ol>
 
 		<div class="row">
@@ -72,35 +71,35 @@
 				<table style="width:100%">
 			 <tr>
          <th>ID :</th>
-         <td>1</td>
+         <td><?= $this->adherent->getId() ?></td>
        </tr>
        <tr>
 				 <th>Nom :</th>
-         <td>LOCATELLI</td>
+         <td><?= $this->adherent->getNom() ?></td>
        </tr>
        <tr>
 				 <th>Prénom :</th>
-         <td>Antoine</td>
+         <td><?= $this->adherent->getPrenom() ?></td>
        </tr>
        <tr>
          <th>Date de naissance :</th>
-         <td>01/01/2000</td>
+         <td><?= $this->adherent->getDateNaissance() ?></td>
        </tr>
        <tr>
          <th>Sexe : </th>
-         <td>Homme</td>
+         <td><?php if($this->adherent->getSexe() == 0) { echo "Femme"; }else{ echo "Homme"; } ?></td>
        </tr>
        <tr>
 				 <th>Numéro de téléphone :</th>
-         <td>0651213520</td>
+         <td><?= $this->adherent->getTelephone() ?></td>
        </tr>
        <tr>
 				 <th>Adresse mail :</th>
-         <td>antoine.locatelli@iut2.univ-grenoble-alpes.fr</td>
+         <td><?= $this->adherent->getMail() ?></td>
        </tr>
        <tr>
 				 <th>Numéro de licence :</th>
-         <td>123456789</td>
+         <td><?= $this->adherent->getNumLicense() ?></td>
        </tr>
        <tr>
          <th>Rôle :</th>
@@ -112,19 +111,19 @@
        </tr>
        <tr>
          <th>Numéro de téléphone portable père :</th>
-         <td>NULL</td>
-       </tr>
-       <tr>
-         <th>Numéro de téléphone fixe père :</th>
-         <td>NULL</td>
+         <td><?php if(is_null($this->contact)){ echo "Pas renseigne"; }else{  print($this->contact->getTelPere()) ; }?></td>
        </tr>
        <tr>
          <th>Numéro de téléphone portable mère :</th>
-         <td>NULL</td>
+         <td><?php if(is_null($this->contact)){ echo "Pas renseigne"; }else{  print($this->contact->getTelMere()) ; }?></td>
        </tr>
        <tr>
          <th>Numéro de téléphone fixe mère :</th>
-         <td>NULL</td>
+         <td><?php if(is_null($this->contact)){ echo "Pas renseigne"; }else{  print($this->contact->getFixeMere()) ; }?></td>
+       </tr>
+       <tr>
+         <th>Numéro de téléphone fixe père :</th>
+         <td><?php if(is_null($this->contact)){ echo "Pas renseigne"; }else{  print($this->contact->getFixePere()) ; }?></td>
        </tr>
 			</table>
 

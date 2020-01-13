@@ -3,7 +3,8 @@ require_once("../Framework/view.class.php");
 // Récupération des données de configuration
 
 require_once("../Model/Adherent.class.php");
-include("../Model/DAO.class.php");
+require_once("../Model/DAO.class.php");
+require_once("../Model/ContactParent.class.php");
 
 
 
@@ -17,8 +18,9 @@ if(isset($_GET["login"]) ){
 			$view->show();
 			} else {
 				$view= new View("../View/plusInfos.View.php");
-				//$view->list=$list;
 				$view->adherent=$adherent;
+				$contact=$myPDO->getContactPourAdherent($adherent->getId());
+				$view->contact=$contact;
 				$view->current_login=$current_login;
 				$view->show();
 			}
