@@ -2,35 +2,22 @@
 include_once("../Model/DAO.class.php");
 include_once("../Framework/view.class.php");
 
-$lastname=$_POST["firstname"];
-$firstname=$_POST["lastname"];
-$date=$_POST["date"];
-$gender=$_POST["gender"];
-$phone=$_POST["phone"];
-$mail=$_POST["mail"];
-$joueur=$_POST["joueur"];
-$entraineur=$_POST["entraineur"];
-$categorie=$_POST["categorie"];
-$bureau=$_POST["bureau"];
-$phoneP=$_POST["phoneP"];
-$phonePF=$_POST["phonePF"];
-$phoneM=$_POST["phoneM"];
-$phoneMF=$_POST["phoneMF"];
+$lastname=$_POST['firstname'];
+$firstname=$_POST['lastname'];
+$date=$_POST['date'];
+$gender=$_POST['gender'];
+$phone=$_POST['phone'];
+$mail=$_POST['mail'];
+$joueur=$_POST['joueur'];
+$entraineur=$_POST['entraineur'];
+$categorie=$_POST['categorie'];
+$bureau=$_POST['bureau'];
+$phoneP=$_POST['phoneP'];
+$phonePF=$_POST['phonePF'];
+$phoneM=$_POST['phoneM'];
+$phoneMF=$_POST['phoneMF'];
 
-echo "$lastname";
-echo "$firstname";
-echo "$date";
-echo "$gender";
-echo "$phone";
-echo "$mail";
-echo "$joueur";
-echo "$entraineur";
-echo "$categorie";
-echo "$bureau";
-echo "$phoneP";
-echo "$phonePF";
-echo "$phoneM";
-echo "$phoneMF";
+
 $bdd=new DAO();
 if ($gender=="female"){
 $bdd->ajoutAdherent($lastname, $firstname, $date, 1, $phone,$mail,$phoneP,$phoneM,$phonePF,$phoneMF,$joueur,$bureau,$entraineur,$categorie);
