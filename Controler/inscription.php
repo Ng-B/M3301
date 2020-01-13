@@ -2,20 +2,20 @@
 include_once("../Model/DAO.class.php");
 include_once("../Framework/view.class.php");
 
-$lastname=$_POST["firstname"];
-$firstname=$_POST["lastname"];
-$date=$_POST["date"];
-$gender=$_POST["gender"];
-$phone=$_POST["phone"];
-$mail=$_POST["mail"];
-$joueur=$_POST["joueur"];
-$entraineur=$_POST["entraineur"];
-$categorie=$_POST["categorie"];
-$bureau=$_POST["bureau"];
-$phoneP=$_POST["phoneP"];
-$phonePF=$_POST["phonePF"];
-$phoneM=$_POST["phoneM"];
-$phoneMF=$_POST["phoneMF"];
+$lastname=$_POST['firstname'];
+$firstname=$_POST['lastname'];
+$date=$_POST['date'];
+$gender=$_POST['gender'];
+$phone=$_POST['phone'];
+$mail=$_POST['mail'];
+$joueur=$_POST['joueur'];
+$entraineur=$_POST['entraineur'];
+$categorie=$_POST['categorie'];
+$bureau=$_POST['bureau'];
+$phoneP=$_POST['phoneP'];
+$phonePF=$_POST['phonePF'];
+$phoneM=$_POST['phoneM'];
+$phoneMF=$_POST['phoneMF'];
 
 echo "$lastname";
 echo "$firstname";
