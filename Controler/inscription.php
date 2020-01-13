@@ -17,9 +17,6 @@ $phonePF=$_POST["phonePF"];
 $phoneM=$_POST["phoneM"];
 $phoneMF=$_POST["phoneMF"];
 
-<<<<<<< HEAD
-
-=======
 echo "$lastname";
 echo "$firstname";
 echo "$date";
@@ -34,7 +31,6 @@ echo "$phoneP";
 echo "$phonePF";
 echo "$phoneM";
 echo "$phoneMF";
->>>>>>> e5ec1e61dc4b59c8b586686c1920828f842032c1
 $bdd=new DAO();
 if ($gender=="female"){
 $bdd->ajoutAdherent($lastname, $firstname, $date, 1, $phone,$mail,$phoneP,$phoneM,$phonePF,$phoneMF,$joueur,$bureau,$entraineur,$categorie);
@@ -54,10 +50,9 @@ if(is_null($adherents) ){
     $view->adherents=$adherents;
     $view->current_login=$_GET["login"];
     $view->show();
-  }*/
+  }
 
-<<<<<<< HEAD
+
 //include "presidentAdherents.ctrl.php";
-=======
->>>>>>> e5ec1e61dc4b59c8b586686c1920828f842032c1
+
  ?>

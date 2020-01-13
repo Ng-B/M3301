@@ -108,7 +108,7 @@ session_start();
 	        </tr>
 	        <tr>
 	          <th>Bureau :</th>
-	          <td>Président</td>
+	          <td>Aucun</td>
 	        </tr>
 			</table>
 
