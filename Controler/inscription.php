@@ -37,6 +37,9 @@ if(is_null($adherents) ){
     $view->adherents=$adherents;
     $view->current_login=$_GET["login"];
     $view->show();
-  }*/
+  }
+
+
+//include "presidentAdherents.ctrl.php";
 
  ?>
