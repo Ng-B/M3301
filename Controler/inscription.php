@@ -40,7 +40,7 @@ $bdd->ajoutAdherent($lastname, $firstname, $date, 0, $phone,$mail,$phoneP,$phone
 
 $myPDO = new DAO();
 $adherents= $myPDO->get_All_Adherent();
-/*  if(is_null($adherents) ){
+if(is_null($adherents) ){
     $view= new View("../View/presidentAdherents.View.php");
     $view->no_adherents=true;
     $view->current_login=$_GET["login"];
