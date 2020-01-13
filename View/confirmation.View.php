@@ -125,7 +125,7 @@ session_start();
 					</fieldset>
 					<input type="submit" value="Valider" id="valider">
 	        </form><br>
-            <a href="presidentAdherents.View.php"><input type="submit" value="Annuler" id="valider"></a>
+            <a href="../Controler/presidentAdherents.ctrl.php"><input type="submit" value="Annuler" id="valider"></a>
 				</div>
 
 			</article>
